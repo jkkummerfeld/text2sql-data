@@ -1,0 +1,2657 @@
+[
+    {
+        "difficulty": 1,
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "What year is the movie \" movie_title0 \" from ?",
+                "variables": {
+                    "movie_title0": "Dead Poets Society"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "What year was the movie \" movie_title0 \" produced",
+                "variables": {
+                    "movie_title0": "The Imitation Game"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.RELEASE_YEAR FROM MOVIE AS MOVIEalias0 WHERE MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "The Imitation Game",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "What year was \" actor_name0 \" born ?",
+                "variables": {
+                    "actor_name0": "Ellen Page"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "In what year was \" actor_name0 \" born",
+                "variables": {
+                    "actor_name0": "Benedict Cumberbatch"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.BIRTH_YEAR FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.NAME = \"actor_name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Benedict Cumberbatch",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "What is the nationality of the actress \" actor_name0 \" ?",
+                "variables": {
+                    "actor_name0": "Ellen Page"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "What is the nationality of the actor \" actor_name0 \" ?",
+                "variables": {
+                    "actor_name0": "Christoph Waltz"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NATIONALITY FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.NAME = \"actor_name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Christoph Waltz",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "Find all movies produced in movie_release_year0",
+                "variables": {
+                    "movie_release_year0": "2015"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM MOVIE AS MOVIEalias0 WHERE MOVIEalias0.RELEASE_YEAR = movie_release_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "2015",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "Find all actors born in \" actor_birth_city0 \"",
+                "variables": {
+                    "actor_birth_city0": "Los Angeles"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "Find all actors born in actor_birth_city0",
+                "variables": {
+                    "actor_birth_city0": "Milan"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "Which actors were born in actor_birth_city0",
+                "variables": {
+                    "actor_birth_city0": "Tehran"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.BIRTH_CITY = \"actor_birth_city0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Tehran",
+                "location": "both",
+                "name": "actor_birth_city0",
+                "type": "actor_birth_city"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "Find all actors who are from actor_nationality0",
+                "variables": {
+                    "actor_nationality0": "Canada"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "Find all actors from actor_nationality0",
+                "variables": {
+                    "actor_nationality0": "Italy"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "Give me the name of all the actors from actor_nationality0",
+                "variables": {
+                    "actor_nationality0": "Afghanistan"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.NATIONALITY = \"actor_nationality0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Afghanistan",
+                "location": "both",
+                "name": "actor_nationality0",
+                "type": "actor_nationality"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "Find all actors who were born in actor_birth_year0",
+                "variables": {
+                    "actor_birth_year0": "1984"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.BIRTH_YEAR = actor_birth_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "1984",
+                "location": "both",
+                "name": "actor_birth_year0",
+                "type": "actor_birth_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "When was \" writer_name0 \" born ?",
+                "variables": {
+                    "writer_name0": "Kevin Spacey"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "In what year was \" writer_name0 \" born ?",
+                "variables": {
+                    "writer_name0": "Kevin Spacey"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT WRITERalias0.BIRTH_YEAR FROM WRITER AS WRITERalias0 WHERE WRITERalias0.NAME = \"writer_name0\" ;",
+            "SELECT ACTORalias0.BIRTH_YEAR FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.NAME = \"actor_name0\" ;",
+            "SELECT DIRECTORalias0.BIRTH_YEAR FROM DIRECTOR AS DIRECTORalias0 WHERE DIRECTORalias0.NAME = \"director_name0\" ;",
+            "SELECT PRODUCERalias0.BIRTH_YEAR FROM PRODUCER AS PRODUCERalias0 WHERE PRODUCERalias0.NAME = \"producer_name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Kevin Spacey",
+                "location": "both",
+                "name": "writer_name0",
+                "type": "writer_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "Where is the birth place of \" writer_name0 \"",
+                "variables": {
+                    "writer_name0": "Kevin Spacey"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "In what city was \" writer_name0 \" born ?",
+                "variables": {
+                    "writer_name0": "Kevin Spacey"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT WRITERalias0.BIRTH_CITY FROM WRITER AS WRITERalias0 WHERE WRITERalias0.NAME = \"writer_name0\" ;",
+            "SELECT DIRECTORalias0.BIRTH_CITY FROM DIRECTOR AS DIRECTORalias0 WHERE DIRECTORalias0.NAME = \"director_name0\" ;",
+            "SELECT PRODUCERalias0.BIRTH_CITY FROM PRODUCER AS PRODUCERalias0 WHERE PRODUCERalias0.NAME = \"producer_name0\" ;",
+            "SELECT ACTORalias0.BIRTH_CITY FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.NAME = \"actor_name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Kevin Spacey",
+                "location": "both",
+                "name": "writer_name0",
+                "type": "writer_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "What is the nationality of \" writer_name0 \" ?",
+                "variables": {
+                    "writer_name0": "Kevin Spacey"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT WRITERalias0.NATIONALITY FROM WRITER AS WRITERalias0 WHERE WRITERalias0.NAME = \"writer_name0\" ;",
+            "SELECT DIRECTORalias0.NATIONALITY FROM DIRECTOR AS DIRECTORalias0 WHERE DIRECTORalias0.NAME = \"director_name0\" ;",
+            "SELECT PRODUCERalias0.NATIONALITY FROM PRODUCER AS PRODUCERalias0 WHERE PRODUCERalias0.NAME = \"producer_name0\" ;",
+            "SELECT ACTORalias0.NATIONALITY FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.NAME = \"actor_name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Kevin Spacey",
+                "location": "both",
+                "name": "writer_name0",
+                "type": "writer_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 1,
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "How much was the budget of \" movie_title0 \"",
+                "variables": {
+                    "movie_title0": "Finding Nemo"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.BUDGET FROM MOVIE AS MOVIEalias0 WHERE MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Finding Nemo",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "Find all movies directed by \" director_name0 \" after movie_release_year0",
+                "variables": {
+                    "director_name0": "Steven Spielberg",
+                    "movie_release_year0": "2006"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND MOVIEalias0.RELEASE_YEAR > movie_release_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "Steven Spielberg",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            },
+            {
+                "example": "2006",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "Who is the director of the movie \" movie_title0 \" ?",
+                "variables": {
+                    "movie_title0": "Catch Me If You Can"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "Who directed the movie \" movie_title0 \" ?",
+                "variables": {
+                    "movie_title0": "Inglourious Basterds"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "List \" movie_title0 \" directors",
+                "variables": {
+                    "movie_title0": "James Bond"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.NAME FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "James Bond",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "Find the actor who played \" cast_role0 \" in the movie \" movie_title0 \"",
+                "variables": {
+                    "cast_role0": "Captain Miller",
+                    "movie_title0": "Saving Private Ryan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "Who acted \" cast_role0 \" in the movie \" movie_title0 \" ?",
+                "variables": {
+                    "cast_role0": "John Nash",
+                    "movie_title0": "A Beautiful Mind"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "Who was the actor that played \" cast_role0 \" in the movie \" movie_title0 \" ?",
+                "variables": {
+                    "cast_role0": "Vinny Gambini",
+                    "movie_title0": "My Cousin Vinny"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "Who acts as \" cast_role0 \" in the movie \" movie_title0 \" ?",
+                "variables": {
+                    "cast_role0": "Alan Turing",
+                    "movie_title0": "The Imitation Game"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "Who is the actor playing \" cast_role0 \" in \" movie_title0 \" ?",
+                "variables": {
+                    "cast_role0": "Alan Turing",
+                    "movie_title0": "The Imitation Game"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE CASTalias0.AID = ACTORalias0.AID AND CASTalias0.ROLE = \"cast_role0\" AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Alan Turing",
+                "location": "both",
+                "name": "cast_role0",
+                "type": "cast_role"
+            },
+            {
+                "example": "The Imitation Game",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "3",
+                "text": "What is the genre of the movie \" movie_title0 \" ?",
+                "variables": {
+                    "movie_title0": "Jurassic Park"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT GENREalias0.GENRE FROM CLASSIFICATION AS CLASSIFICATIONalias0 , GENRE AS GENREalias0 , MOVIE AS MOVIEalias0 WHERE GENREalias0.GID = CLASSIFICATIONalias0.GID AND MOVIEalias0.MID = CLASSIFICATIONalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Jurassic Park",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "Who was the director of the movie movie_title0 from movie_release_year0 ?",
+                "variables": {
+                    "movie_release_year0": "2015",
+                    "movie_title0": "Joy"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.NAME FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND MOVIEalias0.RELEASE_YEAR = movie_release_year0 AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "2015",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            },
+            {
+                "example": "Joy",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "Find all movies written by \" writer_name0 \"",
+                "variables": {
+                    "writer_name0": "Matt Damon"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM MOVIE AS MOVIEalias0 , WRITER AS WRITERalias0 , WRITTEN_BY AS WRITTEN_BYalias0 WHERE WRITERalias0.NAME = \"writer_name0\" AND WRITTEN_BYalias0.MSID = MOVIEalias0.MID AND WRITTEN_BYalias0.WID = WRITERalias0.WID ;"
+        ],
+        "variables": [
+            {
+                "example": "Matt Damon",
+                "location": "both",
+                "name": "writer_name0",
+                "type": "writer_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "Find all movies written and produced by \" producer_name0 \"",
+                "variables": {
+                    "producer_name0": "Woody Allen"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM MADE_BY AS MADE_BYalias0 , MOVIE AS MOVIEalias0 , PRODUCER AS PRODUCERalias0 , WRITER AS WRITERalias0 , WRITTEN_BY AS WRITTEN_BYalias0 WHERE MOVIEalias0.MID = MADE_BYalias0.MSID AND PRODUCERalias0.NAME = \"producer_name0\" AND PRODUCERalias0.PID = MADE_BYalias0.PID AND WRITERalias0.NAME = \"producer_name0\" AND WRITTEN_BYalias0.MSID = MOVIEalias0.MID AND WRITTEN_BYalias0.WID = WRITERalias0.WID ;"
+        ],
+        "variables": [
+            {
+                "example": "Woody Allen",
+                "location": "both",
+                "name": "producer_name0",
+                "type": "producer_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "3",
+                "text": "Find all movies featuring \" actor_name0 \"",
+                "variables": {
+                    "actor_name0": "Kate Winslet"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "Find all movies featuring \" actor_name0 \"",
+                "variables": {
+                    "actor_name0": "Benedict Cumberbatch"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "What are all the movies featuring \" actor_name0 \" ?",
+                "variables": {
+                    "actor_name0": "Kerry Washington"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "Find all movies featuring \" actor_name0 \"",
+                "variables": {
+                    "actor_name0": "Kevin Spacey"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "Find all movies in which \" actor_name0 \" appears",
+                "variables": {
+                    "actor_name0": "Robin Wright"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Robin Wright",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "What was the budget of the movie movie_title0 from movie_release_year0 ?",
+                "variables": {
+                    "movie_release_year0": "2007",
+                    "movie_title0": "Juno"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.BUDGET FROM MOVIE AS MOVIEalias0 WHERE MOVIEalias0.RELEASE_YEAR = movie_release_year0 AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "2007",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            },
+            {
+                "example": "Juno",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "Find all genre_genre0 produced in year movie_release_year0",
+                "variables": {
+                    "genre_genre0": "comedies",
+                    "movie_release_year0": "2015"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "List all the genre_genre0 movies which released in movie_release_year0",
+                "variables": {
+                    "genre_genre0": "Sci-Fi",
+                    "movie_release_year0": "2010"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM CLASSIFICATION AS CLASSIFICATIONalias0 , GENRE AS GENREalias0 , MOVIE AS MOVIEalias0 WHERE GENREalias0.GENRE = \"genre_genre0\" AND GENREalias0.GID = CLASSIFICATIONalias0.GID AND MOVIEalias0.MID = CLASSIFICATIONalias0.MSID AND MOVIEalias0.RELEASE_YEAR = movie_release_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "Sci-Fi",
+                "location": "both",
+                "name": "genre_genre0",
+                "type": "genre_genre"
+            },
+            {
+                "example": "2010",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "Find all actors born in \" actor_birth_city0 \" after actor_birth_year0",
+                "variables": {
+                    "actor_birth_city0": "Los Angeles",
+                    "actor_birth_year0": "1980"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "Who are the actors born in \" actor_birth_city0 \" after actor_birth_year0 ?",
+                "variables": {
+                    "actor_birth_city0": "New York City",
+                    "actor_birth_year0": "1990"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "Find all actors from actor_birth_city0 born after actor_birth_year0",
+                "variables": {
+                    "actor_birth_city0": "Austin",
+                    "actor_birth_year0": "1980"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.BIRTH_CITY = \"actor_birth_city0\" AND ACTORalias0.BIRTH_YEAR > actor_birth_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "Austin",
+                "location": "both",
+                "name": "actor_birth_city0",
+                "type": "actor_birth_city"
+            },
+            {
+                "example": "1980",
+                "location": "both",
+                "name": "actor_birth_year0",
+                "type": "actor_birth_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "Find all movies by directors born in \" director_birth_city0 \"",
+                "variables": {
+                    "director_birth_city0": "Los Angeles"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.BIRTH_CITY = \"director_birth_city0\" AND DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Los Angeles",
+                "location": "both",
+                "name": "director_birth_city0",
+                "type": "director_birth_city"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "What company produced the movie \" movie_title0 \" ?",
+                "variables": {
+                    "movie_title0": "Juno"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COMPANYalias0.NAME FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , MOVIE AS MOVIEalias0 WHERE COPYRIGHTalias0.CID = COMPANYalias0.ID AND MOVIEalias0.MID = COPYRIGHTalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Juno",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "Find all movies that were produced by company_name0",
+                "variables": {
+                    "company_name0": "Netflix"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "Find all movies produced by company_name0",
+                "variables": {
+                    "company_name0": "Netflix"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , MOVIE AS MOVIEalias0 WHERE COMPANYalias0.NAME = \"company_name0\" AND COPYRIGHTalias0.CID = COMPANYalias0.ID AND MOVIEalias0.MID = COPYRIGHTalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Netflix",
+                "location": "both",
+                "name": "company_name0",
+                "type": "company_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "Find all actors who were born in \" actor_birth_city0 \" in actor_birth_year0",
+                "variables": {
+                    "actor_birth_city0": "New York City",
+                    "actor_birth_year0": "1984"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.BIRTH_CITY = \"actor_birth_city0\" AND ACTORalias0.BIRTH_YEAR = actor_birth_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "New York City",
+                "location": "both",
+                "name": "actor_birth_city0",
+                "type": "actor_birth_city"
+            },
+            {
+                "example": "1984",
+                "location": "both",
+                "name": "actor_birth_year0",
+                "type": "actor_birth_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "Find all movies about keyword_keyword0",
+                "variables": {
+                    "keyword_keyword0": "Persians"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "Find all movies about keyword_keyword0",
+                "variables": {
+                    "keyword_keyword0": "Autism"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "Find all movies about keyword_keyword0",
+                "variables": {
+                    "keyword_keyword0": "Iraq war"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "What are the movies related to keyword_keyword0",
+                "variables": {
+                    "keyword_keyword0": "nuclear weapons"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE KEYWORDalias0.KEYWORD = \"keyword_keyword0\" AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
+        ],
+        "variables": [
+            {
+                "example": "nuclear weapons",
+                "location": "both",
+                "name": "keyword_keyword0",
+                "type": "keyword_keyword"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "Find all movies produced by \" producer_name0 \" after movie_release_year0",
+                "variables": {
+                    "movie_release_year0": "2010",
+                    "producer_name0": "Walt Disney"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , MOVIE AS MOVIEalias0 WHERE COMPANYalias0.NAME = \"company_name0\" AND COPYRIGHTalias0.CID = COMPANYalias0.ID AND MOVIEalias0.MID = COPYRIGHTalias0.MSID AND MOVIEalias0.RELEASE_YEAR > movie_release_year0 ;",
+            "SELECT MOVIEalias0.TITLE FROM MADE_BY AS MADE_BYalias0 , MOVIE AS MOVIEalias0 , PRODUCER AS PRODUCERalias0 WHERE MOVIEalias0.MID = MADE_BYalias0.MSID AND MOVIEalias0.RELEASE_YEAR > movie_release_year0 AND PRODUCERalias0.NAME = \"producer_name0\" AND PRODUCERalias0.PID = MADE_BYalias0.PID ;"
+        ],
+        "variables": [
+            {
+                "example": "2010",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            },
+            {
+                "example": "Walt Disney",
+                "location": "both",
+                "name": "producer_name0",
+                "type": "producer_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "Which movies did \" director_name0 \" direct ?",
+                "variables": {
+                    "director_name0": "Alfred Hitchcock"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Alfred Hitchcock",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "Find all movies directed by \" director_name0 \" and featuring \" actor_name0 \"",
+                "variables": {
+                    "actor_name0": "Scarlett Johansson",
+                    "director_name0": "Woody Allen"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "What are all the movies directed by \" director_name0 \" featuring \" actor_name0 \" ?",
+                "variables": {
+                    "actor_name0": "Christoph Waltz",
+                    "director_name0": "Quentin Tarantino"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "How many movies are there that are directed by \" director_name0 \" and featuring \" actor_name0 \" ?",
+                "variables": {
+                    "actor_name0": "Matt Damon",
+                    "director_name0": "Steven Spielberg"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "List all the movies directed by \" director_name0 \" in which \" actor_name0 \" played",
+                "variables": {
+                    "actor_name0": "Taraneh Alidoosti",
+                    "director_name0": "Asghar Farhadi"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Taraneh Alidoosti",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            },
+            {
+                "example": "Asghar Farhadi",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "What are all the tv series created by \" producer_name0 \" ?",
+                "variables": {
+                    "producer_name0": "Shonda Rhimes"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT TV_SERIESalias0.TITLE FROM MADE_BY AS MADE_BYalias0 , PRODUCER AS PRODUCERalias0 , TV_SERIES AS TV_SERIESalias0 WHERE PRODUCERalias0.NAME = \"producer_name0\" AND PRODUCERalias0.PID = MADE_BYalias0.PID AND TV_SERIESalias0.SID = MADE_BYalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Shonda Rhimes",
+                "location": "both",
+                "name": "producer_name0",
+                "type": "producer_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "Who acts \" cast_role0 \" in the series tv_series_title0 ?",
+                "variables": {
+                    "cast_role0": "Olivia Pope",
+                    "tv_series_title0": "Scandal"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , TV_SERIES AS TV_SERIESalias0 WHERE CASTalias0.AID = ACTORalias0.AID AND CASTalias0.ROLE = \"cast_role0\" AND TV_SERIESalias0.SID = CASTalias0.MSID AND TV_SERIESalias0.TITLE = \"tv_series_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Olivia Pope",
+                "location": "both",
+                "name": "cast_role0",
+                "type": "cast_role"
+            },
+            {
+                "example": "Scandal",
+                "location": "both",
+                "name": "tv_series_title0",
+                "type": "tv_series_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "Who is the writer of the movie \" movie_title0 \"",
+                "variables": {
+                    "movie_title0": "Django Unchained"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "Who is the writer of \" movie_title0 \"",
+                "variables": {
+                    "movie_title0": "The Truman Show"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT WRITERalias0.NAME FROM MOVIE AS MOVIEalias0 , WRITER AS WRITERalias0 , WRITTEN_BY AS WRITTEN_BYalias0 WHERE MOVIEalias0.TITLE = \"movie_title0\" AND WRITTEN_BYalias0.MSID = MOVIEalias0.MID AND WRITTEN_BYalias0.WID = WRITERalias0.WID ;"
+        ],
+        "variables": [
+            {
+                "example": "The Truman Show",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "What are the series featuring \" actor_name0 \" ?",
+                "variables": {
+                    "actor_name0": "Kerry Washington"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "What are the series in which \" actor_name0 \" is an actor ?",
+                "variables": {
+                    "actor_name0": "Scott Foley"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT TV_SERIESalias0.TITLE FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , TV_SERIES AS TV_SERIESalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND TV_SERIESalias0.SID = CASTalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Scott Foley",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "3",
+                "text": "Find the directors of all movies featuring \" actor_name0 \"",
+                "variables": {
+                    "actor_name0": "Kate Winslet"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Kate Winslet",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "Find the producers of all movies in which \" actor_name0 \" is an actor",
+                "variables": {
+                    "actor_name0": "Kate Winslet"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT PRODUCERalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MADE_BY AS MADE_BYalias0 , MOVIE AS MOVIEalias0 , PRODUCER AS PRODUCERalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.MID = MADE_BYalias0.MSID AND PRODUCERalias0.PID = MADE_BYalias0.PID ;"
+        ],
+        "variables": [
+            {
+                "example": "Kate Winslet",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "What company produced the series tv_series_title0 ?",
+                "variables": {
+                    "tv_series_title0": "Scandal"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "which company funded the \" tv_series_title0 \" series",
+                "variables": {
+                    "tv_series_title0": "Mickey Mouse"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COMPANYalias0.NAME FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , TV_SERIES AS TV_SERIESalias0 WHERE COPYRIGHTalias0.CID = COMPANYalias0.ID AND TV_SERIESalias0.SID = COPYRIGHTalias0.MSID AND TV_SERIESalias0.TITLE = \"tv_series_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Mickey Mouse",
+                "location": "both",
+                "name": "tv_series_title0",
+                "type": "tv_series_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "Find all tv series produced by company_name0",
+                "variables": {
+                    "company_name0": "Netflix"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT TV_SERIESalias0.TITLE FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , TV_SERIES AS TV_SERIESalias0 WHERE COMPANYalias0.NAME = \"company_name0\" AND COPYRIGHTalias0.CID = COMPANYalias0.ID AND TV_SERIESalias0.SID = COPYRIGHTalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Netflix",
+                "location": "both",
+                "name": "company_name0",
+                "type": "company_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "Who is the director of the series \" tv_series_title0 \" produced by company_name0 ?",
+                "variables": {
+                    "company_name0": "Netflix",
+                    "tv_series_title0": "House of Cards"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.NAME FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , TV_SERIES AS TV_SERIESalias0 WHERE COMPANYalias0.NAME = \"company_name0\" AND COPYRIGHTalias0.CID = COMPANYalias0.ID AND DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND TV_SERIESalias0.SID = COPYRIGHTalias0.MSID AND TV_SERIESalias0.SID = DIRECTED_BYalias0.MSID AND TV_SERIESalias0.TITLE = \"tv_series_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Netflix",
+                "location": "both",
+                "name": "company_name0",
+                "type": "company_name"
+            },
+            {
+                "example": "House of Cards",
+                "location": "both",
+                "name": "tv_series_title0",
+                "type": "tv_series_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "Who is the director of the tv series \" tv_series_title0 \" from tv_series_release_year0 ?",
+                "variables": {
+                    "tv_series_release_year0": "2013",
+                    "tv_series_title0": "House of Cards"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.NAME FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , TV_SERIES AS TV_SERIESalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND TV_SERIESalias0.RELEASE_YEAR = tv_series_release_year0 AND TV_SERIESalias0.SID = DIRECTED_BYalias0.MSID AND TV_SERIESalias0.TITLE = \"tv_series_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "2013",
+                "location": "both",
+                "name": "tv_series_release_year0",
+                "type": "tv_series_release_year"
+            },
+            {
+                "example": "House of Cards",
+                "location": "both",
+                "name": "tv_series_title0",
+                "type": "tv_series_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "Find all the actor_gender0 actors from actor_birth_city0",
+                "variables": {
+                    "actor_birth_city0": "Austin",
+                    "actor_gender0": "female"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.BIRTH_CITY = \"actor_birth_city0\" AND ACTORalias0.GENDER = \"actor_gender0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Austin",
+                "location": "both",
+                "name": "actor_birth_city0",
+                "type": "actor_birth_city"
+            },
+            {
+                "example": "female",
+                "location": "both",
+                "name": "actor_gender0",
+                "type": "actor_gender"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "Find all actors from actor_nationality0 born after actor_birth_year0",
+                "variables": {
+                    "actor_birth_year0": "1980",
+                    "actor_nationality0": "Italy"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.BIRTH_YEAR > actor_birth_year0 AND ACTORalias0.NATIONALITY = \"actor_nationality0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "1980",
+                "location": "both",
+                "name": "actor_birth_year0",
+                "type": "actor_birth_year"
+            },
+            {
+                "example": "Italy",
+                "location": "both",
+                "name": "actor_nationality0",
+                "type": "actor_nationality"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "Find all the actor_gender0 actors born in \" actor_birth_city0 \" after actor_birth_year0",
+                "variables": {
+                    "actor_birth_city0": "New York City",
+                    "actor_birth_year0": "1980",
+                    "actor_gender0": "female"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.BIRTH_CITY = \"actor_birth_city0\" AND ACTORalias0.BIRTH_YEAR > actor_birth_year0 AND ACTORalias0.GENDER = \"actor_gender0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "New York City",
+                "location": "both",
+                "name": "actor_birth_city0",
+                "type": "actor_birth_city"
+            },
+            {
+                "example": "1980",
+                "location": "both",
+                "name": "actor_birth_year0",
+                "type": "actor_birth_year"
+            },
+            {
+                "example": "female",
+                "location": "both",
+                "name": "actor_gender0",
+                "type": "actor_gender"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "Find all the actor_gender0 actors in the movie \" movie_title0 \"",
+                "variables": {
+                    "actor_gender0": "female",
+                    "movie_title0": "Saving Private Ryan"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.GENDER = \"actor_gender0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "female",
+                "location": "both",
+                "name": "actor_gender0",
+                "type": "actor_gender"
+            },
+            {
+                "example": "Saving Private Ryan",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "Find all the directors who are from director_nationality0",
+                "variables": {
+                    "director_nationality0": "Afghanistan"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.NAME FROM DIRECTOR AS DIRECTORalias0 WHERE DIRECTORalias0.NATIONALITY = \"director_nationality0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Afghanistan",
+                "location": "both",
+                "name": "director_nationality0",
+                "type": "director_nationality"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "Find the actors who played in the movie \" movie_title0 \"",
+                "variables": {
+                    "movie_title0": "Camp X-Ray"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Camp X-Ray",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "Find all actors from actor_nationality0 who acted in \" movie_title0 \" movies",
+                "variables": {
+                    "actor_nationality0": "Canada",
+                    "movie_title0": "James Bond"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NATIONALITY = \"actor_nationality0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Canada",
+                "location": "both",
+                "name": "actor_nationality0",
+                "type": "actor_nationality"
+            },
+            {
+                "example": "James Bond",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "find all films in which \" actor_name0 \" acted as \" cast_role0 \"",
+                "variables": {
+                    "actor_name0": "Rowan Atkinson",
+                    "cast_role0": "Mr. Bean"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND CASTalias0.ROLE = \"cast_role0\" AND MOVIEalias0.MID = CASTalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Rowan Atkinson",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            },
+            {
+                "example": "Mr. Bean",
+                "location": "both",
+                "name": "cast_role0",
+                "type": "cast_role"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "where is the director of \" movie_title0 \" from",
+                "variables": {
+                    "movie_title0": "The Past"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.BIRTH_CITY FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "The Past",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "who acted the role of \" cast_role0 \"",
+                "variables": {
+                    "cast_role0": "Mr. Bean"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 WHERE CASTalias0.AID = ACTORalias0.AID AND CASTalias0.ROLE = \"cast_role0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Mr. Bean",
+                "location": "both",
+                "name": "cast_role0",
+                "type": "cast_role"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "what are the genres of movies directed by \" director_name0 \"",
+                "variables": {
+                    "director_name0": "Asghar Farhadi"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT GENREalias0.GENRE FROM CLASSIFICATION AS CLASSIFICATIONalias0 , DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , GENRE AS GENREalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND GENREalias0.GID = CLASSIFICATIONalias0.GID AND MOVIEalias0.MID = CLASSIFICATIONalias0.MSID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Asghar Farhadi",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "Which movie had the character \" cast_role0 \"",
+                "variables": {
+                    "cast_role0": "Daffy Duck"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE CASTalias0.ROLE = \"cast_role0\" AND MOVIEalias0.MID = CASTalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Daffy Duck",
+                "location": "both",
+                "name": "cast_role0",
+                "type": "cast_role"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "What are the major roles in the movie \" movie_title0 \"",
+                "variables": {
+                    "movie_title0": "Daddy Long Legs"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT CASTalias0.ROLE FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Daddy Long Legs",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "List all director_gender0 directors who worked with the \" company_name0 \" company",
+                "variables": {
+                    "company_name0": "NBCUniversal",
+                    "director_gender0": "male"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.NAME FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE COMPANYalias0.NAME = \"company_name0\" AND COPYRIGHTalias0.CID = COMPANYalias0.ID AND DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.GENDER = \"director_gender0\" AND MOVIEalias0.MID = COPYRIGHTalias0.MSID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "NBCUniversal",
+                "location": "both",
+                "name": "company_name0",
+                "type": "company_name"
+            },
+            {
+                "example": "male",
+                "location": "both",
+                "name": "director_gender0",
+                "type": "director_gender"
+            }
+        ]
+    },
+    {
+        "difficulty": 2,
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "List all the directors of movies about keyword_keyword0",
+                "variables": {
+                    "keyword_keyword0": "nuclear weapons"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.NAME FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND KEYWORDalias0.KEYWORD = \"keyword_keyword0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
+        ],
+        "variables": [
+            {
+                "example": "nuclear weapons",
+                "location": "both",
+                "name": "keyword_keyword0",
+                "type": "keyword_keyword"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "What is the number of movies in which \" actor_name0 \" acted after movie_release_year0 ?",
+                "variables": {
+                    "actor_name0": "Jennifer Aniston",
+                    "movie_release_year0": "2010"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.RELEASE_YEAR > movie_release_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "Jennifer Aniston",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            },
+            {
+                "example": "2010",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "What is the number of actors in the movie \" movie_title0 \" ?",
+                "variables": {
+                    "movie_title0": "Grumpier Old Men"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "How many actors are in the movie \" movie_title0 \" ?",
+                "variables": {
+                    "movie_title0": "Saving Private Ryan"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( ACTORalias0.NAME ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Saving Private Ryan",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "How many movies did \" director_name0 \" direct ?",
+                "variables": {
+                    "director_name0": "Alfred Hitchcock"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "How many movies did \" director_name0 \" direct ?",
+                "variables": {
+                    "director_name0": "Matt Damon"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "How many movies did \" director_name0 \" direct ?",
+                "variables": {
+                    "director_name0": "Steven Spielberg"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Steven Spielberg",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "How many movies were produced in the year movie_release_year0 ?",
+                "variables": {
+                    "movie_release_year0": "2012"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "What is the number of movies produced in movie_release_year0 ?",
+                "variables": {
+                    "movie_release_year0": "2013"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM MOVIE AS MOVIEalias0 WHERE MOVIEalias0.RELEASE_YEAR = movie_release_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "2013",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "What is the number of movies directed by \" director_name0 \" per year ?",
+                "variables": {
+                    "director_name0": "Woody Allen"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) , MOVIEalias0.RELEASE_YEAR FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID GROUP BY MOVIEalias0.RELEASE_YEAR ;"
+        ],
+        "variables": [
+            {
+                "example": "Woody Allen",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "How many movies did \" actor_name0 \" act in ?",
+                "variables": {
+                    "actor_name0": "Ronald Reagan"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "What is the number of movies in which \" actor_name0 \" acted ?",
+                "variables": {
+                    "actor_name0": "Tom Cruise"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "What is the number of movies featuring \" actor_name0 \" ?",
+                "variables": {
+                    "actor_name0": "Brad Pitt"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "How many movies did \" actor_name0 \" act in",
+                "variables": {
+                    "actor_name0": "Shahab Hosseini"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Shahab Hosseini",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "How many actors were born in \" actor_birth_city0 \" after actor_birth_year0 ?",
+                "variables": {
+                    "actor_birth_city0": "Los Angeles",
+                    "actor_birth_year0": "2000"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( ACTORalias0.NAME ) ) FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.BIRTH_CITY = \"actor_birth_city0\" AND ACTORalias0.BIRTH_YEAR > actor_birth_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "Los Angeles",
+                "location": "both",
+                "name": "actor_birth_city0",
+                "type": "actor_birth_city"
+            },
+            {
+                "example": "2000",
+                "location": "both",
+                "name": "actor_birth_year0",
+                "type": "actor_birth_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "How many movies did \" actor_name0 \" act in before movie_release_year0 ?",
+                "variables": {
+                    "actor_name0": "Humphrey Bogart",
+                    "movie_release_year0": "1942"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.RELEASE_YEAR < movie_release_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "Humphrey Bogart",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            },
+            {
+                "example": "1942",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "What is the number of movies that \" actor_name0 \" acts in per year ?",
+                "variables": {
+                    "actor_name0": "Brad Pitt"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) , MOVIEalias0.RELEASE_YEAR FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID GROUP BY MOVIEalias0.RELEASE_YEAR ;"
+        ],
+        "variables": [
+            {
+                "example": "Brad Pitt",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "3",
+                "text": "How many movies about keyword_keyword0 were produced in movie_release_year0 ?",
+                "variables": {
+                    "keyword_keyword0": "Iraq war",
+                    "movie_release_year0": "2015"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE KEYWORDalias0.KEYWORD = \"keyword_keyword0\" AND MOVIEalias0.RELEASE_YEAR = movie_release_year0 AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
+        ],
+        "variables": [
+            {
+                "example": "Iraq war",
+                "location": "both",
+                "name": "keyword_keyword0",
+                "type": "keyword_keyword"
+            },
+            {
+                "example": "2015",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "How many movies about keyword_keyword0 were released after movie_release_year0 ?",
+                "variables": {
+                    "keyword_keyword0": "Persians",
+                    "movie_release_year0": "1990"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE KEYWORDalias0.KEYWORD = \"keyword_keyword0\" AND MOVIEalias0.RELEASE_YEAR > movie_release_year0 AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
+        ],
+        "variables": [
+            {
+                "example": "Persians",
+                "location": "both",
+                "name": "keyword_keyword0",
+                "type": "keyword_keyword"
+            },
+            {
+                "example": "1990",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "How many movies did \" director_name0 \" direct after movie_release_year0 ?",
+                "variables": {
+                    "director_name0": "Quentin Tarantino",
+                    "movie_release_year0": "2010"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND MOVIEalias0.RELEASE_YEAR > movie_release_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "Quentin Tarantino",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            },
+            {
+                "example": "2010",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "How many movies did \" director_name0 \" direct before movie_release_year0 ?",
+                "variables": {
+                    "director_name0": "Quentin Tarantino",
+                    "movie_release_year0": "2010"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND MOVIEalias0.RELEASE_YEAR < movie_release_year0 ;"
+        ],
+        "variables": [
+            {
+                "example": "Quentin Tarantino",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            },
+            {
+                "example": "2010",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "How many movies did \" director_name0 \" direct before movie_release_year1 and after movie_release_year0 ?",
+                "variables": {
+                    "director_name0": "Quentin Tarantino",
+                    "movie_release_year0": "2010",
+                    "movie_release_year1": "2002"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MADE_BY AS MADE_BYalias0 , MOVIE AS MOVIEalias0 , PRODUCER AS PRODUCERalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND MOVIEalias0.MID = MADE_BYalias0.MSID AND MOVIEalias0.RELEASE_YEAR < movie_release_year0 AND MOVIEalias0.RELEASE_YEAR > movie_release_year1 AND PRODUCERalias0.PID = MADE_BYalias0.PID ;"
+        ],
+        "variables": [
+            {
+                "example": "Quentin Tarantino",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            },
+            {
+                "example": "2010",
+                "location": "both",
+                "name": "movie_release_year0",
+                "type": "movie_release_year"
+            },
+            {
+                "example": "2002",
+                "location": "both",
+                "name": "movie_release_year1",
+                "type": "movie_release_year"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "How many movies did company_name0 produce ?",
+                "variables": {
+                    "company_name0": "Netflix"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , MOVIE AS MOVIEalias0 WHERE COMPANYalias0.NAME = \"company_name0\" AND COPYRIGHTalias0.CID = COMPANYalias0.ID AND MOVIEalias0.MID = COPYRIGHTalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Netflix",
+                "location": "both",
+                "name": "company_name0",
+                "type": "company_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "3",
+                "text": "How many actor_gender0 actors were born in \" actor_birth_city0 \" after actor_birth_year0 ?",
+                "variables": {
+                    "actor_birth_city0": "New York City",
+                    "actor_birth_year0": "1980",
+                    "actor_gender0": "female"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( ACTORalias0.NAME ) ) FROM ACTOR AS ACTORalias0 WHERE ACTORalias0.BIRTH_CITY = \"actor_birth_city0\" AND ACTORalias0.BIRTH_YEAR > actor_birth_year0 AND ACTORalias0.GENDER = \"actor_gender0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "New York City",
+                "location": "both",
+                "name": "actor_birth_city0",
+                "type": "actor_birth_city"
+            },
+            {
+                "example": "1980",
+                "location": "both",
+                "name": "actor_birth_year0",
+                "type": "actor_birth_year"
+            },
+            {
+                "example": "female",
+                "location": "both",
+                "name": "actor_gender0",
+                "type": "actor_gender"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "find the number of actors from actor_nationality0 who played in \" director_name0 \" movies",
+                "variables": {
+                    "actor_nationality0": "Iran",
+                    "director_name0": "Jim Jarmusch"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( ACTORalias0.NAME ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NATIONALITY = \"actor_nationality0\" AND CASTalias0.AID = ACTORalias0.AID AND DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Iran",
+                "location": "both",
+                "name": "actor_nationality0",
+                "type": "actor_nationality"
+            },
+            {
+                "example": "Jim Jarmusch",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "How many companies participated in producing \" movie_title0 \"",
+                "variables": {
+                    "movie_title0": "Camp X-Ray"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( COMPANYalias0.NAME ) ) FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , MOVIE AS MOVIEalias0 WHERE COPYRIGHTalias0.CID = COMPANYalias0.ID AND MOVIEalias0.MID = COPYRIGHTalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "Camp X-Ray",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "How many actors from actor_nationality0 have acted in \" movie_title0 \"",
+                "variables": {
+                    "actor_nationality0": "China",
+                    "movie_title0": "Rush Hour 3"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( ACTORalias0.NAME ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NATIONALITY = \"actor_nationality0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "China",
+                "location": "both",
+                "name": "actor_nationality0",
+                "type": "actor_nationality"
+            },
+            {
+                "example": "Rush Hour 3",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 3,
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "Find the number of companies which worked with \" actor_name0 \"",
+                "variables": {
+                    "actor_name0": "Gabriele Ferzetti"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( DISTINCT ( COMPANYalias0.NAME ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND COPYRIGHTalias0.CID = COMPANYalias0.ID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.MID = COPYRIGHTalias0.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Gabriele Ferzetti",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "Find all movies that star both \" actor_name0 \" and \" actor_name1 \"",
+                "variables": {
+                    "actor_name0": "Angelina Jolie",
+                    "actor_name1": "Brad Pitt"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "Find all movies featuring \" actor_name0 \" and \" actor_name1 \"",
+                "variables": {
+                    "actor_name0": "Benedict Cumberbatch",
+                    "actor_name1": "Keira Knightley"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "Find all movies featuring both \" actor_name0 \" and \" actor_name1 \"",
+                "variables": {
+                    "actor_name0": "Matt Damon",
+                    "actor_name1": "Ben Affleck"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "Find all movies featuring \" actor_name1 \" and \" actor_name0 \"",
+                "variables": {
+                    "actor_name0": "Woody Strode",
+                    "actor_name1": "Jason Robards"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM ACTOR AS ACTORalias0 , ACTOR AS ACTORalias1 , CAST AS CASTalias0 , CAST AS CASTalias1 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND ACTORalias1.NAME = \"actor_name1\" AND CASTalias0.AID = ACTORalias0.AID AND CASTalias1.AID = ACTORalias1.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.MID = CASTalias1.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Woody Strode",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            },
+            {
+                "example": "Jason Robards",
+                "location": "both",
+                "name": "actor_name1",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "Find all actors who acted in the same movie as \" actor_name0 \"",
+                "variables": {
+                    "actor_name0": "Tom Hanks"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , ACTOR AS ACTORalias1 , CAST AS CASTalias0 , CAST AS CASTalias1 , MOVIE AS MOVIEalias0 WHERE ACTORalias1.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND CASTalias1.AID = ACTORalias1.AID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.MID = CASTalias1.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Tom Hanks",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "3",
+                "text": "What movies have the same director as the movie \" movie_title0 \" ?",
+                "variables": {
+                    "movie_title0": "Revolutionary Road"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias1.TITLE FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTED_BY AS DIRECTED_BYalias1 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 , MOVIE AS MOVIEalias1 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.DID = DIRECTED_BYalias1.DID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND MOVIEalias0.TITLE = \"movie_title0\" AND MOVIEalias1.MID = DIRECTED_BYalias1.MSID ;"
+        ],
+        "variables": [
+            {
+                "example": "Revolutionary Road",
+                "location": "both",
+                "name": "movie_title0",
+                "type": "movie_title"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "3",
+                "text": "What is the maximum number of movies in which \" actor_name0 \" act in a given year ?",
+                "variables": {
+                    "actor_name0": "Brad Pitt"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MAX( * ) FROM ( SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID GROUP BY MOVIEalias0.RELEASE_YEAR ) AS DERIVED_TABLEalias0 ;"
+        ],
+        "variables": [
+            {
+                "example": "Brad Pitt",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "Find the actor with most number of films",
+                "variables": {}
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID ORDER BY COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) DESC LIMIT 1 ;"
+        ],
+        "variables": []
+    },
+    {
+        "difficulty": 4,
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "Who acted in the most number of movies directed by \" Jim Jarmusch \"",
+                "variables": {}
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE CASTalias0.AID = ACTORalias0.AID AND DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ORDER BY COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) DESC LIMIT 1 ;"
+        ],
+        "variables": []
+    },
+    {
+        "difficulty": 4,
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "Find the movie which is classified in the most number of genres",
+                "variables": {}
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM CLASSIFICATION AS CLASSIFICATIONalias0 , GENRE AS GENREalias0 , MOVIE AS MOVIEalias0 WHERE GENREalias0.GID = CLASSIFICATIONalias0.GID AND MOVIEalias0.MID = CLASSIFICATIONalias0.MSID GROUP BY MOVIEalias0.TITLE ORDER BY COUNT( DISTINCT ( GENREalias0.GENRE ) ) DESC LIMIT 1 ;"
+        ],
+        "variables": []
+    },
+    {
+        "difficulty": 4,
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "which movie has the most number of actors from actor_nationality0 ?",
+                "variables": {
+                    "actor_nationality0": "China"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NATIONALITY = \"actor_nationality0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID GROUP BY MOVIEalias0.TITLE ORDER BY COUNT( DISTINCT ( ACTORalias0.NAME ) ) DESC LIMIT 1 ;"
+        ],
+        "variables": [
+            {
+                "example": "China",
+                "location": "both",
+                "name": "actor_nationality0",
+                "type": "actor_nationality"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "Find the actors who played in the latest movie by \" director_name0 \"",
+                "variables": {
+                    "director_name0": "Quentin Tarantino"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE CASTalias0.AID = ACTORalias0.AID AND DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = CASTalias0.MSID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ORDER BY MOVIEalias0.RELEASE_YEAR DESC LIMIT 1 ;"
+        ],
+        "variables": [
+            {
+                "example": "Quentin Tarantino",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "Find the name and budget of the latest movie by \" director_name0 \"",
+                "variables": {
+                    "director_name0": "Quentin Tarantino"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.BUDGET , MOVIEalias0.TITLE FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ORDER BY MOVIEalias0.RELEASE_YEAR DESC LIMIT 1 ;"
+        ],
+        "variables": [
+            {
+                "example": "Quentin Tarantino",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "Who is directed the latest movie by \" company_name0 \"",
+                "variables": {
+                    "company_name0": "NBCUniversal"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT DIRECTORalias0.NAME FROM COMPANY AS COMPANYalias0 , COPYRIGHT AS COPYRIGHTalias0 , DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE COMPANYalias0.NAME = \"company_name0\" AND COPYRIGHTalias0.CID = COMPANYalias0.ID AND DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND MOVIEalias0.MID = COPYRIGHTalias0.MSID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ORDER BY MOVIEalias0.RELEASE_YEAR DESC LIMIT 1 ;"
+        ],
+        "variables": [
+            {
+                "example": "NBCUniversal",
+                "location": "both",
+                "name": "company_name0",
+                "type": "company_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "What is the latest movie by \" director_name0 \"",
+                "variables": {
+                    "director_name0": "Jim Jarmusch"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT MOVIEalias0.TITLE FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MOVIE AS MOVIEalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND DIRECTORalias0.NAME = \"director_name0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID ORDER BY MOVIEalias0.RELEASE_YEAR DESC LIMIT 1 ;"
+        ],
+        "variables": [
+            {
+                "example": "Jim Jarmusch",
+                "location": "both",
+                "name": "director_name0",
+                "type": "director_name"
+            }
+        ]
+    },
+    {
+        "difficulty": 4,
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "Which producer has worked with the most number of directors ?",
+                "variables": {}
+            }
+        ],
+        "sql": [
+            "SELECT PRODUCERalias0.NAME FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , MADE_BY AS MADE_BYalias0 , MOVIE AS MOVIEalias0 , PRODUCER AS PRODUCERalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND MOVIEalias0.MID = MADE_BYalias0.MSID AND PRODUCERalias0.PID = MADE_BYalias0.PID GROUP BY PRODUCERalias0.NAME ORDER BY COUNT( DISTINCT ( DIRECTORalias0.NAME ) ) DESC LIMIT 1 ;"
+        ],
+        "variables": []
+    },
+    {
+        "difficulty": 4,
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "Find the latest movie which \" actor_name0 \" acted in",
+                "variables": {
+                    "actor_name0": "Gabriele Ferzetti"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT ACTORalias0.NAME FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID ORDER BY MOVIEalias0.RELEASE_YEAR DESC LIMIT 1 ;"
+        ],
+        "variables": [
+            {
+                "example": "Gabriele Ferzetti",
+                "location": "both",
+                "name": "actor_name0",
+                "type": "actor_name"
+            }
+        ]
+    }
+]

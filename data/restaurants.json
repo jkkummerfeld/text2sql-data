@@ -1,0 +1,3554 @@
+[
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "how many name0 are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "buttercup kitchen"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "how many name0 are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "buttercup kitchen"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "how many name0 are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "buttercup kitchen"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( * ) FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.NAME = \"name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "san francisco",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            },
+            {
+                "example": "buttercup kitchen",
+                "location": "unk",
+                "name": "name0",
+                "type": "name"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "how many food_type0 restaurants are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "how many food_type0 restaurants are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "how many places for food_type0 food are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "how many food_type0 places are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "how many places for food_type0 are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "how many food_type0 restaurants are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "how many food_type0 restaurants are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "how many places for food_type0 food are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "how many food_type0 places are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "how many places for food_type0 are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "how many food_type0 restaurants are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "how many food_type0 restaurants are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "how many places for food_type0 food are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "how many food_type0 places are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "how many places for food_type0 are there in the region0 ?",
+                "variables": {
+                    "food_type0": "chinese",
+                    "region0": "bay area"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( * ) FROM GEOGRAPHIC AS GEOGRAPHICalias0 , RESTAURANT AS RESTAURANTalias0 WHERE GEOGRAPHICalias0.REGION = \"region0\" AND RESTAURANTalias0.CITY_NAME = GEOGRAPHICalias0.CITY_NAME AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "bay area",
+                "location": "unk",
+                "name": "region0",
+                "type": "region"
+            },
+            {
+                "example": "chinese",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "8",
+                "text": "how many name0 are there in county0 ?",
+                "variables": {
+                    "county0": "santa cruz county",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "how many name0 are there in county0 ?",
+                "variables": {
+                    "county0": "santa cruz county",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "how many name0 are there in county0 ?",
+                "variables": {
+                    "county0": "santa cruz county",
+                    "name0": "jamerican cuisine"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( * ) FROM GEOGRAPHIC AS GEOGRAPHICalias0 , RESTAURANT AS RESTAURANTalias0 WHERE GEOGRAPHICalias0.COUNTY = \"county0\" AND RESTAURANTalias0.CITY_NAME = GEOGRAPHICalias0.CITY_NAME AND RESTAURANTalias0.NAME = \"name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "santa cruz county",
+                "location": "unk",
+                "name": "county0",
+                "type": "county"
+            },
+            {
+                "example": "jamerican cuisine",
+                "location": "unk",
+                "name": "name0",
+                "type": "name"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "where is name0 ?",
+                "variables": {
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where is name0 ?",
+                "variables": {
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where is name0 ?",
+                "variables": {
+                    "name0": "jamerican cuisine"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.NAME = \"name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "jamerican cuisine",
+                "location": "unk",
+                "name": "name0",
+                "type": "name"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "what is the best food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "What is the best food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "What is the best place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "Give me the best place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "Where is the best food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "Give me the best food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "Where is the best food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "Give me the best restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "Give me the best food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "What is the best restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "Where is the best restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "what is the best food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "What is the best food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "What is the best place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "Give me the best place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "Where is the best food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "Give me the best food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "Where is the best food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "Give me the best restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "Give me the best food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "What is the best restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "Where is the best restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "what is the best food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "What is the best food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "What is the best place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "Give me the best place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "Where is the best food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "Give me the best food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "Where is the best food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "Give me the best restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "Give me the best food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "What is the best restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "Where is the best restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "french"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.RATING = ( SELECT MAX( RESTAURANTalias1.RATING ) FROM LOCATION AS LOCATIONalias1 , RESTAURANT AS RESTAURANTalias1 WHERE LOCATIONalias1.CITY_NAME = \"city_name0\" AND RESTAURANTalias1.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias1.ID = LOCATIONalias1.RESTAURANT_ID ) ;"
+        ],
+        "variables": [
+            {
+                "example": "san francisco",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            },
+            {
+                "example": "french",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "where is name0 in the region0 ?",
+                "variables": {
+                    "name0": "denny",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "where is name0 in the region0 ?",
+                "variables": {
+                    "name0": "denny",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where is name0 in the region0 ?",
+                "variables": {
+                    "name0": "denny",
+                    "region0": "bay area"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM GEOGRAPHIC AS GEOGRAPHICalias0 , LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE GEOGRAPHICalias0.REGION = \"region0\" AND RESTAURANTalias0.CITY_NAME = GEOGRAPHICalias0.CITY_NAME AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.NAME = \"name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "bay area",
+                "location": "unk",
+                "name": "region0",
+                "type": "region"
+            },
+            {
+                "example": "denny",
+                "location": "unk",
+                "name": "name0",
+                "type": "name"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "6",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "what are some good restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me some good restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me a good restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "what is a good restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "what are some good restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "give me some good restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "give me a good restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "what is a good restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "what are some good restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me some good restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me a good restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "what is a good restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND LOCATIONalias0.STREET_NAME = \"street_name0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.RATING > 2.5 ;"
+        ],
+        "variables": [
+            {
+                "example": "bethel island",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            },
+            {
+                "example": "bethel island rd",
+                "location": "unk",
+                "name": "street_name0",
+                "type": "street_name"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "4",
+                "text": "where can we find a restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me a restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where can we find some restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is a restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "give me some restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where can we find a restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "give me a restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where can we find some restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where is a restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me some restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where can we find a restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "give me a restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where can we find some restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where is a restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me some restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID ;"
+        ],
+        "variables": [
+            {
+                "example": "alameda",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "9",
+                "text": "give me some restaurants good for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where are some restaurants good for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me some restaurants good for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where are some restaurants good for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me some restaurants good for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where are some restaurants good for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE RESTAURANTalias0.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.RATING > 2.5 ;"
+        ],
+        "variables": [
+            {
+                "example": "french",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "how many places for food_type0 food are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "how many food_type0 restaurants are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "how many food_type0 restaurant are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "how many places for food_type0 are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "how many places for food_type0 food are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "how many food_type0 restaurants are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "how many food_type0 restaurant are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "how many places for food_type0 are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "how many places for food_type0 food are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "how many food_type0 restaurants are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "how many food_type0 restaurant are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "how many places for food_type0 are there in city_name0 ?",
+                "variables": {
+                    "city_name0": "palo alto",
+                    "food_type0": "french"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( * ) FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID ;"
+        ],
+        "variables": [
+            {
+                "example": "palo alto",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            },
+            {
+                "example": "french",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "how many food_type0 restaurants are in the county0 ?",
+                "variables": {
+                    "county0": "yolo county",
+                    "food_type0": "italian"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "how many food_type0 restaurants are in the county0 ?",
+                "variables": {
+                    "county0": "yolo county",
+                    "food_type0": "italian"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "how many food_type0 restaurants are in the county0 ?",
+                "variables": {
+                    "county0": "yolo county",
+                    "food_type0": "italian"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( * ) FROM GEOGRAPHIC AS GEOGRAPHICalias0 , RESTAURANT AS RESTAURANTalias0 WHERE GEOGRAPHICalias0.COUNTY = \"county0\" AND RESTAURANTalias0.CITY_NAME = GEOGRAPHICalias0.CITY_NAME AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "yolo county",
+                "location": "unk",
+                "name": "county0",
+                "type": "county"
+            },
+            {
+                "example": "italian",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "4",
+        "sentences": [
+            {
+                "question-split": "6",
+                "text": "where can i eat food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "where can i eat food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "french"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where can i eat food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "french"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID ;"
+        ],
+        "variables": [
+            {
+                "example": "mountain view",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            },
+            {
+                "example": "french",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "0",
+                "text": "how many name0 are there in the region0 ?",
+                "variables": {
+                    "name0": "denny",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "how many name0 are there in the region0 ?",
+                "variables": {
+                    "name0": "denny",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "how many name0 are there in the region0 ?",
+                "variables": {
+                    "name0": "denny",
+                    "region0": "bay area"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COUNT( * ) FROM GEOGRAPHIC AS GEOGRAPHICalias0 , RESTAURANT AS RESTAURANTalias0 WHERE GEOGRAPHICalias0.REGION = \"region0\" AND RESTAURANTalias0.CITY_NAME = GEOGRAPHICalias0.CITY_NAME AND RESTAURANTalias0.NAME = \"name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "bay area",
+                "location": "unk",
+                "name": "region0",
+                "type": "region"
+            },
+            {
+                "example": "denny",
+                "location": "unk",
+                "name": "name0",
+                "type": "name"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "3",
+                "text": "give me a good restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "what are some good restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "what is a good restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me some good restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me a good restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "what are some good restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "what is a good restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me some good restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me a good restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "what are some good restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "what is a good restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me some good restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "alameda"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.RATING > 2.5 ;"
+        ],
+        "variables": [
+            {
+                "example": "alameda",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "7",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "where is a good restaurant on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "where are some good arabics on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is a good food_type0 restaurant on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "what are some good places for food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me a good food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me some restaurants good for food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me a good place on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where is a good place on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where can i eat food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me some good places on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where is a food_type0 restaurant on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me a restaurant on street_name0 in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "give me a good restaurant on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where is a restaurant on street_name0 in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me some good restaurants on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me some good places for food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where can i eat some good food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where is a good food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where are some restaurants good for food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where are some good places for food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me a good food_type0 restaurant on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me some good arabics on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where is a good restaurant on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where are some good arabics on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where is a good food_type0 restaurant on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "what are some good places for food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me a good food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me some restaurants good for food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me a good place on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where is a good place on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "where can i eat food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me some good places on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where is a food_type0 restaurant on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me a restaurant on street_name0 in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me a good restaurant on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where is a restaurant on street_name0 in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me some good restaurants on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me some good places for food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where can i eat some good food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where is a good food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where are some restaurants good for food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where are some good places for food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me a good food_type0 restaurant on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me some good arabics on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "where is a good restaurant on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "where are some good arabics on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is a good food_type0 restaurant on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "what are some good places for food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me a good food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me some restaurants good for food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me a good place on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where is a good place on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where can i eat food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me some good places on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "where is a food_type0 restaurant on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me a restaurant on street_name0 in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me a good restaurant on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where is a restaurant on street_name0 in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me some good restaurants on street_name0 in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me some good places for food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where can i eat some good food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where is a good food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where are some restaurants good for food_type0 food on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where are some good places for food_type0 on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me a good food_type0 restaurant on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me some good arabics on street_name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "food_type0": "arabic",
+                    "street_name0": "buchanan"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND LOCATIONalias0.STREET_NAME = \"street_name0\" AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.RATING > 2.5 ;"
+        ],
+        "variables": [
+            {
+                "example": "san francisco",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            },
+            {
+                "example": "buchanan",
+                "location": "unk",
+                "name": "street_name0",
+                "type": "street_name"
+            },
+            {
+                "example": "arabic",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "5",
+        "sentences": [
+            {
+                "question-split": "3",
+                "text": "where can i eat food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where can i eat food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where can i eat food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "bay area"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM GEOGRAPHIC AS GEOGRAPHICalias0 , LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE GEOGRAPHICalias0.REGION = \"region0\" AND RESTAURANTalias0.CITY_NAME = GEOGRAPHICalias0.CITY_NAME AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID ;"
+        ],
+        "variables": [
+            {
+                "example": "bay area",
+                "location": "unk",
+                "name": "region0",
+                "type": "region"
+            },
+            {
+                "example": "french",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "8",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "give me a good restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "what are some good restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me some good restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "what is a good restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me a good restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "what are some good restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me some good restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "what is a good restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me a good restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "what are some good restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me some good restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "what is a good restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE RESTAURANTalias0.CITY_NAME IN ( SELECT GEOGRAPHICalias0.CITY_NAME FROM GEOGRAPHIC AS GEOGRAPHICalias0 WHERE GEOGRAPHICalias0.REGION = \"region0\" ) AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.RATING > 2.5 ;"
+        ],
+        "variables": [
+            {
+                "example": "bay area",
+                "location": "unk",
+                "name": "region0",
+                "type": "region"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "1",
+                "text": "give me some restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me a restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where can we find a restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where can we find some restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me some restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "give me a restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where can we find a restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where can we find some restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me some restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "give me a restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where can we find a restaurant on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where can we find some restaurants on city_name0 rd in city_name0 ?",
+                "variables": {
+                    "city_name0": "bethel island",
+                    "street_name0": "bethel island rd"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND LOCATIONalias0.STREET_NAME = \"street_name0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID ;"
+        ],
+        "variables": [
+            {
+                "example": "bethel island",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            },
+            {
+                "example": "bethel island rd",
+                "location": "unk",
+                "name": "street_name0",
+                "type": "street_name"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "2",
+        "sentences": [
+            {
+                "question-split": "5",
+                "text": "where is the best restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is the best restaurant in region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "what is the best restaurant in region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "what is the best food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where is the best food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "what is the best food_type0 in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me the best restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me the best restaurant in region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "what is the best restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where is the best food_type0 in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me the best food_type0 in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me the best food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where is the best restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where is the best restaurant in region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "what is the best restaurant in region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "what is the best food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "where is the best food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "what is the best food_type0 in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me the best restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me the best restaurant in region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "what is the best restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is the best food_type0 in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me the best food_type0 in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me the best food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where is the best restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where is the best restaurant in region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "what is the best restaurant in region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "what is the best food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where is the best food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "what is the best food_type0 in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me the best restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me the best restaurant in region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "what is the best restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "where is the best food_type0 in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me the best food_type0 in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me the best food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "american",
+                    "region0": "bay area"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM GEOGRAPHIC AS GEOGRAPHICalias0 , LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE GEOGRAPHICalias0.REGION = \"region0\" AND RESTAURANTalias0.CITY_NAME = GEOGRAPHICalias0.CITY_NAME AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.RATING = ( SELECT MAX( RESTAURANTalias1.RATING ) FROM GEOGRAPHIC AS GEOGRAPHICalias1 , RESTAURANT AS RESTAURANTalias1 WHERE GEOGRAPHICalias1.REGION = \"region0\" AND RESTAURANTalias1.CITY_NAME = GEOGRAPHICalias1.CITY_NAME AND RESTAURANTalias1.FOOD_TYPE = \"food_type0\" ) ;"
+        ],
+        "variables": [
+            {
+                "example": "bay area",
+                "location": "unk",
+                "name": "region0",
+                "type": "region"
+            },
+            {
+                "example": "american",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "0",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "where can we find some restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me some restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me a restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where can i find a restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where can we find some restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me some restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "give me a restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where can i find a restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where can we find some restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "give me some restaurants in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me a restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where can i find a restaurant in the region0 ?",
+                "variables": {
+                    "region0": "bay area"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE RESTAURANTalias0.CITY_NAME IN ( SELECT GEOGRAPHICalias0.CITY_NAME FROM GEOGRAPHIC AS GEOGRAPHICalias0 WHERE GEOGRAPHICalias0.REGION = \"region0\" ) AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID ;"
+        ],
+        "variables": [
+            {
+                "example": "bay area",
+                "location": "unk",
+                "name": "region0",
+                "type": "region"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "3",
+        "sentences": [
+            {
+                "question-split": "2",
+                "text": "give me some restaurants good for food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "what are some good places in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me a good restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me a good food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where is a good place in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where are some restaurants good for food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me a good place in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where is a good restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "what are some good restaurants in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where is a good food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "where can i eat some good food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me some restaurants good for food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "what are some good places in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me a good restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me a good food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where is a good place in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where are some restaurants good for food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me a good place in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where is a good restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "what are some good restaurants in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where is a good food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where can i eat some good food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me some restaurants good for food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "what are some good places in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me a good restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me a good food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where is a good place in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where are some restaurants good for food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me a good place in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "where is a good restaurant in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "what are some good restaurants in the region0 for food_type0 food ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where is a good food_type0 restaurant in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where can i eat some good food_type0 food in the region0 ?",
+                "variables": {
+                    "food_type0": "french",
+                    "region0": "yosemite and mono lake area"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM GEOGRAPHIC AS GEOGRAPHICalias0 , LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE GEOGRAPHICalias0.REGION = \"region0\" AND RESTAURANTalias0.CITY_NAME = GEOGRAPHICalias0.CITY_NAME AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.RATING > 2.5 ;"
+        ],
+        "variables": [
+            {
+                "example": "yosemite and mono lake area",
+                "location": "unk",
+                "name": "region0",
+                "type": "region"
+            },
+            {
+                "example": "french",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "9",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "where are some restaurants good for food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "what are some good places in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "where are some good food_type0 restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "show me a good food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me a good food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "give me a good food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me a good place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "where are some good arabics in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where is a restaurant in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "what are some good restaurants in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me some restaurants good for food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where can i eat some good food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me some good places for food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is a good food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me a restaurant in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me some good food_type0 restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where are some good places for food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me some good arabics in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me a good restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is a good food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "what are some good places for food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where is a good restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where is a good place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where are some restaurants good for food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "what are some good places in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where are some good food_type0 restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "show me a good food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me a good food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "give me a good food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "give me a good place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where are some good arabics in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is a restaurant in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "what are some good restaurants in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me some restaurants good for food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where can i eat some good food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me some good places for food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where is a good food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me a restaurant in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "give me some good food_type0 restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "where are some good places for food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me some good arabics in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me a good restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where is a good food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "what are some good places for food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where is a good restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where is a good place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where are some restaurants good for food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "what are some good places in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where are some good food_type0 restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "show me a good food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "give me a good food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "give me a good food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "give me a good place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where are some good arabics in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where is a restaurant in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "what are some good restaurants in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "give me some restaurants good for food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where can i eat some good food_type0 food in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "give me some good places for food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "9",
+                "text": "where is a good food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "give me a restaurant in city_name0 that serves good food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "give me some good food_type0 restaurants in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "where are some good places for food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "give me some good arabics in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "2",
+                "text": "give me a good restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "3",
+                "text": "where is a good food_type0 restaurant in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "what are some good places for food_type0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "6",
+                "text": "where is a good restaurant in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where is a good place in city_name0 for food_type0 food ?",
+                "variables": {
+                    "city_name0": "mountain view",
+                    "food_type0": "arabic"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND RESTAURANTalias0.FOOD_TYPE = \"food_type0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.RATING > 2.5 ;"
+        ],
+        "variables": [
+            {
+                "example": "mountain view",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            },
+            {
+                "example": "arabic",
+                "location": "unk",
+                "name": "food_type0",
+                "type": "food_type"
+            }
+        ]
+    },
+    {
+        "comments": [],
+        "old-name": "",
+        "query-split": "1",
+        "sentences": [
+            {
+                "question-split": "7",
+                "text": "where can i find a name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "5",
+                "text": "where is name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "8",
+                "text": "where is a name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where can i find a name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "4",
+                "text": "where is a name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "7",
+                "text": "where can i find a name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "0",
+                "text": "where is name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "jamerican cuisine"
+                }
+            },
+            {
+                "question-split": "1",
+                "text": "where is a name0 in city_name0 ?",
+                "variables": {
+                    "city_name0": "san francisco",
+                    "name0": "jamerican cuisine"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT LOCATIONalias0.HOUSE_NUMBER , RESTAURANTalias0.NAME FROM LOCATION AS LOCATIONalias0 , RESTAURANT AS RESTAURANTalias0 WHERE LOCATIONalias0.CITY_NAME = \"city_name0\" AND RESTAURANTalias0.ID = LOCATIONalias0.RESTAURANT_ID AND RESTAURANTalias0.NAME = \"name0\" ;"
+        ],
+        "variables": [
+            {
+                "example": "san francisco",
+                "location": "unk",
+                "name": "city_name0",
+                "type": "city_name"
+            },
+            {
+                "example": "jamerican cuisine",
+                "location": "unk",
+                "name": "name0",
+                "type": "name"
+            }
+        ]
+    }
+]

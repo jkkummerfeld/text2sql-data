@@ -1,0 +1,2666 @@
+[
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How often are students in the waitlist issued overrides for department0 number0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "370"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "370",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Would department0 number0 be counted towards my flex tech?",
+                "variables": {
+                    "department0": "MECHENG",
+                    "number0": "211"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "211",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "MECHENG",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "I'm thinking of minoring in entrepreneurship. What courses should I take?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "I want to do a summer internship next year. What courses should I take to best prepare myself?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How long has department0 number0 been taught for?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "281"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "When was department0 number0 first offered?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "281"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Which classes do the lectures for number0 clash with?",
+                "variables": {
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I fulfill my remaining requirements without taking any courses on Fridays?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What classes do I need for minoring in CS?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I take number0 this term and number1 the semester after?",
+                "variables": {
+                    "number0": "280",
+                    "number1": "492"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "If I'm taking number0 this semester, will I be able to take number1 next semester?",
+                "variables": {
+                    "number0": "280",
+                    "number1": "492"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "492",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What number1 -level classes can I take without taking department0 number0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "280",
+                    "number1": "300"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Is there any number1 -level class that does not require me to take department0 number0 as a prerequisite?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "280",
+                    "number1": "300"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "300",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can department0 number0 be repeated for credits?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Can department0 number0 be repeated for credit?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "370"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "370",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Is department0 number0 a required class for minoring in department0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "376"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "376",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Do the professors for number0 stay the same from one semester to the next?",
+                "variables": {
+                    "number0": "281"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I fulfill my requirements without taking any courses with Prof. instructor0?",
+                "variables": {
+                    "instructor0": "Smith"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "Smith",
+                "location": "both",
+                "name": "instructor0",
+                "type": "instructor"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Is Prof. instructor0 available for an independent study?",
+                "variables": {
+                    "instructor0": "Smith"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "Smith",
+                "location": "both",
+                "name": "instructor0",
+                "type": "instructor"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How much harder are number0 level courses compared to number1 level courses?",
+                "variables": {
+                    "number0": "500",
+                    "number1": "400"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "500",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "400",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Do all of the lower-level classes meet on Friday?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How do I declare an department0 major ?",
+                "variables": {
+                    "department0": "EECS"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "How can I declare a major in department0 ?",
+                "variables": {
+                    "department0": "EECS"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Does number0 still use lisp?",
+                "variables": {
+                    "number0": "492"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "492",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What classes don't use C++?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What languages do they use in number0?",
+                "variables": {
+                    "number0": "388"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "388",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Does number0 involve programming?",
+                "variables": {
+                    "number0": "203"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "203",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How many projects are performed in department0 number0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I take number0 next semester?",
+                "variables": {
+                    "number0": "281"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "If I take number0, do I have to go to Central campus?",
+                "variables": {
+                    "number0": "183"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "183",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Do I need to take number0 or department0 number1?",
+                "variables": {
+                    "department0": "ENGR",
+                    "number0": "183",
+                    "number1": "101"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "183",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "101",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            },
+            {
+                "example": "ENGR",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Do I have all the classes I need to declare?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Am I going to have to take number0 eventually?",
+                "variables": {
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Am I required to take 370?",
+                "variables": {
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Do I need to take 370?",
+                "variables": {
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Is 370 a required course?",
+                "variables": {
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Is 370 a requirement for me?",
+                "variables": {
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Is 370 necessary for me?",
+                "variables": {
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Is 370 really a requirement?",
+                "variables": {
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Is 370 required for me?",
+                "variables": {
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Is 370 required for my major?",
+                "variables": {
+                    "number0": "370"
+                }
+            },
+            {
+                "question-split": "none",
+                "text": "Is 370 required?",
+                "variables": {
+                    "number0": "370"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "370",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "If I take number0 next semester, can I take number1 in the semester0?",
+                "variables": {
+                    "number0": "370",
+                    "number1": "381",
+                    "semester0": "Fall"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "370",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "381",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            },
+            {
+                "example": "Fall",
+                "location": "both",
+                "name": "semester0",
+                "type": "semester"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I sign up for a CS thesis course this semester, or are there other classes I need to take first?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Are there any discussion sections for number0 that meet in the afternoon?",
+                "variables": {
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I take machine learning before I take intro to AI?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "I definitely want to take number0 next semester. What classes do I need to take this semester to be eligible for it?",
+                "variables": {
+                    "number0": "492"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "492",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Have I already met the requirements for a CS minor?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I take topic0 and number0 at the same time?",
+                "variables": {
+                    "number0": "280",
+                    "topic0": "discrete math"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "discrete math",
+                "location": "both",
+                "name": "topic0",
+                "type": "topic"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I take all the required courses for a CS major without ever having a 9 A.M. class?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I just audit number0?",
+                "variables": {
+                    "number0": "492"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "492",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "If I take number0 next semester, I will have fulfilled all the requirements for a CS major, right?",
+                "variables": {
+                    "number0": "494"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "494",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Are there any requirements for the CS major that I haven't met yet?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Are there any classes that will teach me Python?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Do I need to know Java to take the topic0 class?",
+                "variables": {
+                    "topic0": "databases"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "databases",
+                "location": "both",
+                "name": "topic0",
+                "type": "topic"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can you recommend a topic0 class?",
+                "variables": {
+                    "topic0": "theory"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "theory",
+                "location": "both",
+                "name": "topic0",
+                "type": "topic"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Who teaches the discussion of department0 number0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Who are the GSIs for number0 this semester0?",
+                "variables": {
+                    "number0": "281",
+                    "semester0": "fall"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "fall",
+                "location": "both",
+                "name": "semester0",
+                "type": "semester"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What do students usually take after department0 number0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "I want to pursue a career in topic0. What courses should I take?",
+                "variables": {
+                    "topic0": "web development"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "web development",
+                "location": "both",
+                "name": "topic0",
+                "type": "topic"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Show me courses in topic0 that have good instructors.",
+                "variables": {
+                    "topic0": "artificial intelligence"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "artificial intelligence",
+                "location": "both",
+                "name": "topic0",
+                "type": "topic"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Does department0 number0 have exams?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "281"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Are there courses where I can attend class during the weekend?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What programming language is commonly used in courses in topic0?",
+                "variables": {
+                    "topic0": "artificial intelligence"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "artificial intelligence",
+                "location": "both",
+                "name": "topic0",
+                "type": "topic"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What is the duration of the department0 number0 lectures?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "281"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Do I need to take the core classes before I can take an upper-level elective?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "I am thinking of taking department0 number0, department0 number1, department0 number2 and department0 number3 this semester. Do you think the workload will be manageable?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "203",
+                    "number1": "281",
+                    "number2": "484",
+                    "number3": "545"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "203",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            },
+            {
+                "example": "484",
+                "location": "both",
+                "name": "number2",
+                "type": "number"
+            },
+            {
+                "example": "545",
+                "location": "both",
+                "name": "number3",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What are some number0 level courses with a small class size?",
+                "variables": {
+                    "number0": "400"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "400",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Should I take department0 number0 under instructor0 or instructor1?",
+                "variables": {
+                    "department0": "EECS",
+                    "instructor0": "Andrew DeOrio",
+                    "instructor1": "Peter Chen",
+                    "number0": "482"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "482",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            },
+            {
+                "example": "Andrew DeOrio",
+                "location": "both",
+                "name": "instructor0",
+                "type": "instructor"
+            },
+            {
+                "example": "Peter Chen",
+                "location": "both",
+                "name": "instructor1",
+                "type": "instructor"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What are some less than 3 credits flexible electives?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How many hour of classes a week are there for department0 number0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "203"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "203",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What are each of the sections of department0 number0 about?",
+                "variables": {
+                    "department0": "ENGR",
+                    "number0": "100"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "100",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "ENGR",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What courses are counted as humanities?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Why do I need to take department0 number0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How many classes do I need to take for minoring in department0?",
+                "variables": {
+                    "department0": "EECS"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I take department0 number0/number1 this semester0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "280",
+                    "number1": "281",
+                    "semester0": "spring"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            },
+            {
+                "example": "spring",
+                "location": "both",
+                "name": "semester0",
+                "type": "semester"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How many humanities classes do I need to take for graduation?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How many credits do I need for humanities in order to graduate?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "On which days of the week does number0 have labs?",
+                "variables": {
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Are there any introductory courses that usually have less than fifty students?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Are there any small introductory courses?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Are all of the lower level courses really big?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How many upper level classes have morning classes?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How many upper level classes have large classes?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Is department0 number0 taught in a large lecture?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Does department0 number0 include lectures and labs?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What department0 classes do I need to take for minoring in department0?",
+                "variables": {
+                    "department0": "EECS"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What CS general electives are offered?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What number0 -level classes can I take next semester?",
+                "variables": {
+                    "number0": "300"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "300",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How many credits of general electives do CS majors need?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Do I fulfill the requirements of declaring department0 major?",
+                "variables": {
+                    "department0": "EECS"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "What are some LAC course that I should take?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Are there any introductory courses that don't have three lectures a week?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Does number0 always have morning labs?",
+                "variables": {
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Does number0 ever have afternoon labs?",
+                "variables": {
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How long are the lectures in number0?",
+                "variables": {
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How long are the labs in number0?",
+                "variables": {
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "How many contact hours are there for number0?",
+                "variables": {
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Is it possible to take three department0 courses in the same semester?",
+                "variables": {
+                    "department0": "EECS"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Who are the instructors for number0 labs?",
+                "variables": {
+                    "number0": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I possibly take number0 without number1?",
+                "variables": {
+                    "number0": "281",
+                    "number1": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "281",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Which is the best department0 number0 section for CS?",
+                "variables": {
+                    "department0": "ENGR",
+                    "number0": "100"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "100",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "ENGR",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can CS majors take department0 number0?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "315"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "315",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Is there a schedule where I can take department0 number0 department0 number1 and department0 number2 next semester?",
+                "variables": {
+                    "department0": "EECS",
+                    "number0": "485",
+                    "number1": "486",
+                    "number2": "388"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "485",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "486",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            },
+            {
+                "example": "388",
+                "location": "both",
+                "name": "number2",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            }
+        ]
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Are there any upper level courses that don't have morning labs?",
+                "variables": {}
+            }
+        ],
+        "sql": [],
+        "variables": []
+    },
+    {
+        "query-split": "none",
+        "sentences": [
+            {
+                "question-split": "none",
+                "text": "Can I take number0 and number1 at the same time?",
+                "variables": {
+                    "number0": "370",
+                    "number1": "280"
+                }
+            }
+        ],
+        "sql": [],
+        "variables": [
+            {
+                "example": "370",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            },
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            }
+        ]
+    },
+    {
+        "comments": [
+            "Require reasoning, or a different interpretation",
+            "Accuracy: CFD - 0",
+            "Accuracy: DRK - 0",
+            "helpfulness: CFD - 0",
+            "helpfulness: DRK - 1"
+        ],
+        "old-name": "question132.0.json",
+        "query-split": "test",
+        "sentences": [
+            {
+                "question-split": "train",
+                "text": "Should I take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "DENT",
+                    "number0": "632",
+                    "number1": "545"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Are department0 number0 and department0 number1 favorable courses to take at the same time ?",
+                "variables": {
+                    "department0": "RCNSCI",
+                    "number0": "202",
+                    "number1": "419"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Do you advise me taking department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "INSTHUM",
+                    "number0": "411",
+                    "number1": "311"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Do you think I should take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "PHYSICS",
+                    "number0": "621",
+                    "number1": "450"
+                }
+            },
+            {
+                "question-split": "test",
+                "text": "Do you think I should take department0 number0 and department0 number1 in the same semester ?",
+                "variables": {
+                    "department0": "DENTHYG",
+                    "number0": "475",
+                    "number1": "470"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Do you think it is a good idea to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "JUDAIC",
+                    "number0": "570",
+                    "number1": "317"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "How wise is it to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "NATIVEAM",
+                    "number0": "222",
+                    "number1": "388"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Is it a good idea to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "RELIGION",
+                    "number0": "326",
+                    "number1": "310"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Is it advisable for me to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "MCDB",
+                    "number0": "589",
+                    "number1": "801"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it advisable to study both department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "ASIANLAN",
+                    "number0": "302",
+                    "number1": "412"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it advisable to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "THTREMUS",
+                    "number0": "211",
+                    "number1": "256"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it advisable to take department0 number1 and department0 number0 simultaneously ?",
+                "variables": {
+                    "department0": "ENS",
+                    "number0": "407",
+                    "number1": "326"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it best to simultaneously take department0 number0 and department0 number1 ?",
+                "variables": {
+                    "department0": "WOMENSTD",
+                    "number0": "411",
+                    "number1": "253"
+                }
+            },
+            {
+                "question-split": "test",
+                "text": "Is it best to take department0 number0 and number1 together ?",
+                "variables": {
+                    "department0": "ARCH",
+                    "number0": "317",
+                    "number1": "466"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it fine if I take department0 number0 and department0 number1 simultaneously ?",
+                "variables": {
+                    "department0": "PHYSICS",
+                    "number0": "112",
+                    "number1": "630"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Is it good to take both department0 number0 and department0 number1 at once ?",
+                "variables": {
+                    "department0": "IOE",
+                    "number0": "334",
+                    "number1": "518"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it ok to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "LATINOAM",
+                    "number0": "361",
+                    "number1": "389"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Is it okay , if I take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "SAC",
+                    "number0": "352",
+                    "number1": "311"
+                }
+            },
+            {
+                "question-split": "test",
+                "text": "Is it recommended to take department0 number0 and number1 at the same time ?",
+                "variables": {
+                    "department0": "CMBIOL",
+                    "number0": "680",
+                    "number1": "685"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it recommended to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "MUSPERF",
+                    "number0": "990",
+                    "number1": "781"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it recommended to take department0 number0 and department0 number1 together ?",
+                "variables": {
+                    "department0": "PERIODON",
+                    "number0": "793",
+                    "number1": "781"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it recommended to take both department0 number0 and department0 number1 concurrently ?",
+                "variables": {
+                    "department0": "ELI",
+                    "number0": "599",
+                    "number1": "580"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it recommended to take both department0 number1 and number0 at the same time ?",
+                "variables": {
+                    "department0": "BIOLOGY",
+                    "number0": "687",
+                    "number1": "255"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is it useful to take department0 number0 and department0 number1 concurrently ?",
+                "variables": {
+                    "department0": "MKT",
+                    "number0": "611",
+                    "number1": "620"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Is it wise to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "ENVIRON",
+                    "number0": "243",
+                    "number1": "365"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is taking department0 number0 and department0 number1 at the same time wise ?",
+                "variables": {
+                    "department0": "POLISH",
+                    "number0": "566",
+                    "number1": "221"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Is taking department0 number0 and department0 number1 simultaneously smart ?",
+                "variables": {
+                    "department0": "ORALSURG",
+                    "number0": "750",
+                    "number1": "755"
+                }
+            },
+            {
+                "question-split": "test",
+                "text": "Might it be wise to ingest both department0 number0 and department0 number1 together ?",
+                "variables": {
+                    "department0": "JUDAIC",
+                    "number0": "343",
+                    "number1": "481"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Of the courses , are department0 number0 and department0 number1 ones that should be taken at the same time ?",
+                "variables": {
+                    "department0": "ORALBIOL",
+                    "number0": "995",
+                    "number1": "779"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Should department0 number0 and department0 number1 be taken at the same time ?",
+                "variables": {
+                    "department0": "HEBREW",
+                    "number0": "101",
+                    "number1": "201"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Should department0 number0 and department0 number1 be taken simultaneously ?",
+                "variables": {
+                    "department0": "POLSCI",
+                    "number0": "493",
+                    "number1": "663"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Should department0 number0 be taken at the same time as department0 number1 ?",
+                "variables": {
+                    "department0": "ANTHRBIO",
+                    "number0": "364",
+                    "number1": "169"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Should I , at the same time , take department0 number0 and department0 number1 ?",
+                "variables": {
+                    "department0": "COMPLIT",
+                    "number0": "781",
+                    "number1": "698"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Should I do department0 number0 and department0 number1 simultaneously ?",
+                "variables": {
+                    "department0": "ENVIRON",
+                    "number0": "455",
+                    "number1": "243"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Should I enroll in department0 number0 and department0 number1 simultaneously ?",
+                "variables": {
+                    "department0": "RCLANG",
+                    "number0": "334",
+                    "number1": "306"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Should I simultaneously take department0 number0 and department0 number1 ?",
+                "variables": {
+                    "department0": "WOMENSTD",
+                    "number0": "416",
+                    "number1": "387"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Should I take department0 number0 and number1 at the same time ?",
+                "variables": {
+                    "department0": "MKT",
+                    "number0": "310",
+                    "number1": "603"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Should I take department0 number0 and number1 simultaneously ?",
+                "variables": {
+                    "department0": "MEMS",
+                    "number0": "213",
+                    "number1": "260"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Should I take department0 number0 and department0 number1 both at the same time ?",
+                "variables": {
+                    "department0": "UP",
+                    "number0": "408",
+                    "number1": "835"
+                }
+            },
+            {
+                "question-split": "test",
+                "text": "Should I take department0 number0 and department0 number1 concurrently ?",
+                "variables": {
+                    "department0": "MEDCHEM",
+                    "number0": "610",
+                    "number1": "570"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Should I take department0 number0 and department0 number1 simultaneously ?",
+                "variables": {
+                    "department0": "TCHNCLCM",
+                    "number0": "499",
+                    "number1": "675"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Should I take department0 number0 and department0 number1 together ?",
+                "variables": {
+                    "department0": "PROSTHOD",
+                    "number0": "583",
+                    "number1": "646"
+                }
+            },
+            {
+                "question-split": "test",
+                "text": "Should I take both department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "CSP",
+                    "number0": "101",
+                    "number1": "103"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Should I take both department0 number0 and department0 number1 in the same semester ?",
+                "variables": {
+                    "department0": "MUSICOL",
+                    "number0": "450",
+                    "number1": "406"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Should I take both department0 number0 and department0 number1 together ?",
+                "variables": {
+                    "department0": "PSYCH",
+                    "number0": "740",
+                    "number1": "425"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Should I take both the department0 number0 and department0 number1 courses simultaneously ?",
+                "variables": {
+                    "department0": "HHCR",
+                    "number0": "740",
+                    "number1": "730"
+                }
+            },
+            {
+                "question-split": "test",
+                "text": "Should I take the courses department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "DUTCH",
+                    "number0": "351",
+                    "number1": "160"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Should both department0 number0 and department0 number1 be take together ?",
+                "variables": {
+                    "department0": "NESLANG",
+                    "number0": "480",
+                    "number1": "513"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Taking department0 number0 and department0 number1 simultaneously is good or not ?",
+                "variables": {
+                    "department0": "POLSCI",
+                    "number0": "822",
+                    "number1": "613"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Will I be ok taking department0 number0 and department0 number1 together ?",
+                "variables": {
+                    "department0": "NERS",
+                    "number0": "490",
+                    "number1": "250"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Will I see benefits from doing department0 number0 and number1 simultaneously ?",
+                "variables": {
+                    "department0": "GREEKMOD",
+                    "number0": "505",
+                    "number1": "503"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Will it be okay if I take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "AT",
+                    "number0": "410",
+                    "number1": "200"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Would it be a good idea to take department0 number0 and department0 number1 the same semester ?",
+                "variables": {
+                    "department0": "YIDDISH",
+                    "number0": "531",
+                    "number1": "431"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Would it be better to take department0 number0 and department0 number1 together ?",
+                "variables": {
+                    "department0": "UC",
+                    "number0": "204",
+                    "number1": "107"
+                }
+            },
+            {
+                "question-split": "train",
+                "text": "Would it be good for me to do department0 number0 and department0 number1 simultaneously ?",
+                "variables": {
+                    "department0": "THEORY",
+                    "number0": "531",
+                    "number1": "250"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Would it be wise for me to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "ORALBIOL",
+                    "number0": "779",
+                    "number1": "857"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Would it be wise to take department0 number0 and department0 number1 at the same time ?",
+                "variables": {
+                    "department0": "ARMENIAN",
+                    "number0": "483",
+                    "number1": "274"
+                }
+            },
+            {
+                "question-split": "dev",
+                "text": "Would taking department0 number0 and department0 number1 concurrently be okay ?",
+                "variables": {
+                    "department0": "WOMENSTD",
+                    "number0": "647",
+                    "number1": "372"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Would you advise I take department0 number0 and department0 number1 concurrently ?",
+                "variables": {
+                    "department0": "ORGSTUDY",
+                    "number0": "203",
+                    "number1": "425"
+                }
+            },
+            {
+                "question-split": "exclude",
+                "text": "Would you recommend taking department0 number0 and department0 number1 together ?",
+                "variables": {
+                    "department0": "IOE",
+                    "number0": "512",
+                    "number1": "518"
+                }
+            }
+        ],
+        "sql": [
+            "SELECT COURSEalias0.DEPARTMENT , COURSEalias0.NUMBER , PROGRAM_COURSEalias0.WORKLOAD FROM COURSE AS COURSEalias0 , PROGRAM_COURSE AS PROGRAM_COURSEalias0 WHERE ( ( COURSEalias0.DEPARTMENT = \"department0\" AND COURSEalias0.NUMBER = number0 ) OR ( COURSEalias0.DEPARTMENT = \"department0\" AND COURSEalias0.NUMBER = number1 ) ) AND PROGRAM_COURSEalias0.COURSE_ID = COURSEalias0.COURSE_ID ;"
+        ],
+        "variables": [
+            {
+                "example": "370",
+                "location": "both",
+                "name": "number1",
+                "type": "number"
+            },
+            {
+                "example": "EECS",
+                "location": "both",
+                "name": "department0",
+                "type": "department"
+            },
+            {
+                "example": "280",
+                "location": "both",
+                "name": "number0",
+                "type": "number"
+            }
+        ]
+    }
+]
