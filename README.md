@@ -19,7 +19,7 @@ If you use this data in your work, please cite our ACL paper *and* the appropria
 For example, in your paper you could write (using the BibTeX below):
 
 ```
-In this work, we use the version 1 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp}
+In this work, we use the version 1 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-original}
 ```
 
 If you are only using one dataset, here are example citation commands:
@@ -30,7 +30,7 @@ Academic     | `\citet{data-advising,data-academic}`
 Advising     | `\citet{data-advising}`
 ATIS         | `\citet{data-advising,data-atis-original,data-atis-geography-scholar}`
 Geography    | `\citet{data-advising,data-geography-original,data-atis-geography-scholar}`
-Restaurants  | TODO `\citet{data-advising,}`
+Restaurants  | `\citet{data-advising,data-restaurants-original}`
 Scholar      | `\citet{data-advising,data-atis-geography-scholar}`
 IMDB         | `\citet{data-advising,data-imdb-yelp}`
 Yelp         | `\citet{data-advising,data-imdb-yelp}`
@@ -102,6 +102,16 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
   pages     = {1050--1055},
   location  = {Portland, Oregon},
   url       = {http://dl.acm.org/citation.cfm?id=1864519.1864543},
+}
+
+@inproceedings{data-restaurants-original,
+  author    = {Giordani, Alessandra and Moschitti, Alessandro},
+  title     = {Automatic Generation and Reranking of SQL-derived Answers to NL Questions},
+  booktitle = {Proceedings of the Second International Conference on Trustworthy Eternal Systems via Evolving Software, Data and Knowledge},
+  year      = {2012},
+  location  = {Montpellier, France},
+  pages     = {59--76},
+  url       = {https://doi.org/10.1007/978-3-642-45260-4_5},
 }
 
 ```
