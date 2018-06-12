@@ -15,7 +15,25 @@ TODO: codalab
 
 # Using the data
 
-If you use this data in your work, please cite our ACL paper *and* the appropriate original sources, and list the version number of the data:
+If you use this data in your work, please cite our ACL paper *and* the appropriate original sources, and list the version number of the data.
+For example, in your paper you could write (using the BibTeX below):
+
+```
+In this work, we use the version 1 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp}
+```
+
+If you are only using one dataset, here are example citation commands:
+
+Data         | Cite
+------------ | ------
+Academic     | `\citet{data-advising,data-academic}`
+Advising     | `\citet{data-advising}`
+ATIS         | `\citet{data-advising,data-atis-original,data-atis-geography-scholar}`
+Geography    | `\citet{data-advising,data-geography-original,data-atis-geography-scholar}`
+Restaurants  | TODO `\citet{data-advising,}`
+Scholar      | `\citet{data-advising,data-atis-geography-scholar}`
+IMDB         | `\citet{data-advising,data-imdb-yelp}`
+Yelp         | `\citet{data-advising,data-imdb-yelp}`
 
 ```TeX
 @InProceedings{data-sql-advising,
@@ -87,25 +105,6 @@ If you use this data in your work, please cite our ACL paper *and* the appropria
 }
 
 ```
-
-Example citation:
-
-```
-In this work, we use the version 1 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp}
-```
-
-If you are only using one dataset, here are example ciwtation commands:
-
-Data         | Cite
------------- | ------
-Academic     | `\citet{data-advising,data-academic}`
-Advising     | `\citet{data-advising}`
-ATIS         | `\citet{data-advising,data-atis-original,data-atis-geography-scholar}`
-Geography    | `\citet{data-advising,data-geography-original,data-atis-geography-scholar}`
-Restaurants  | TODO `\citet{data-advising,}`
-Scholar      | `\citet{data-advising,data-atis-geography-scholar}`
-IMDB         | `\citet{data-advising,data-imdb-yelp}`
-Yelp         | `\citet{data-advising,data-imdb-yelp}`
 
 # Contributions
 
