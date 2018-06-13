@@ -31,11 +31,11 @@ parser.add_argument('--split', help='Use this split in cross-validation.', type=
 # Model
 parser.add_argument('--mlp', help='Use a multi-layer perceptron', action='store_true')
 parser.add_argument('--dim_word', help='Dimensionality of word embeddings', type=int, default=128)
-parser.add_argument('--dim_hidden_lstm', help='Dimensionality of LSTM hidden vectors', type=int, default=50)
+parser.add_argument('--dim_hidden_lstm', help='Dimensionality of LSTM hidden vectors', type=int, default=64)
 parser.add_argument('--dim_hidden_mlp', help='Dimensionality of MLP hidden vectors', type=int, default=32)
 parser.add_argument('--dim_hidden_template', help='Dimensionality of MLP hidden vectors for the final template choice', type=int, default=64)
 parser.add_argument('--word_vectors', help='Pre-built word embeddings')
-parser.add_argument('--lstm_layers', help='Number of layers in the LSTM', type=int, default=1)
+parser.add_argument('--lstm_layers', help='Number of layers in the LSTM', type=int, default=2)
 
 # Training
 parser.add_argument('--max_iters', help='Maximum number of training iterations', type=int, default=50)
@@ -43,7 +43,7 @@ parser.add_argument('--max_bad_iters', help='Maximum number of consecutive train
 parser.add_argument('--log_freq', help='Number of examples to decode between logging', type=int, default=400)
 parser.add_argument('--eval_freq', help='Number of examples to decode between evaluation runs', type=int, default=800)
 parser.add_argument('--train_noise', help='Noise added to word embeddings as regularization', type=float, default=0.1)
-parser.add_argument('--lstm_dropout', help='Dropout for input and hidden elements of the LSTM', type=float)
+parser.add_argument('--lstm_dropout', help='Dropout for input and hidden elements of the LSTM', type=float, default=0.0)
 parser.add_argument('--learning_rate', help='Learning rate for optimiser', type=float, default="0.1")
 
 args = parser.parse_args()
@@ -254,7 +254,7 @@ pOutputTemplate = model.add_parameters((NTEMPLATES, DIM_HIDDEN_TEMPLATE))
 def build_tagging_graph(words, tags, template, builders, train=True):
     dy.renew_cg()
 
-    if train and args.lstm_dropout is not None:
+    if train and args.lstm_dropout is not None and args.lstm_dropout > 0:
         for b in builders:
             b.set_dropouts(args.lstm_dropout, args.lstm_dropout)
 

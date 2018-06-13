@@ -3,14 +3,15 @@ This directory contains a simple baseline approach for mapping text to SQL:
 - Identify an SQL template for this question
 - Choose which words will fit which slots in the template
 
-The model is a bi-directional LSTM that
+The model uses a bi-directional LSTM to predict a label for each word, indicating whether it fills a slot.
+The final hidden states of the LSTM are used to predict the template.
+There is no enforcement of agreement between the template and the slots.
+Visually, for the sentence "Flights from Denver to Boston" it looks like this:
 
 ![Image of model structure](./model.png)
 
-Given our observation of overlap between train and test splits for the standard data, this is a simple baseline that clearly doesn't generalise, but may be very effective:
-
-- Convert the data into a set of templates where the only variables in the templates are words that occur in the input
-- Run a tagger over the input, where the tags are the slots words need to fill, and the tagger also chooses a template
+This approach is motivated by our observation of overlap between train and test in question-based data splits.
+It will completely fail on query-based data splits, but does surprisingly well on question-based splits, making it a nice baseline.
 
 If you use this code, please cite our ACL paper:
 
@@ -27,34 +28,50 @@ If you use this code, please cite our ACL paper:
 }
 ```
 
-
 ## Requirements
 
-- [Dynet](dynet.readthedocs.io) for python
+- Python 3
+- [Dynet](dynet.readthedocs.io)
 
 ## Running
 
 For all arguments etc, run:
 
 ```
-./baseline.py --help
+./text2sql-template-baseline.py --help
 ```
 
 To run with all the defaults, simply do:
 
 ```
-./baseline.py <data_file>
+./text2sql-template-baseline.py <data_file>
 ```
 
-Initial results on the development set (% of cases where we get the right template and identify all variables) are:
+## Parameters used for paper results
 
-Dataset  | Oracle | Current Score
--------- | ------ | ------
-GeoQuery | 82     | 47
-Advising | 99     | 75
-ATIS     | 89     | 65
-Scholar  | 91     | 55
+The parameters were varied slightly for each dataset (any not listed here were set to the default).
+
+Dataset                           | Parameter            | Value
+--------------------------------- | -------------------- | ----------
+Advising                          | max-iters            | 40
+Geography                         | dim-word             | 64
+                                  | dim-hidden-lstm      | 128
+                                  | dim-hidden-template  | 32
+                                  | max-iters            | 31
+Scholar                           | lstm-layers          | 1
+                                  | max-iters            | 17
+ATIS                              | learning-rate        | 0.05
+                                  | max-iters            | 22
+Academic, IMDB, Restaurants, Yelp | dim-word             | 64
+                                  | dim-hidden-template  | 32
+                                  | train-noise          | 0.0
+                                  | lstm-layers          | 1
+                                  | max-iters            | 3
+
+For evaluation, log-freq and eval-freq were set to very large numbers, and do-test-eval was set.
 
 ## License
 
 This code is a modified version of the example [tagger code](https://github.com/clab/dynet/blob/master/examples/tagger/bilstmtagger.py) from the DyNet repository.
+It is available under an Apache 2 license.
+
