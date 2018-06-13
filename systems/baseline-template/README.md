@@ -1,4 +1,11 @@
-# Baseline Text-to-SQL
+This directory contains a simple baseline approach for mapping text to SQL:
+
+- Identify an SQL template for this question
+- Choose which words will fit which slots in the template
+
+The model is a bi-directional LSTM that
+
+![Image of model structure](./model.pdf)
 
 Given our observation of overlap between train and test splits for the standard data, this is a simple baseline that clearly doesn't generalise, but may be very effective:
 
