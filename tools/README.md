@@ -1,3 +1,24 @@
 These are useful tools for processing the SQL data.
 
-The tools are Python 2 and 3 compatible. When run with no arguments they print their usage instructions and exit.
+### canonicaliser.py
+
+This is the code we wrote to modify SQL to have a consistent style, specifically:
+
+- Tokenisation, e.g. each bracket is a separate token, except when used as part of COUNT, MAX, etc
+- Case, all keywords are uppercase, while variable names are lowercase
+- Aliases, converted to be of the form `TABLEalisN`, where `TABLE` is the name of a table and `N` is a number
+- Order, conditionals are ordered alphabetically, and the two sides of the conditional are also ordered
+
+Tests were developed in the process of developing the code and are also included.
+If you do use this we would suggest proceeding with care - if your SQL contains phenomena we had not considered then the results could be unexpected.
+
+### corpus_stats.py
+
+Collects a few simple statistics about a dataset:
+
+- Number of questions
+- Number of queries
+- Number of selects per query
+- Query depth (nesting)
+- Query breadth (multiple selects at the same level)
+
