@@ -5,7 +5,7 @@ This directory contains a simple baseline approach for mapping text to SQL:
 
 The model is a bi-directional LSTM that
 
-![Image of model structure](./model.pdf)
+![Image of model structure](./model.png)
 
 Given our observation of overlap between train and test splits for the standard data, this is a simple baseline that clearly doesn't generalise, but may be very effective:
 
