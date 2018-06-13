@@ -1,7 +1,3 @@
-These are two systems for mapping questions to SQL:
-
-- A template based, slot-filling LSTM ([instructions](./baseline-template/README.md)).
-- A sequence-to-sequence model ([instructions](./sequence-to-sequence/README.md)).
 
 If you use this code, please cite our ACL paper:
 

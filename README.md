@@ -7,20 +7,17 @@ For a range of domains, we provide:
 - A database schema
 - A database
 
-We also provide code for two neural network based systems:
+We have separate files describing the [datasets](./data/README.md), [systems](./systems/README.md), and [tools](./tools/README.md).
 
-- A template based, slot-filling LSTM
-- A sequence-to-sequence model 
+TODO: codalab
 
 Version | Description
 ------- | -------------
 1       | Data used in the ACL 2018 paper
 
-TODO: codalab
+# Citing this work
 
-# Using the data
-
-If you use this data in your work, please cite our ACL paper *and* the appropriate original sources, and list the version number of the data.
+If you use this data in your work, please cite our ACL paper _and_ the appropriate original sources, and list the version number of the data.
 For example, in your paper you could write (using the BibTeX below):
 
 ```
@@ -127,7 +124,3 @@ We put substantial effort into fixing bugs in the datasets, but none of them are
 If you find a bug, please submit a pull request with a fix.
 We will be merging fixes into a development branch and only infrequently merging all of those changes into the master branch (at which point this page will be adjusted to note that it is a new release).
 This approach is intended to balance the need for clear comparisons between systems, while also improving the data.
-
-# Format 
-
-See `data/README.md` for details on our format.
