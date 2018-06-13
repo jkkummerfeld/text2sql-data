@@ -30,15 +30,15 @@ Symbol             | Type              | Meaning
 ------------------ | ----------------- | -----------------------------
 query-split        | string            | Whether this is a training, development or test query
 sentences          | list of mappings  | -
-----question-split | string            | Whether this is a training, development or test question
-----text           | string            | The text of the question, with variable names
-----variables      | mapping           | Mapping from variable names to values
+sentences/question-split | string            | Whether this is a training, development or test question
+sentences/text           | string            | The text of the question, with variable names
+sentences/variables      | mapping           | Mapping from variable names to values
 sql                | list of strings   | SQL queries with variable names. Note - we only use the first query, but retain the variants for completeness (e.g. using joins vs. conditions).
 variables          | list of mappings  | -
-----location       | string            | Whether this occurs in the SQL only, the question only, or both
-----example        | string            | An example value that could fill the variable (in the SQL only case, this is what is used)
-----name           | string            | The variable name
-----type           | string            | Dataset specific type
+variables/location       | string            | Whether this occurs in the SQL only, the question only, or both
+variables/example        | string            | An example value that could fill the variable (in the SQL only case, this is what is used)
+variables/name           | string            | The variable name
+variables/type           | string            | Dataset specific type
 
 Example:
 
