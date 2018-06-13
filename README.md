@@ -1,4 +1,4 @@
-# The text2sql corpus
+# text2sql-data
 This repository contains data and code for building and evaluating systems that map sentences to SQL.
 For a range of domains, we provide:
 
