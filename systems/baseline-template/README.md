@@ -1,9 +1,9 @@
 This directory contains a simple baseline approach for mapping text to SQL:
 
 - Identify an SQL template for this question
-- Choose which words will fit which slots in the template
+- Choose words in the question to fill slots in the template
 
-The model uses a bi-directional LSTM to predict a label for each word, indicating whether it fills a slot.
+The model uses a bi-directional LSTM to predict a label for each word, indicating what type of slot it fills.
 The final hidden states of the LSTM are used to predict the template.
 There is no enforcement of agreement between the template and the slots.
 Visually, for the sentence "Flights from Denver to Boston" it looks like this:
@@ -35,7 +35,7 @@ If you use this code, please cite our ACL paper:
 
 ## Running
 
-For all arguments etc, run:
+To see all options, run:
 
 ```
 ./text2sql-template-baseline.py --help
@@ -55,18 +55,18 @@ Dataset                           | Parameter            | Value
 --------------------------------- | -------------------- | ----------
 Advising                          | max-iters            | 40
 Geography                         | dim-word             | 64
-                                  | dim-hidden-lstm      | 128
-                                  | dim-hidden-template  | 32
-                                  | max-iters            | 31
+"                                 | dim-hidden-lstm      | 128
+"                                 | dim-hidden-template  | 32
+"                                 | max-iters            | 31
 Scholar                           | lstm-layers          | 1
-                                  | max-iters            | 17
+"                                 | max-iters            | 17
 ATIS                              | learning-rate        | 0.05
-                                  | max-iters            | 22
+"                                 | max-iters            | 22
 Academic, IMDB, Restaurants, Yelp | dim-word             | 64
-                                  | dim-hidden-template  | 32
-                                  | train-noise          | 0.0
-                                  | lstm-layers          | 1
-                                  | max-iters            | 3
+"                                 | dim-hidden-template  | 32
+"                                 | train-noise          | 0.0
+"                                 | lstm-layers          | 1
+"                                 | max-iters            | 3
 
 For evaluation, log-freq and eval-freq were set to very large numbers, and do-test-eval was set.
 
