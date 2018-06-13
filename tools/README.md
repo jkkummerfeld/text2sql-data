@@ -22,3 +22,6 @@ Collects a few simple statistics about a dataset:
 - Query depth (nesting)
 - Query breadth (multiple selects at the same level)
 
+### json_to_flat.py
+
+A convenient tool to convert from our json format to three files (train, dev, test) conaining one example per line: `sentence | query` with variables filled in.

@@ -14,21 +14,85 @@ For each dataset we provide:
 - `*-fields.txt`, a list of fields in the database
 - `*-schema.csv`, key information about each database field
 
-For four of the databases are not included either for size or licensing reasons.
-They can be found:
+Four of the databases are not included either for size or licensing reasons.
+They can be found as follows:
 
 Dataset  | Database
 -------- | ----------
-Academic | TODO
-IMDB     | TODO
-Scholar  | TODO
-Yelp     | TODO
+Academic (MAS), IMDB, Yelp | [https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM](https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM)
+Scholar  | [https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk](https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk)
 
 # Format
 
+Each json file contains a list of queries with the following fields:
 
+Symbol             | Type              | Meaning
+------------------ | ----------------- | -----------------------------
+query-split        | string            | Whether this is a training, development or test query
+sentences          | list of mappings  | -
+----question-split | string            | Whether this is a training, development or test question
+----text           | string            | The text of the question, with variable names
+----variables      | mapping           | Mapping from variable names to values
+sql                | list of strings   | SQL queries with variable names. Note - we only use the first query, but retain the variants for completeness (e.g. using joins vs. conditions).
+variables          | list of mappings  | -
+----location       | string            | Whether this occurs in the SQL only, the question only, or both
+----example        | string            | An example value that could fill the variable (in the SQL only case, this is what is used)
+----name           | string            | The variable name
+----type           | string            | Dataset specific type
 
-- Note multiple SQL in some cases. We used the first one in our experiments.
+Example:
+
+```
+{
+    "query-split": "test",
+    "sentences": [
+        {
+            "question-split": "exclude",
+            "text": "Can undergraduates take number0 ?",
+            "variables": {
+                "department0": "",
+                "number0": "990"
+            }
+        }
+    ],
+    "sql": [
+        "SELECT DISTINCT COURSEalias0.ADVISORY_REQUIREMENT , COURSEalias0.ENFORCED_REQUIREMENT , COURSEalias0.NAME FROM COURSE AS COURSEalias0 WHERE COURSEalias0.DEPARTMENT = \"department0\" AND COURSEalias0.NUMBER = number0 ;"
+    ],
+    "variables": [
+        {
+            "example": "EECS",
+            "location": "sql-only",
+            "name": "department0",
+            "type": "department"
+        },
+        {
+            "example": "595",
+            "location": "both",
+            "name": "number0",
+            "type": "number"
+        }
+    ]
+}
+```
+
+When a question has multiple interpretations it appears in multiple files.
+At the moment, there is only one SQL query per file, one todo item is to merge these cases where the query does the same thing but differently (as opposed to being a different interpretation of the question).
+
+For release, we will scrub usernames from all of the data. The QA related fields will be retained, but hopefully the scores all become excellent!
+
+The schema is formatted as a series of lines, each describing one field from a table:
+
+- Table name
+- Field name
+- Type
+- Null
+- Key
+- Default
+- Extra
+
+When a value is not set (e.g. default) a `-` is used.
+
+- TODO: Note multiple SQL in some cases. We used the first one in our experiments.
 
 # Other content
 
@@ -36,5 +100,4 @@ The two directories contain relevant data that we did not use in our paper:
 
 - `non-sql-data`, variants of the datasets (e.g. with logical forms instead of SQL, or with translation into other languages)
 - `original`, the data from prior work that we modified
-
 
