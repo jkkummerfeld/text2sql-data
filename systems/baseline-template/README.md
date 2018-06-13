@@ -32,3 +32,6 @@ Advising | 99     | 75
 ATIS     | 89     | 65
 Scholar  | 91     | 55
 
+## License
+
+This code is a modified version of the example [tagger code](https://github.com/clab/dynet/blob/master/examples/tagger/bilstmtagger.py) from the DyNet repository.

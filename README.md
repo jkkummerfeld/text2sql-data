@@ -7,6 +7,11 @@ For a range of domains, we provide:
 - A database schema
 - A database
 
+We also provide code for two neural network based systems:
+
+- A template based, slot-filling LSTM
+- A sequence-to-sequence model 
+
 Version | Description
 ------- | -------------
 1       | Data used in the ACL 2018 paper

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Based on https://github.com/clab/dynet/blob/master/examples/tagger/bilstmtagger.py
+# Adapted by Jonathan K. Kummerfeld from https://github.com/clab/dynet/blob/master/examples/tagger/bilstmtagger.py
 
 import argparse
 from collections import Counter
