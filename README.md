@@ -97,7 +97,7 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
 
 @inproceedings{data-geography-original
   dataset   = {Geography, original},
-  author    = {Zelle, John M. and Mooney, Raymond J.},
+  author    = {John M. Zelle and Raymond J. Mooney},
   title     = {Learning to Parse Database Queries Using Inductive Logic Programming},
   booktitle = {Proceedings of the Thirteenth National Conference on Artificial Intelligence - Volume 2},
   year      = {1996},
@@ -107,7 +107,7 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
 }
 
 @inproceedings{data-restaurants-original,
-  author    = {Giordani, Alessandra and Moschitti, Alessandro},
+  author    = {Alessandra Giordani and Alessandro Moschitti},
   title     = {Automatic Generation and Reranking of SQL-derived Answers to NL Questions},
   booktitle = {Proceedings of the Second International Conference on Trustworthy Eternal Systems via Evolving Software, Data and Knowledge},
   year      = {2012},

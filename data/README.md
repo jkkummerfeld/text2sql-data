@@ -22,6 +22,8 @@ Dataset  | Database
 Academic (MAS), IMDB, Yelp | [https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM](https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM)
 Scholar  | [https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk](https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk)
 
+For more information about the sources of data see the [READ-history.md](./READ-history.md) file.
+
 # Format
 
 Each json file contains a list of queries with the following fields:
@@ -75,11 +77,6 @@ Example:
 }
 ```
 
-When a question has multiple interpretations it appears in multiple files.
-At the moment, there is only one SQL query per file, one todo item is to merge these cases where the query does the same thing but differently (as opposed to being a different interpretation of the question).
-
-For release, we will scrub usernames from all of the data. The QA related fields will be retained, but hopefully the scores all become excellent!
-
 The schema is formatted as a series of lines, each describing one field from a table:
 
 - Table name
@@ -91,8 +88,6 @@ The schema is formatted as a series of lines, each describing one field from a t
 - Extra
 
 When a value is not set (e.g. default) a `-` is used.
-
-- TODO: Note multiple SQL in some cases. We used the first one in our experiments.
 
 # Other content
 
