@@ -19,10 +19,10 @@ Created for NaLIR by enumerating all of the different queries possible with the 
 
 ## advising
 
-1. Collected questions from facebook and undergraduates (past CLAIR lab students), then wrote further questions of a similar style.
+1. Collected questions from Facebook and undergraduates (past CLAIR lab students), then wrote further questions of a similar style.
 2. Four people wrote SQL queries for all of the questions (one per question).
 3. Six people scored the queries for helpfulness and accuracy (two people per query).
-4. Collected paraphrases on mechanical turk, then one person checked them all, correcting/filtering for major grammatical or correctness issues and adding paraphrases to stay above a minimum of 10 per query.
+4. Collected paraphrases on Mechanical Turk, then one person checked them all, correcting/filtering for major grammatical or correctness issues and adding paraphrases to stay above a minimum of 10 per query.
 
 The default student is in EECS (needed for assumed content of queries).
 In the database they are represented by student record ID 1.
@@ -30,7 +30,7 @@ In the database they are represented by student record ID 1.
 ## atis
 
 1. Originally collected for the "The ATIS spoken language systems pilot corpus"
-2. Modified By Iyer et al. to reduce nesting.
+2. Modified by Iyer et al. to reduce nesting.
 
 ## geoquery
 
