@@ -6,7 +6,7 @@ This is the code we wrote to modify SQL to have a consistent style, specifically
 
 - Tokenisation, e.g. each bracket is a separate token, except when used as part of COUNT, MAX, etc
 - Case, all keywords are uppercase, while variable names are lowercase
-- Aliases, converted to be of the form `TABLEalisN`, where `TABLE` is the name of a table and `N` is a number
+- Aliases, converted to be of the form `TABLEaliasN`, where `TABLE` is the name of a table and `N` is a number
 - Order, conditionals are ordered alphabetically, and the two sides of the conditional are also ordered
 
 Tests were developed in the process of developing the code and are also included.
