@@ -14,7 +14,7 @@ For each dataset we provide:
 - `*-fields.txt`, a list of fields in the database
 - `*-schema.csv`, key information about each database field
 
-Four of the databases are not included either for size or licensing reasons.
+Four of the databases are not included in the repository either for size or licensing reasons.
 They can be found as follows:
 
 Dataset  | Database
