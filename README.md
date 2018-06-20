@@ -9,8 +9,6 @@ For a range of domains, we provide:
 
 We have separate files describing the [datasets](./data/README.md), [systems](./systems/README.md), and [tools](./tools/README.md).
 
-TODO: codalab
-
 Version | Description
 ------- | -------------
 1       | Data used in the ACL 2018 paper
