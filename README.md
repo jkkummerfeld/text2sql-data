@@ -19,7 +19,7 @@ If you use this data in your work, please cite our ACL paper _and_ the appropria
 For example, in your paper you could write (using the BibTeX below):
 
 ```
-In this work, we use version 1 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-original}
+In this work, we use version 1 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-original,data-restaurants}
 ```
 
 If you are only using one dataset, here are example citation commands:
@@ -30,7 +30,7 @@ Academic     | `\citet{data-advising,data-academic}`
 Advising     | `\citet{data-advising}`
 ATIS         | `\citet{data-advising,data-atis-original,data-atis-geography-scholar}`
 Geography    | `\citet{data-advising,data-geography-original,data-atis-geography-scholar}`
-Restaurants  | `\citet{data-advising,data-restaurants-original}`
+Restaurants  | `\citet{data-advising,data-restaurants-original,data-restaurants}`
 Scholar      | `\citet{data-advising,data-atis-geography-scholar}`
 IMDB         | `\citet{data-advising,data-imdb-yelp}`
 Yelp         | `\citet{data-advising,data-imdb-yelp}`
@@ -105,6 +105,16 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
 }
 
 @inproceedings{data-restaurants-original,
+ author    = {Ana-Maria Popescu, Oren Etzioni, and Henry Kautz},
+ title     = {Towards a Theory of Natural Language Interfaces to Databases},
+ booktitle = {Proceedings of the 8th International Conference on Intelligent User Interfaces},
+ year      = {2003},
+ location  = {Miami, Florida, USA},
+ pages     = {149--157},
+ url       = {http://doi.acm.org/10.1145/604045.604070},
+}
+
+@inproceedings{data-restaurants,
   author    = {Alessandra Giordani and Alessandro Moschitti},
   title     = {Automatic Generation and Reranking of SQL-derived Answers to NL Questions},
   booktitle = {Proceedings of the Second International Conference on Trustworthy Eternal Systems via Evolving Software, Data and Knowledge},
@@ -113,7 +123,6 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
   pages     = {59--76},
   url       = {https://doi.org/10.1007/978-3-642-45260-4_5},
 }
-
 ```
 
 # Contributions
