@@ -93,6 +93,6 @@ When a value is not set (e.g. default) a `-` is used.
 
 The two directories contain relevant data that we did not use in our paper:
 
-- `non-sql-data`, variants of the datasets (e.g. with logical forms instead of SQL, or with translation into other languages)
+- `non-sql-data`, variants of the datasets (e.g. with logical forms instead of SQL, or with translation into other languages, from the [GeoQuery](http://www.cs.utexas.edu/users/ml/wasp/) website)
 - `original`, the data from prior work that we modified
 
