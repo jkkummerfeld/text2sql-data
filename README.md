@@ -7,7 +7,8 @@ For a range of domains, we provide:
 - A database schema
 - A database
 
-We have separate files describing the [datasets](./data/README.md), [systems](./systems/README.md), and [tools](./tools/README.md).
+These are improved forms of prior datasets and a new dataset we developed.
+We have separate files describing the [datasets](./data/README.md), [systems](./systems/README.md), and [tools](./tools/).
 
 Version | Description
 ------- | -------------
