@@ -1,5 +1,10 @@
 # text2sql-data
-This repository contains data and code for building and evaluating systems that map sentences to SQL.
+This repository contains data and code for building and evaluating systems that map sentences to SQL, developed as part of:
+
+  - [Improving Text-to-SQL Evaluation Methodology](http://arxiv.org/abs/1806.09029),
+  Catherine Finegan-Dollak, Jonathan K. Kummerfeld, Li Zhang, Karthik Ramanathan, Sesh Sadasivam, Rui Zhang, and Dragomir Radev,
+  ACL 2018
+
 For a range of domains, we provide:
 
 - Sentences with annotated variables
@@ -46,7 +51,7 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
   year      = {2018},
   location  = {Melbourne, Victoria, Australia},
   pages     = {},
-  url       = {},
+  url       = {http://arxiv.org/abs/1806.09029},
 }
 
 @InProceedings{data-sql-imdb-yelp,
