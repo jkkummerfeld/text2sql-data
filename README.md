@@ -25,7 +25,7 @@ If you use this data in your work, please cite our ACL paper _and_ the appropria
 For example, in your paper you could write (using the BibTeX below):
 
 ```
-In this work, we use version 1 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-original,data-restaurants}
+In this work, we use version 1 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-logic,data-restaurants-original,data-restaurants}
 ```
 
 If you are only using one dataset, here are example citation commands:
@@ -36,7 +36,7 @@ Academic     | `\citet{data-advising,data-academic}`
 Advising     | `\citet{data-advising}`
 ATIS         | `\citet{data-advising,data-atis-original,data-atis-geography-scholar}`
 Geography    | `\citet{data-advising,data-geography-original,data-atis-geography-scholar}`
-Restaurants  | `\citet{data-advising,data-restaurants-original,data-restaurants}`
+Restaurants  | `\citet{data-advising,data-restaurants-logic,data-restaurants-original,data-restaurants}`
 Scholar      | `\citet{data-advising,data-atis-geography-scholar}`
 IMDB         | `\citet{data-advising,data-imdb-yelp}`
 Yelp         | `\citet{data-advising,data-imdb-yelp}`
@@ -108,6 +108,16 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
   pages     = {1050--1055},
   location  = {Portland, Oregon},
   url       = {http://dl.acm.org/citation.cfm?id=1864519.1864543},
+}
+
+@inproceedings{data-restaurants-logic,
+  author    = {Lappoon R. Tang and Raymond J. Mooney},
+  title     = {Automated Construction of Database Interfaces: Intergrating Statistical and Relational Learning for Semantic Parsing},
+  booktitle = {2000 Joint SIGDAT Conference on Empirical Methods in Natural Language Processing and Very Large Corpora},
+  year      = {2000},
+  pages     = {133--141},
+  location  = {Hong Kong, China},
+  url       = {http://www.aclweb.org/anthology/W00-1317},
 }
 
 @inproceedings{data-restaurants-original,
