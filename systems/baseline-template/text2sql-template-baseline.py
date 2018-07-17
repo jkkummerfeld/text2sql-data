@@ -135,24 +135,8 @@ test = []
 for filename in args.data:
     with open(filename) as input_file:
         data = json.load(input_file)
-        if type(data) == list:
-            for example in data:
-                for dataset, instance in get_tagged_data_for_query(example):
-                    if dataset == 'train':
-                        train.append(instance)
-                    elif dataset == 'dev':
-                        if args.do_test_eval:
-                            train.append(instance)
-                        else:
-                            dev.append(instance)
-                    elif dataset == 'test':
-                        test.append(instance)
-                    elif dataset == 'exclude':
-                        pass
-                    else:
-                        assert False, dataset
-        else:
-            for dataset, instance in get_tagged_data_for_query(data):
+        for example in data:
+            for dataset, instance in get_tagged_data_for_query(example):
                 if dataset == 'train':
                     train.append(instance)
                 elif dataset == 'dev':
