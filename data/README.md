@@ -24,6 +24,14 @@ Scholar  | [https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk](https:
 
 For more information about the sources of data see the [READ-history.md](./READ-history.md) file.
 
+## Data split definition
+
+Question split - Where possible, we follow the divisions from prior work.
+
+Query split - Random assignment (note that this did not take into consideration the number of questions for a given query).
+
+For the smaller datasets we use cross-validation (randomly assigned) and provide our split definitions to enable exact replication.
+
 # Format
 
 Each json file contains a list of queries with the following fields:
