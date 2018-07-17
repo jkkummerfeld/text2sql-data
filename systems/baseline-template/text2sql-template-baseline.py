@@ -14,9 +14,6 @@ import numpy as np
 
 ## Command line argument handling and default configuration ##
 
-abstract_lang = 'sql'
-###abstract_lang = 'logic'
-
 parser = argparse.ArgumentParser(description='A simple template-based text-to-SQL system.')
 
 # IO
@@ -89,21 +86,11 @@ def insert_variables(sql, sql_variables, sent, sent_variables):
             template.append(token)
         elif token in sent_variables:
             if sent_variables[token] == '':
-                example = None
-                for variable in sql_variables:
-                    if variable['name'] == token:
-                        example = variable['example']
-                assert example is not None
-                template.append(example)
+                template.append(sql_variables[token])
             else:
                 template.append(token)
         elif token in sql_variables:
-            example = None
-            for variable in sql_variables:
-                if variable['name'] == token:
-                    example = variable['example']
-            assert example is not None
-            template.append(example)
+            template.append(sql_variables[token])
 
     return (tokens, tags, ' '.join(template))
 
@@ -119,8 +106,10 @@ def get_tagged_data_for_query(data):
             else:
                 dataset = "train"
 
-        for sql in data[abstract_lang]:
-            sql_vars = data['variables']
+        for sql in data['sql']:
+            sql_vars = {}
+            for sql_var in data['variables']:
+                sql_vars[sql_var['name']] = sql_var['example']
             text = sent_info['text']
             text_vars = sent_info['variables']
 
