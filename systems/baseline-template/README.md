@@ -47,6 +47,13 @@ To run with all the defaults, simply do:
 ./text2sql-template-baseline.py <data_file>
 ```
 
+For the smaller datasets (Academic, Restaurants, IMDB, Yelp), cross-validation is used rather than a simple train-dev-test split.
+To handle that, use the `--split` flag, with an argument indicating the split number, for example:
+
+```
+./text2sql-template-baseline.py data/restaurants.json --split 0
+```
+
 ## Parameters used for paper results
 
 The parameters were varied slightly for each dataset (any not listed here were set to the default).

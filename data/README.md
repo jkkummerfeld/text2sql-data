@@ -30,9 +30,9 @@ Each json file contains a list of queries with the following fields:
 
 Symbol             | Type              | Meaning
 ------------------ | ----------------- | -----------------------------
-query-split        | string            | Whether this is a training, development or test query
+query-split        | string            | Whether this is a training, development or test query [large datasets] or the split number for 10-fold cross validation [small datasets]
 sentences          | list of mappings  | -
-sentences/question-split | string            | Whether this is a training, development or test question
+sentences/question-split | string            | Whether this is a training, development or test question [large datasets] or the split number for 10-fold cross validation [small datasets]
 sentences/text           | string            | The text of the question, with variable names
 sentences/variables      | mapping           | Mapping from variable names to values
 sql                | list of strings   | SQL queries with variable names. Note - we only use the first query, but retain the variants for completeness (e.g. using joins vs. conditions).
@@ -49,11 +49,11 @@ Example:
     "query-split": "test",
     "sentences": [
         {
-            "question-split": "exclude",
-            "text": "Can undergraduates take number0 ?",
+            "question-split": "train",
+            "text": "Is course number0 available to undergrads ?",
             "variables": {
                 "department0": "",
-                "number0": "990"
+                "number0": "519"
             }
         }
     ],

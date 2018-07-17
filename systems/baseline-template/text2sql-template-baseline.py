@@ -26,7 +26,7 @@ parser.add_argument('--query_split', help='Use the query split rather than the q
 parser.add_argument('--no_vars', help='Run without filling in variables', action='store_true')
 parser.add_argument('--use_all_sql', help='Default is to use first SQL only, this makes multiple instances.', action='store_true')
 parser.add_argument('--do_test_eval', help='Do the final evaluation on the test set (rather than dev).', action='store_true')
-parser.add_argument('--split', help='Use this split in cross-validation.', type=int)
+parser.add_argument('--split', help='Use this split in cross-validation.', type=int) # Used for small datasets: Academic, Restaurants, IMDB, Yelp
 
 # Model
 parser.add_argument('--mlp', help='Use a multi-layer perceptron', action='store_true')
