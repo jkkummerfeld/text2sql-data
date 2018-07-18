@@ -1,7 +1,7 @@
 # text2sql-data
 This repository contains data and code for building and evaluating systems that map sentences to SQL, developed as part of:
 
-  - [Improving Text-to-SQL Evaluation Methodology](http://arxiv.org/abs/1806.09029),
+  - [Improving Text-to-SQL Evaluation Methodology](http://aclweb.org/anthology/P18-1033),
   Catherine Finegan-Dollak, Jonathan K. Kummerfeld, Li Zhang, Karthik Ramanathan, Sesh Sadasivam, Rui Zhang, and Dragomir Radev,
   ACL 2018
 
@@ -50,8 +50,8 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
   month     = {July},
   year      = {2018},
   location  = {Melbourne, Victoria, Australia},
-  pages     = {},
-  url       = {http://arxiv.org/abs/1806.09029},
+  pages     = {351--360},
+  url       = {http://aclweb.org/anthology/P18-1033},
 }
 
 @InProceedings{data-sql-imdb-yelp,

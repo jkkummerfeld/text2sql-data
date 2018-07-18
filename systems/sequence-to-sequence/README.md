@@ -10,8 +10,8 @@ If you use this code, please cite our ACL paper:
   month     = {July},
   year      = {2018},
   address   = {Melbourne, Victoria, Australia},
-  pages     = {},
-  url       = {http://arxiv.org/abs/1806.09029},
+  pages     = {351--360},
+  url       = {http://aclweb.org/anthology/P18-1033},
 }
 ```
 
