@@ -57,6 +57,9 @@ To handle that, use the `--split` flag, with an argument indicating the split nu
 ## Parameters used for paper results
 
 The parameters were varied slightly for each dataset (any not listed here were set to the default).
+The following flags were set for evaluation on all datasets:
+
+`--eval_freq 1000000 --log_freq 1000000 --max_bad_iters -1 --do_test_eval`
 
 Dataset                           | Parameter            | Value
 --------------------------------- | -------------------- | ----------
@@ -74,8 +77,6 @@ Academic, IMDB, Restaurants, Yelp | dim-word             | 64
 "                                 | train-noise          | 0.0
 "                                 | lstm-layers          | 1
 "                                 | max-iters            | 3
-
-For evaluation, log-freq and eval-freq were set to very large numbers, and do-test-eval was set.
 
 ## License
 
