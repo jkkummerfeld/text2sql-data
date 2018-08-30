@@ -17,6 +17,7 @@ We have separate files describing the [datasets](./data/), [systems](./systems/)
 
 Version | Description
 ------- | -------------
+2       | Data with fixes for variables incorrectly defined in questions
 1       | Data used in the ACL 2018 paper
 
 # Citing this work
