@@ -129,8 +129,7 @@
                 "question-split": "train",
                 "variables": {
                     "authorname0": "Philipp Haberstock",
-                    "authorname1": "Ludwig Nastansky",
-                    "misc0": "2"
+                    "authorname1": "Ludwig Nastansky"
                 }
             },
             {
@@ -138,8 +137,7 @@
                 "question-split": "train",
                 "variables": {
                     "authorname0": "X Jiang",
-                    "authorname1": "Frantzen",
-                    "misc0": "2"
+                    "authorname1": "Frantzen"
                 }
             },
             {
@@ -147,8 +145,7 @@
                 "question-split": "train",
                 "variables": {
                     "authorname0": "X Jiang",
-                    "authorname1": "Frantzen",
-                    "misc0": "2"
+                    "authorname1": "Frantzen"
                 }
             },
             {
@@ -156,8 +153,7 @@
                 "question-split": "train",
                 "variables": {
                     "authorname0": "Peter Mertens",
-                    "authorname1": "Dina Barbian",
-                    "misc0": "2"
+                    "authorname1": "Dina Barbian"
                 }
             },
             {
@@ -165,8 +161,7 @@
                 "question-split": "test",
                 "variables": {
                     "authorname0": "Peter Mertens",
-                    "authorname1": "Dina Barbian",
-                    "misc0": "2"
+                    "authorname1": "Dina Barbian"
                 }
             },
             {
@@ -174,14 +169,13 @@
                 "question-split": "test",
                 "variables": {
                     "authorname0": "Peter Mertens",
-                    "authorname1": "Dina Barbian",
-                    "misc0": "2"
+                    "authorname1": "Dina Barbian"
                 }
             }
         ],
         "sql": [
             "SELECT DISTINCT WRITESalias0.PAPERID FROM AUTHOR AS AUTHORalias0 , AUTHOR AS AUTHORalias1 , WRITES AS WRITESalias0 , WRITES AS WRITESalias1 WHERE AUTHORalias0.AUTHORNAME = \"authorname0\" AND AUTHORalias1.AUTHORNAME = \"authorname1\" AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias1.AUTHORID = AUTHORalias1.AUTHORID AND WRITESalias1.PAPERID = WRITESalias0.PAPERID ;",
-            "SELECT DISTINCT WRITESalias0.PAPERID FROM AUTHOR AS AUTHORalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME IN ( \"authorname0\" , \"authorname1\" ) AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID GROUP BY WRITESalias0.PAPERID HAVING COUNT( DISTINCT WRITESalias0.AUTHORID ) = misc0 ;"
+            "SELECT DISTINCT WRITESalias0.PAPERID FROM AUTHOR AS AUTHORalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME IN ( \"authorname0\" , \"authorname1\" ) AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID GROUP BY WRITESalias0.PAPERID HAVING COUNT( DISTINCT WRITESalias0.AUTHORID ) = 2 ;"
         ],
         "variables": [
             {
@@ -3157,7 +3151,7 @@
                 }
             },
             {
-                "text": "I want the papers on keyphrase0 by authorname0",
+                "text": "I want the papers on keyphrasename0 by authorname0",
                 "question-split": "train",
                 "variables": {
                     "authorname0": "philipp koehn",
@@ -3683,21 +3677,19 @@
                 "text": "journal articles by authorname0",
                 "question-split": "train",
                 "variables": {
-                    "authorname0": "lorenzo bruzzone",
-                    "journalid0": "0"
+                    "authorname0": "lorenzo bruzzone"
                 }
             },
             {
                 "text": "Journal Papers by authorname0",
                 "question-split": "train",
                 "variables": {
-                    "authorname0": "mohammad rastegari",
-                    "journalid0": "0"
+                    "authorname0": "mohammad rastegari"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT PAPERalias0.PAPERID FROM AUTHOR AS AUTHORalias0 , PAPER AS PAPERalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME = \"authorname0\" AND PAPERalias0.JOURNALID >= journalid0 AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID ;"
+            "SELECT DISTINCT PAPERalias0.PAPERID FROM AUTHOR AS AUTHORalias0 , PAPER AS PAPERalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME = \"authorname0\" AND PAPERalias0.JOURNALID >= 0 AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID ;"
         ],
         "variables": [
             {
@@ -3705,12 +3697,6 @@
                 "location": "unk",
                 "name": "authorname0",
                 "type": "authorname"
-            },
-            {
-                "example": "0",
-                "location": "unk",
-                "name": "journalid0",
-                "type": "journalid"
             }
         ]
     },
@@ -3852,13 +3838,12 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver in the Decision Feedback",
-                    "year0": "2016",
-                    "misc0": "1"
+                    "year0": "2016"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT PAPERalias0.PAPERID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME = \"keyphrasename0\" AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID AND PAPERalias0.YEAR = year0 GROUP BY PAPERalias0.PAPERID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > misc0 ;"
+            "SELECT DISTINCT PAPERalias0.PAPERID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME = \"keyphrasename0\" AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID AND PAPERalias0.YEAR = year0 GROUP BY PAPERalias0.PAPERID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > 1 ;"
         ],
         "variables": [
             {
@@ -3872,12 +3857,6 @@
                 "location": "unk",
                 "name": "year0",
                 "type": "year"
-            },
-            {
-                "example": "1",
-                "location": "unk",
-                "name": "misc0",
-                "type": "misc"
             }
         ]
     },
@@ -4280,7 +4259,7 @@
                 "question-split": "dev",
                 "variables": {
                     "year0": "2000",
-                    "benuename0": "SIGMOD"
+                    "venuename0": "SIGMOD"
                 }
             },
             {
@@ -4885,8 +4864,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Neural",
-                    "keyphrasename1": "Relation Extraction",
-                    "misc0": "2"
+                    "keyphrasename1": "Relation Extraction"
                 }
             },
             {
@@ -4894,8 +4872,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -4903,8 +4880,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -4912,8 +4888,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -4921,8 +4896,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -4930,8 +4904,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Convolution",
-                    "keyphrasename1": "Combinatoric",
-                    "misc0": "1"
+                    "keyphrasename1": "Combinatoric"
                 }
             },
             {
@@ -4939,8 +4912,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -4948,8 +4920,7 @@
                 "question-split": "dev",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -4957,8 +4928,7 @@
                 "question-split": "dev",
                 "variables": {
                     "keyphrasename0": "Decision Feedback",
-                    "keyphrasename1": "Multiuser Receiver",
-                    "misc0": "1"
+                    "keyphrasename1": "Multiuser Receiver"
                 }
             },
             {
@@ -4966,8 +4936,7 @@
                 "question-split": "test",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -4975,15 +4944,14 @@
                 "question-split": "test",
                 "variables": {
                     "keyphrasename0": "multiuser receiver",
-                    "keyphrasename1": "decision feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "decision feedback"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT PAPERKEYPHRASEalias0.PAPERID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) GROUP BY PAPERKEYPHRASEalias0.PAPERID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASEID ) = misc0 ;",
-            "SELECT DISTINCT PAPERalias0.PAPERID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID GROUP BY PAPERalias0.PAPERID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > misc0 ;",
-            "SELECT DISTINCT PAPERalias0.PAPERID , PAPERalias0.YEAR FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID GROUP BY PAPERalias0.PAPERID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > misc0 ;"
+            "SELECT DISTINCT PAPERKEYPHRASEalias0.PAPERID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) GROUP BY PAPERKEYPHRASEalias0.PAPERID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASEID ) = 1 ;",
+            "SELECT DISTINCT PAPERalias0.PAPERID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID GROUP BY PAPERalias0.PAPERID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > 1 ;",
+            "SELECT DISTINCT PAPERalias0.PAPERID , PAPERalias0.YEAR FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID GROUP BY PAPERalias0.PAPERID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > 1 ;"
         ],
         "variables": [
             {
@@ -4997,12 +4965,6 @@
                 "location": "unk",
                 "name": "keyphrasename1",
                 "type": "keyphrasename"
-            },
-            {
-                "example": "2",
-                "location": "unk",
-                "name": "misc0",
-                "type": "misc"
             }
         ]
     },
@@ -5334,13 +5296,12 @@
                 "text": "journal papers for keyphrasename0",
                 "question-split": "train",
                 "variables": {
-                    "keyphrasename0": "instance segmentation",
-                    "journalid0": "0"
+                    "keyphrasename0": "instance segmentation"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT PAPERalias0.PAPERID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME = \"keyphrasename0\" AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.JOURNALID >= journalid0 AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID ;"
+            "SELECT DISTINCT PAPERalias0.PAPERID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME = \"keyphrasename0\" AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.JOURNALID >= 0 AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID ;"
         ],
         "variables": [
             {
@@ -5348,12 +5309,6 @@
                 "location": "unk",
                 "name": "keyphrasename0",
                 "type": "keyphrasename"
-            },
-            {
-                "example": "0",
-                "location": "unk",
-                "name": "journalid0",
-                "type": "journalid"
             }
         ]
     },
@@ -5961,8 +5916,7 @@
                 "question-split": "train",
                 "variables": {
                     "authorname0": "Dan Suciu",
-                    "authorname1": "Magdalena Balazinska",
-                    "misc0": "2"
+                    "authorname1": "Magdalena Balazinska"
                 }
             },
             {
@@ -5970,8 +5924,7 @@
                 "question-split": "train",
                 "variables": {
                     "authorname0": "Dan Suciu",
-                    "authorname1": "Magdalena Balazinska",
-                    "misc0": "2"
+                    "authorname1": "Magdalena Balazinska"
                 }
             },
             {
@@ -5979,8 +5932,7 @@
                 "question-split": "test",
                 "variables": {
                     "authorname0": "X Jiang",
-                    "authorname1": "Frantzen",
-                    "misc0": "2"
+                    "authorname1": "Frantzen"
                 }
             },
             {
@@ -5988,14 +5940,13 @@
                 "question-split": "test",
                 "variables": {
                     "authorname0": "Dan Suciu",
-                    "authorname1": "Magdalena Balazinska",
-                    "misc0": "2"
+                    "authorname1": "Magdalena Balazinska"
                 }
             }
         ],
         "sql": [
             "SELECT DISTINCT COUNT( 1 ) FROM AUTHOR AS AUTHORalias0 , AUTHOR AS AUTHORalias1 , WRITES AS WRITESalias0 , WRITES AS WRITESalias1 WHERE AUTHORalias0.AUTHORNAME = \"authorname0\" AND AUTHORalias1.AUTHORNAME = \"authorname1\" AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias1.AUTHORID = AUTHORalias1.AUTHORID AND WRITESalias1.PAPERID = WRITESalias0.PAPERID ;",
-            "SELECT DISTINCT COUNT( DERIVED_TABLEalias0.PAPERID ) FROM ( SELECT WRITESalias0.PAPERID FROM AUTHOR AS AUTHORalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME IN ( \"authorname0\" , \"authorname1\" ) AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID GROUP BY WRITES.PAPERID HAVING COUNT( DISTINCT WRITES.AUTHORID ) = misc0 ) AS DERIVED_TABLEalias0 ;"
+            "SELECT DISTINCT COUNT( DERIVED_TABLEalias0.PAPERID ) FROM ( SELECT WRITESalias0.PAPERID FROM AUTHOR AS AUTHORalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME IN ( \"authorname0\" , \"authorname1\" ) AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID GROUP BY WRITES.PAPERID HAVING COUNT( DISTINCT WRITES.AUTHORID ) = 2 ) AS DERIVED_TABLEalias0 ;"
         ],
         "variables": [
             {
@@ -6390,8 +6341,7 @@
                 "question-split": "train",
                 "variables": {
                     "authorname0": "Akihito Kotera",
-                    "authorname1": "Masatsugu Kidode",
-                    "misc0": "2"
+                    "authorname1": "Masatsugu Kidode"
                 }
             },
             {
@@ -6399,13 +6349,12 @@
                 "question-split": "dev",
                 "variables": {
                     "authorname0": "Luke S Zettlemoyer",
-                    "authorname1": "Mirella Lapata",
-                    "misc0": "2"
+                    "authorname1": "Mirella Lapata"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT PAPERKEYPHRASEalias0.KEYPHRASEID FROM AUTHOR AS AUTHORalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME IN ( \"authorname0\" , \"authorname1\" ) AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID GROUP BY PAPERKEYPHRASEalias0.KEYPHRASEID HAVING COUNT( DISTINCT WRITESalias0.AUTHORID ) = misc0 ;"
+            "SELECT DISTINCT PAPERKEYPHRASEalias0.KEYPHRASEID FROM AUTHOR AS AUTHORalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME IN ( \"authorname0\" , \"authorname1\" ) AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID GROUP BY PAPERKEYPHRASEalias0.KEYPHRASEID HAVING COUNT( DISTINCT WRITESalias0.AUTHORID ) = 2 ;"
         ],
         "variables": [
             {
@@ -6419,12 +6368,6 @@
                 "location": "unk",
                 "name": "authorname1",
                 "type": "authorname"
-            },
-            {
-                "example": "2",
-                "location": "unk",
-                "name": "misc0",
-                "type": "misc"
             }
         ]
     },
@@ -6548,7 +6491,7 @@
             }
         ],
         "sql": [
-            "SELECT DISTINCT COUNT( PAPERalias0.PAPERID ) FROM AUTHOR AS AUTHORalias0 , PAPER AS PAPERalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME = \"authorname0\" AND PAPERalias0.YEAR >= YEAR(CURDATE()) - misc0 AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID ;"
+            "SELECT DISTINCT COUNT( PAPERalias0.PAPERID ) FROM AUTHOR AS AUTHORalias0 , PAPER AS PAPERalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME = \"authorname0\" AND PAPERalias0.YEAR == YEAR(CURDATE()) - misc0 AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID ;"
         ],
         "variables": [
             {
@@ -6840,8 +6783,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -6849,8 +6791,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -6858,8 +6799,7 @@
                 "question-split": "dev",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -6867,8 +6807,7 @@
                 "question-split": "test",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -6876,13 +6815,12 @@
                 "question-split": "test",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT WRITESalias0.AUTHORID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 , WRITES AS WRITESalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID GROUP BY WRITESalias0.AUTHORID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > misc0 ;"
+            "SELECT DISTINCT WRITESalias0.AUTHORID FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 , WRITES AS WRITESalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID GROUP BY WRITESalias0.AUTHORID HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > 1 ;"
         ],
         "variables": [
             {
@@ -6896,12 +6834,6 @@
                 "location": "unk",
                 "name": "keyphrasename1",
                 "type": "keyphrasename"
-            },
-            {
-                "example": "1",
-                "location": "unk",
-                "name": "misc0",
-                "type": "misc"
             }
         ]
     },
@@ -7741,8 +7673,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Decision Feedback",
-                    "keyphrasename1": "Multiuser Receiver",
-                    "misc0": "1"
+                    "keyphrasename1": "Multiuser Receiver"
                 }
             },
             {
@@ -7750,8 +7681,7 @@
                 "question-split": "train",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -7759,8 +7689,7 @@
                 "question-split": "test",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             },
             {
@@ -7768,13 +7697,12 @@
                 "question-split": "test",
                 "variables": {
                     "keyphrasename0": "Multiuser Receiver",
-                    "keyphrasename1": "Decision Feedback",
-                    "misc0": "1"
+                    "keyphrasename1": "Decision Feedback"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT PAPERalias0.PAPERID , PAPERalias0.YEAR FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID GROUP BY PAPERalias0.PAPERID , PAPERalias0.YEAR HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > misc0 ORDER BY PAPERalias0.YEAR ASC ;"
+            "SELECT DISTINCT PAPERalias0.PAPERID , PAPERalias0.YEAR FROM KEYPHRASE AS KEYPHRASEalias0 , PAPER AS PAPERalias0 , PAPERKEYPHRASE AS PAPERKEYPHRASEalias0 WHERE KEYPHRASEalias0.KEYPHRASENAME IN ( \"keyphrasename0\" , \"keyphrasename1\" ) AND PAPERKEYPHRASEalias0.KEYPHRASEID = KEYPHRASEalias0.KEYPHRASEID AND PAPERalias0.PAPERID = PAPERKEYPHRASEalias0.PAPERID GROUP BY PAPERalias0.PAPERID , PAPERalias0.YEAR HAVING COUNT( DISTINCT KEYPHRASEalias0.KEYPHRASENAME ) > 1 ORDER BY PAPERalias0.YEAR ASC ;"
         ],
         "variables": [
             {
@@ -7788,12 +7716,6 @@
                 "location": "unk",
                 "name": "keyphrasename1",
                 "type": "keyphrasename"
-            },
-            {
-                "example": "1",
-                "location": "unk",
-                "name": "misc0",
-                "type": "misc"
             }
         ]
     },
@@ -9056,13 +8978,12 @@
                 "question-split": "train",
                 "variables": {
                     "authorname0": "Nigam H. Shah",
-                    "authorname1": "Srinivasan Iyer",
-                    "misc0": "2"
+                    "authorname1": "Srinivasan Iyer"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT PAPERalias0.YEAR , WRITESalias0.PAPERID FROM AUTHOR AS AUTHORalias0 , PAPER AS PAPERalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME IN ( \"authorname0\" , \"authorname1\" ) AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID GROUP BY WRITESalias0.PAPERID HAVING COUNT( DISTINCT WRITESalias0.AUTHORID ) = misc0 ORDER BY PAPERalias0.YEAR DESC ;"
+            "SELECT DISTINCT PAPERalias0.YEAR , WRITESalias0.PAPERID FROM AUTHOR AS AUTHORalias0 , PAPER AS PAPERalias0 , WRITES AS WRITESalias0 WHERE AUTHORalias0.AUTHORNAME IN ( \"authorname0\" , \"authorname1\" ) AND WRITESalias0.AUTHORID = AUTHORalias0.AUTHORID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID GROUP BY WRITESalias0.PAPERID HAVING COUNT( DISTINCT WRITESalias0.AUTHORID ) = 2 ORDER BY PAPERalias0.YEAR DESC ;"
         ],
         "variables": [
             {
@@ -9076,12 +8997,6 @@
                 "location": "unk",
                 "name": "authorname1",
                 "type": "authorname"
-            },
-            {
-                "example": "2",
-                "location": "unk",
-                "name": "misc0",
-                "type": "misc"
             }
         ]
     },
@@ -9321,8 +9236,7 @@
                 "question-split": "dev",
                 "variables": {
                     "venuename0": "ICML",
-                    "venuename1": "ACL",
-                    "misc0": "2"
+                    "venuename1": "ACL"
                 }
             },
             {
@@ -9330,13 +9244,12 @@
                 "question-split": "test",
                 "variables": {
                     "venuename0": "ICML",
-                    "venuename1": "Science ( New York , N.Y. )",
-                    "misc0": "2"
+                    "venuename1": "Science ( New York , N.Y. )"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT WRITESalias0.AUTHORID FROM PAPER AS PAPERalias0 , VENUE AS VENUEalias0 , WRITES AS WRITESalias0 WHERE VENUEalias0.VENUEID = PAPERalias0.VENUEID AND VENUEalias0.VENUENAME IN ( \"venuename0\" , \"venuename1\" ) AND WRITESalias0.PAPERID = PAPERalias0.PAPERID GROUP BY WRITESalias0.AUTHORID HAVING COUNT( DISTINCT VENUEalias0.VENUEID ) = misc0 ;"
+            "SELECT DISTINCT WRITESalias0.AUTHORID FROM PAPER AS PAPERalias0 , VENUE AS VENUEalias0 , WRITES AS WRITESalias0 WHERE VENUEalias0.VENUEID = PAPERalias0.VENUEID AND VENUEalias0.VENUENAME IN ( \"venuename0\" , \"venuename1\" ) AND WRITESalias0.PAPERID = PAPERalias0.PAPERID GROUP BY WRITESalias0.AUTHORID HAVING COUNT( DISTINCT VENUEalias0.VENUEID ) = 2 ;"
         ],
         "variables": [
             {
@@ -9350,12 +9263,6 @@
                 "location": "unk",
                 "name": "venuename1",
                 "type": "venuename"
-            },
-            {
-                "example": "2",
-                "location": "unk",
-                "name": "misc0",
-                "type": "misc"
             }
         ]
     },
@@ -9523,13 +9430,12 @@
                 "question-split": "test",
                 "variables": {
                     "venuename0": "ICASSP",
-                    "venuename1": "ICSLP",
-                    "misc0": "2"
+                    "venuename1": "ICSLP"
                 }
             }
         ],
         "sql": [
-            "SELECT DISTINCT COUNT( DISTINCT CITEalias0.CITINGPAPERID ) , WRITESalias0.AUTHORID FROM CITE AS CITEalias0 , PAPER AS PAPERalias0 , VENUE AS VENUEalias0 , WRITES AS WRITESalias0 WHERE VENUEalias0.VENUEID = PAPERalias0.VENUEID AND VENUEalias0.VENUENAME IN ( \"venuename0\" , \"venuename1\" ) AND WRITESalias0.PAPERID = CITEalias0.CITEDPAPERID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID GROUP BY WRITESalias0.AUTHORID HAVING COUNT( DISTINCT VENUEalias0.VENUEID ) = misc0 ORDER BY COUNT( DISTINCT CITEalias0.CITINGPAPERID ) DESC ;"
+            "SELECT DISTINCT COUNT( DISTINCT CITEalias0.CITINGPAPERID ) , WRITESalias0.AUTHORID FROM CITE AS CITEalias0 , PAPER AS PAPERalias0 , VENUE AS VENUEalias0 , WRITES AS WRITESalias0 WHERE VENUEalias0.VENUEID = PAPERalias0.VENUEID AND VENUEalias0.VENUENAME IN ( \"venuename0\" , \"venuename1\" ) AND WRITESalias0.PAPERID = CITEalias0.CITEDPAPERID AND WRITESalias0.PAPERID = PAPERalias0.PAPERID GROUP BY WRITESalias0.AUTHORID HAVING COUNT( DISTINCT VENUEalias0.VENUEID ) = 2 ORDER BY COUNT( DISTINCT CITEalias0.CITINGPAPERID ) DESC ;"
         ],
         "variables": [
             {
@@ -9543,12 +9449,6 @@
                 "location": "unk",
                 "name": "venuename1",
                 "type": "venuename"
-            },
-            {
-                "example": "2",
-                "location": "unk",
-                "name": "misc0",
-                "type": "misc"
             }
         ]
     },

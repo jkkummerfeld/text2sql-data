@@ -621,7 +621,7 @@
         "sentences": [
             {
                 "question-split": "9",
-                "text": "what are some good restaurants on city_name0 rd in city_name0 ?",
+                "text": "what are some good restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -629,7 +629,7 @@
             },
             {
                 "question-split": "3",
-                "text": "give me some good restaurants on city_name0 rd in city_name0 ?",
+                "text": "give me some good restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -637,7 +637,7 @@
             },
             {
                 "question-split": "7",
-                "text": "give me a good restaurant on city_name0 rd in city_name0 ?",
+                "text": "give me a good restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -645,7 +645,7 @@
             },
             {
                 "question-split": "6",
-                "text": "what is a good restaurant on city_name0 rd in city_name0 ?",
+                "text": "what is a good restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -653,7 +653,7 @@
             },
             {
                 "question-split": "9",
-                "text": "what are some good restaurants on city_name0 rd in city_name0 ?",
+                "text": "what are some good restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -661,7 +661,7 @@
             },
             {
                 "question-split": "4",
-                "text": "give me some good restaurants on city_name0 rd in city_name0 ?",
+                "text": "give me some good restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -669,7 +669,7 @@
             },
             {
                 "question-split": "1",
-                "text": "give me a good restaurant on city_name0 rd in city_name0 ?",
+                "text": "give me a good restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -677,7 +677,7 @@
             },
             {
                 "question-split": "5",
-                "text": "what is a good restaurant on city_name0 rd in city_name0 ?",
+                "text": "what is a good restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -685,7 +685,7 @@
             },
             {
                 "question-split": "4",
-                "text": "what are some good restaurants on city_name0 rd in city_name0 ?",
+                "text": "what are some good restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -693,7 +693,7 @@
             },
             {
                 "question-split": "9",
-                "text": "give me some good restaurants on city_name0 rd in city_name0 ?",
+                "text": "give me some good restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -701,7 +701,7 @@
             },
             {
                 "question-split": "0",
-                "text": "give me a good restaurant on city_name0 rd in city_name0 ?",
+                "text": "give me a good restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -709,7 +709,7 @@
             },
             {
                 "question-split": "8",
-                "text": "what is a good restaurant on city_name0 rd in city_name0 ?",
+                "text": "what is a good restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -1299,7 +1299,7 @@
             },
             {
                 "question-split": "3",
-                "text": "where are some good arabics on street_name0 in city_name0 ?",
+                "text": "where are some good food_type0 -s on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "san francisco",
                     "food_type0": "arabic",
@@ -1479,7 +1479,7 @@
             },
             {
                 "question-split": "2",
-                "text": "give me some good arabics on street_name0 in city_name0 ?",
+                "text": "give me some good food_type0 -s on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "san francisco",
                     "food_type0": "arabic",
@@ -1497,7 +1497,7 @@
             },
             {
                 "question-split": "1",
-                "text": "where are some good arabics on street_name0 in city_name0 ?",
+                "text": "where are some good food_type0 -s on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "san francisco",
                     "food_type0": "arabic",
@@ -1677,7 +1677,7 @@
             },
             {
                 "question-split": "8",
-                "text": "give me some good arabics on street_name0 in city_name0 ?",
+                "text": "give me some good food_type0 -s on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "san francisco",
                     "food_type0": "arabic",
@@ -1695,7 +1695,7 @@
             },
             {
                 "question-split": "9",
-                "text": "where are some good arabics on street_name0 in city_name0 ?",
+                "text": "where are some good food_type0 -s on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "san francisco",
                     "food_type0": "arabic",
@@ -1875,7 +1875,7 @@
             },
             {
                 "question-split": "3",
-                "text": "give me some good arabics on street_name0 in city_name0 ?",
+                "text": "give me some good food_type0 -s on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "san francisco",
                     "food_type0": "arabic",
@@ -2064,7 +2064,7 @@
         "sentences": [
             {
                 "question-split": "1",
-                "text": "give me some restaurants on city_name0 rd in city_name0 ?",
+                "text": "give me some restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2072,7 +2072,7 @@
             },
             {
                 "question-split": "3",
-                "text": "give me a restaurant on city_name0 rd in city_name0 ?",
+                "text": "give me a restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2080,7 +2080,7 @@
             },
             {
                 "question-split": "0",
-                "text": "where can we find a restaurant on city_name0 rd in city_name0 ?",
+                "text": "where can we find a restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2088,7 +2088,7 @@
             },
             {
                 "question-split": "8",
-                "text": "where can we find some restaurants on city_name0 rd in city_name0 ?",
+                "text": "where can we find some restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2096,7 +2096,7 @@
             },
             {
                 "question-split": "7",
-                "text": "give me some restaurants on city_name0 rd in city_name0 ?",
+                "text": "give me some restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2104,7 +2104,7 @@
             },
             {
                 "question-split": "4",
-                "text": "give me a restaurant on city_name0 rd in city_name0 ?",
+                "text": "give me a restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2112,7 +2112,7 @@
             },
             {
                 "question-split": "4",
-                "text": "where can we find a restaurant on city_name0 rd in city_name0 ?",
+                "text": "where can we find a restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2120,7 +2120,7 @@
             },
             {
                 "question-split": "8",
-                "text": "where can we find some restaurants on city_name0 rd in city_name0 ?",
+                "text": "where can we find some restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2128,7 +2128,7 @@
             },
             {
                 "question-split": "2",
-                "text": "give me some restaurants on city_name0 rd in city_name0 ?",
+                "text": "give me some restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2136,7 +2136,7 @@
             },
             {
                 "question-split": "1",
-                "text": "give me a restaurant on city_name0 rd in city_name0 ?",
+                "text": "give me a restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2144,7 +2144,7 @@
             },
             {
                 "question-split": "4",
-                "text": "where can we find a restaurant on city_name0 rd in city_name0 ?",
+                "text": "where can we find a restaurant on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2152,7 +2152,7 @@
             },
             {
                 "question-split": "0",
-                "text": "where can we find some restaurants on city_name0 rd in city_name0 ?",
+                "text": "where can we find some restaurants on street_name0 in city_name0 ?",
                 "variables": {
                     "city_name0": "bethel island",
                     "street_name0": "bethel island rd"
@@ -2942,7 +2942,7 @@
             },
             {
                 "question-split": "9",
-                "text": "where are some good arabics in city_name0 ?",
+                "text": "where are some good food_type0 -s in city_name0 ?",
                 "variables": {
                     "city_name0": "mountain view",
                     "food_type0": "arabic"
@@ -3022,7 +3022,7 @@
             },
             {
                 "question-split": "7",
-                "text": "give me some good arabics in city_name0 ?",
+                "text": "give me some good food_type0 -s in city_name0 ?",
                 "variables": {
                     "city_name0": "mountain view",
                     "food_type0": "arabic"
@@ -3126,7 +3126,7 @@
             },
             {
                 "question-split": "5",
-                "text": "where are some good arabics in city_name0 ?",
+                "text": "where are some good food_type0 -s in city_name0 ?",
                 "variables": {
                     "city_name0": "mountain view",
                     "food_type0": "arabic"
@@ -3206,7 +3206,7 @@
             },
             {
                 "question-split": "2",
-                "text": "give me some good arabics in city_name0 ?",
+                "text": "give me some good food_type0 -s in city_name0 ?",
                 "variables": {
                     "city_name0": "mountain view",
                     "food_type0": "arabic"
@@ -3310,7 +3310,7 @@
             },
             {
                 "question-split": "2",
-                "text": "where are some good arabics in city_name0 ?",
+                "text": "where are some good food_type0 -s in city_name0 ?",
                 "variables": {
                     "city_name0": "mountain view",
                     "food_type0": "arabic"
@@ -3390,7 +3390,7 @@
             },
             {
                 "question-split": "3",
-                "text": "give me some good arabics in city_name0 ?",
+                "text": "give me some good food_type0 -s in city_name0 ?",
                 "variables": {
                     "city_name0": "mountain view",
                     "food_type0": "arabic"
