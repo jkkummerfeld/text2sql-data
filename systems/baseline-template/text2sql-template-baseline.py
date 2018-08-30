@@ -52,12 +52,14 @@ import dynet as dy # Loaded late to avoid memory allocation when we just want he
 def insert_variables(sql, sql_variables, sent, sent_variables):
     tokens = []
     tags = []
+    seen_sent_variables = set()
     for token in sent.strip().split():
         if (token not in sent_variables) or args.no_vars:
             tokens.append(token)
             tags.append("O")
         else:
             assert len(sent_variables[token]) > 0
+            seen_sent_variables.add(token)
             for word in sent_variables[token].split():
                 tokens.append(word)
                 tags.append(token)
@@ -81,18 +83,33 @@ def insert_variables(sql, sql_variables, sent, sent_variables):
             sql_tokens.append(token)
 
     template = []
+    complete = []
     for token in sql_tokens:
-        if (token not in sent_variables) and (token not in sql_variables):
+        # Do the template
+        if token in seen_sent_variables:
+            # The token is a variable name that will be copied from the sentence
             template.append(token)
-        elif token in sent_variables:
-            if sent_variables[token] == '':
-                template.append(sql_variables[token])
-            else:
-                template.append(token)
-        elif token in sql_variables:
+        elif (token not in sent_variables) and (token not in sql_variables):
+            # The token is an SQL keyword
+            template.append(token)
+        elif token in sent_variables and sent_variables[token] != '':
+            # The token is a variable whose value is unique to this questions,
+            # but is not explicitly given
+            template.append(sent_variables[token])
+        else:
+            # The token is a variable whose value is not unique to this
+            # question and not explicitly given
             template.append(sql_variables[token])
 
-    return (tokens, tags, ' '.join(template))
+        # Do the complete case
+        if token in sent_variables and sent_variables[token] != '':
+            complete.append(sent_variables[token])
+        elif token in sql_variables:
+            complete.append(sql_variables[token])
+        else:
+            complete.append(token)
+
+    return (tokens, tags, ' '.join(template), ' '.join(complete))
 
 def get_tagged_data_for_query(data):
     dataset = data['query-split']
@@ -162,7 +179,7 @@ def build_vocab(sentences):
     words = {"<UNK>"}
     tag_set = set()
     template_set = set()
-    for tokens, tags, template in train:
+    for tokens, tags, template, complete in train:
         template_set.add(template)
         for tag in tags:
             tag_set.add(tag)
@@ -276,36 +293,60 @@ def build_tagging_graph(words, tags, template, builders, train=True):
 
     return pred_tags, pred_template, errs
 
+def insert_tagged_tokens(tokens, tags, template):
+    to_insert = {}
+    cur = (None, [])
+    for token, tag in zip(tokens, tags):
+        if tag != cur[0]:
+            if cur[0] is not None:
+                value = ' '.join(cur[1])
+                to_insert[cur[0]] = value
+            if tag == 'O':
+                cur = (None, [])
+            else:
+                cur = (tag, [token])
+        else:
+            cur[1].append(token)
+    if cur[0] is not None:
+        value = ' '.join(cur[1])
+        to_insert[cur[0]] = value
+
+    modified = []
+    for token in template.split():
+        modified.append(to_insert.get(token, token))
+
+    return ' '.join(modified)
+
 def run_eval(data, builders, iteration, step):
     if len(data) == 0:
         print("No data for eval")
         return -1
-    good = 0.0
-    total = 0.0
-    complete_good = 0.0
-    templates_good = 0.0
+    correct_tags = 0.0
+    total_tags = 0.0
+    complete_match = 0.0
+    templates_match = 0.0
     oracle = 0.0
-    for tokens, tags, template in data:
+    for tokens, tags, template, complete in data:
         word_ids = [vocab_words.w2i.get(word, UNK) for word in tokens]
         tag_ids = [0 for tag in tags]
         pred_tags, pred_template, _ = build_tagging_graph(word_ids, tag_ids, 0, builders, False)
         gold_tags = tags
-        perfect = True
         for gold, pred in zip(gold_tags, pred_tags):
-            total += 1
-            if gold == pred: good += 1
-            else: perfect = False
+            total_tags += 1
+            if gold == pred: correct_tags += 1
+        pred_complete = insert_tagged_tokens(tokens, pred_tags, pred_template)
+        if pred_complete == complete:
+            complete_match += 1
         if pred_template == template:
-            templates_good += 1
-            if perfect:
-                complete_good += 1
+            templates_match += 1
         if template in vocab_templates.w2i:
             oracle += 1
-    tok_acc = good / total
-    complete_acc = complete_good / len(data)
-    template_acc = templates_good / len(data)
+
+    tok_acc = correct_tags / total_tags
+    complete_acc = complete_match / len(data)
+    template_acc = templates_match / len(data)
     oracle_acc = oracle / len(data)
-    print("Eval {}-{} Acc: {:>5} Template: {:>5} Complete: {:>5} Oracle: {:>5}".format(iteration, step, tok_acc, template_acc, complete_acc, oracle_acc))
+    print("Eval {}-{} Tag Acc: {:>5} Template: {:>5} Complete: {:>5} Oracle: {:>5}".format(iteration, step, tok_acc, template_acc, complete_acc, oracle_acc))
     return complete_acc
 
 tagged = 0
@@ -315,7 +356,7 @@ iters_since_best_updated = 0
 steps = 0
 for iteration in range(args.max_iters):
     random.shuffle(train)
-    for tokens, tags, template in train:
+    for tokens, tags, template, complete in train:
         steps += 1
 
         # Convert to indices
