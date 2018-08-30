@@ -40,7 +40,7 @@ None of the non-oracle results shifted substantially.
 There are some large drops for the oracle entities setting (ATIS and Scholar), but the results do not change the findings of the paper.
 The reason some values improved is that when filling in the query with slots tags that are inconsistent with the chosen template are ignored (and so cases that were previously wrong are now right).
 
-                    | Advising  | ATIS | GeoQuery | Scholar | Restaurants | Academic | IMDB | Yelp
+System              | Advising  | ATIS | GeoQuery | Scholar | Restaurants | Academic | IMDB | Yelp
 ------------------- | --------- | ---- | -------- | ------- | ----------- | -------- | ---- | ----
 Old Baseline        |        80 |   46 |       57 |      52 |          95 |        0 |    0 |    1
 New Baseline        |        83 |   45 |       57 |      54 |          92 |        1 |    1 |    0
