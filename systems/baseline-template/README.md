@@ -59,7 +59,7 @@ To handle that, use the `--split` flag, with an argument indicating the split nu
 The parameters were varied slightly for each dataset (any not listed here were set to the default).
 The following flags were set for evaluation on all datasets:
 
-`--eval_freq 1000000 --log_freq 1000000 --max_bad_iters -1 --do_test_eval`
+`--eval-freq 1000000 --log-freq 1000000 --max-bad-iters -1 --do-test-eval`
 
 Dataset                           | Parameter            | Value
 --------------------------------- | -------------------- | ----------

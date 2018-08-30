@@ -18,30 +18,30 @@ parser = argparse.ArgumentParser(description='A simple template-based text-to-SQ
 
 # IO
 parser.add_argument('data', help='Data in json format', nargs='+')
-parser.add_argument('--unk_max', help='Maximum count to be considered an unknown word', type=int, default=0)
-parser.add_argument('--query_split', help='Use the query split rather than the question split', action='store_true')
-parser.add_argument('--no_vars', help='Run without filling in variables', action='store_true')
-parser.add_argument('--use_all_sql', help='Default is to use first SQL only, this makes multiple instances.', action='store_true')
-parser.add_argument('--do_test_eval', help='Do the final evaluation on the test set (rather than dev).', action='store_true')
+parser.add_argument('--unk-max', help='Maximum count to be considered an unknown word', type=int, default=0)
+parser.add_argument('--query-split', help='Use the query split rather than the question split', action='store_true')
+parser.add_argument('--no-vars', help='Run without filling in variables', action='store_true')
+parser.add_argument('--use-all-sql', help='Default is to use first SQL only, this makes multiple instances.', action='store_true')
+parser.add_argument('--do-test-eval', help='Do the final evaluation on the test set (rather than dev).', action='store_true')
 parser.add_argument('--split', help='Use this split in cross-validation.', type=int) # Used for small datasets: Academic, Restaurants, IMDB, Yelp
 
 # Model
 parser.add_argument('--mlp', help='Use a multi-layer perceptron', action='store_true')
-parser.add_argument('--dim_word', help='Dimensionality of word embeddings', type=int, default=128)
-parser.add_argument('--dim_hidden_lstm', help='Dimensionality of LSTM hidden vectors', type=int, default=64)
-parser.add_argument('--dim_hidden_mlp', help='Dimensionality of MLP hidden vectors', type=int, default=32)
-parser.add_argument('--dim_hidden_template', help='Dimensionality of MLP hidden vectors for the final template choice', type=int, default=64)
-parser.add_argument('--word_vectors', help='Pre-built word embeddings')
-parser.add_argument('--lstm_layers', help='Number of layers in the LSTM', type=int, default=2)
+parser.add_argument('--dim-word', help='Dimensionality of word embeddings', type=int, default=128)
+parser.add_argument('--dim-hidden-lstm', help='Dimensionality of LSTM hidden vectors', type=int, default=64)
+parser.add_argument('--dim-hidden-mlp', help='Dimensionality of MLP hidden vectors', type=int, default=32)
+parser.add_argument('--dim-hidden-template', help='Dimensionality of MLP hidden vectors for the final template choice', type=int, default=64)
+parser.add_argument('--word-vectors', help='Pre-built word embeddings')
+parser.add_argument('--lstm-layers', help='Number of layers in the LSTM', type=int, default=2)
 
 # Training
-parser.add_argument('--max_iters', help='Maximum number of training iterations', type=int, default=50)
-parser.add_argument('--max_bad_iters', help='Maximum number of consecutive training iterations without improvement', type=int, default=5)
-parser.add_argument('--log_freq', help='Number of examples to decode between logging', type=int, default=400)
-parser.add_argument('--eval_freq', help='Number of examples to decode between evaluation runs', type=int, default=800)
-parser.add_argument('--train_noise', help='Noise added to word embeddings as regularization', type=float, default=0.1)
-parser.add_argument('--lstm_dropout', help='Dropout for input and hidden elements of the LSTM', type=float, default=0.0)
-parser.add_argument('--learning_rate', help='Learning rate for optimiser', type=float, default="0.1")
+parser.add_argument('--max-iters', help='Maximum number of training iterations', type=int, default=50)
+parser.add_argument('--max-bad-iters', help='Maximum number of consecutive training iterations without improvement', type=int, default=5)
+parser.add_argument('--log-freq', help='Number of examples to decode between logging', type=int, default=400)
+parser.add_argument('--eval-freq', help='Number of examples to decode between evaluation runs', type=int, default=800)
+parser.add_argument('--train-noise', help='Noise added to word embeddings as regularization', type=float, default=0.1)
+parser.add_argument('--lstm-dropout', help='Dropout for input and hidden elements of the LSTM', type=float, default=0.0)
+parser.add_argument('--learning-rate', help='Learning rate for optimiser', type=float, default="0.1")
 
 args = parser.parse_args()
 
