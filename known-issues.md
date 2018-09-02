@@ -5,7 +5,7 @@ We are documenting them here for future reference (and in case someone is lookin
 
 - The UW data modified the training and development data to avoid nesting, but not the test data. Our de-duplication / merging of queries mean we often have both versions of each query, but in some cases we only have the nested version (if it only appeared in testing).
 - Many queries use a date, but nothing is explicitly given in the query. Some say `today`, but the date it corresponds to varies a lot. Others give a day, e.g. `Sunday`, but again the date varies.
-- Comparison operators (`<`, `>`, `<=`, etc) are not consistently used. One possible scheme would be before <, after > by <=, between <= and >=, around < and >, morning, afternoon, evening < and >.
+- Comparison operators (`<`, `>`, `<=`, etc) are not consistently used. One possible scheme would be `before <`, `after >`, `by <=`, `between >= ... <=`, `around > ... <`, and use `> ... <` for morning, afternoon, and evening ranges.
 - Sometimes a variable is specified in the question, but not used in the query, e.g. a time (and vice versa).
 - There are queries that only make sense as follow-ups, e.g. `show me the flights`.
 - `arrival_time < 41` is used all over the place for unknown reasons, typically with `time_elapsed >= 60`. It is often part of repeated query chunks.
@@ -21,6 +21,7 @@ We are documenting them here for future reference (and in case someone is lookin
 
 # GeoQuery
 
+- Variables names don't include the type (all are `varN`, but the type is specified in the `variables` data).
 - [Logical form] Refers to information that does not exist, e.g. city size.
 - [Logical form] Inconsistent use of `US`.
 - [Logical form] Treats modifiers inconsistently (e.g. `largest` vs. `largest population` even though we only have population as a measure of size).
