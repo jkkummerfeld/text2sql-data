@@ -148,6 +148,8 @@ If you find a bug, please submit a pull request with a fix.
 We will be merging fixes into a development branch and only infrequently merging all of those changes into the master branch (at which point this page will be adjusted to note that it is a new release).
 This approach is intended to balance the need for clear comparisons between systems, while also improving the data.
 
+For some ideas of issues to address, see our list of [known issues](./known-issues.md).
+
 # Acknowledgments
 
 This material is based in part upon work supported by IBM under contract 4915012629. Any opinions, findings, conclusions or recommendations expressed are those of the authors and do not necessarily reflect the views of IBM.
