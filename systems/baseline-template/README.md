@@ -28,6 +28,27 @@ If you use this code, please cite our ACL paper:
 }
 ```
 
+## Note on evaluation bug
+
+After publication we were made aware (via GitHub issues) of a bug in the baseline model.
+The template generation did not correctly consider variables that are implicitly defined by the text (the intention was that multiple templates would be created for such cases).
+This meant that the evaluation, which only checked if the right template was chosen and the right tags were assigned, was incorrect.
+We fixed the bug and changed the evaluation to compare the filled in query.
+
+The table below shows the old and new results.
+None of the non-oracle results shifted substantially.
+There are some large drops for the oracle entities setting (ATIS and Scholar), but the results do not change the findings of the paper.
+The reason some values improved is that when filling in the query with slots tags that are inconsistent with the chosen template are ignored (and so cases that were previously wrong are now right).
+
+System              | Advising  | ATIS | GeoQuery | Scholar | Restaurants | Academic | IMDB | Yelp
+------------------- | --------- | ---- | -------- | ------- | ----------- | -------- | ---- | ----
+Old Baseline        |        80 |   46 |       57 |      52 |          95 |        0 |    0 |    1
+New Baseline        |        83 |   45 |       57 |      54 |          92 |        1 |    1 |    0
+Old Oracle Entities |        89 |   56 |       56 |      66 |          95 |        0 |    7 |    8
+New Oracle Entities |        87 |   49 |       59 |      59 |          92 |        1 |    2 |    3
+Old Oracle All      |       100 |   69 |       78 |      84 |         100 |       11 |   47 |   25
+New Oracle All      |       100 |   66 |       78 |      82 |         100 |       11 |   47 |   25
+
 ## Requirements
 
 - Python 3
@@ -59,7 +80,7 @@ To handle that, use the `--split` flag, with an argument indicating the split nu
 The parameters were varied slightly for each dataset (any not listed here were set to the default).
 The following flags were set for evaluation on all datasets:
 
-`--eval_freq 1000000 --log_freq 1000000 --max_bad_iters -1 --do_test_eval`
+`--eval-freq 1000000 --log-freq 1000000 --max-bad-iters -1 --do-test-eval`
 
 Dataset                           | Parameter            | Value
 --------------------------------- | -------------------- | ----------
