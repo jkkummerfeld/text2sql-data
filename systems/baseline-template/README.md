@@ -28,7 +28,7 @@ If you use this code, please cite our ACL paper:
 }
 ```
 
-## Note on evaluation bug
+## Note on evaluation bugs
 
 After publication we were made aware (via GitHub issues) of two bugs in the baseline model.
 First, the template generation did not correctly consider variables that are implicitly defined by the text (the intention was that multiple templates would be created for such cases).
@@ -36,7 +36,7 @@ This meant that the evaluation, which only checked if the right template was cho
 We fixed the bug and changed the evaluation to compare the filled in query.
 Second, the splits were not correctly determined for the smaller datasets
 
-The table below shows the old and new results, with substantial shifts (5+) in bold.
+The table below shows the old and new results, with substantial shifts (5+) in bold with a star.
 None of the non-oracle results shifted substantially.
 There are some large drops for the oracle entities setting (ATIS and Scholar), but the results do not change the findings of the paper.
 The reason some values improved is that when filling in the query with slots tags that are inconsistent with the chosen template are ignored (and so cases that were previously wrong are now right).
@@ -46,7 +46,7 @@ System              | Advising  |   ATIS | GeoQuery | Scholar | Restaurants | Ac
 Old Baseline        |        80 |     46 |       57 |      52 |          95 |        0 |     0 |    1
 New Baseline        |        83 |     45 |       57 |      54 |          93 |        0 |     2 |    2
 Old Oracle Entities |        89 |     56 |       56 |      66 |          95 |        0 |     7 |    8
-New Oracle Entities |        87 | **49** |       59 |  **59** |          93 |        0 | **2** |    6
+New Oracle Entities |        87 | **\*49** |       59 |  **\*59** |          93 |        0 | **\*2** |    6
 Old Oracle All      |       100 |     69 |       78 |      84 |         100 |       11 |    47 |   25
 New Oracle All      |       100 |     66 |       78 |      82 |         100 |       11 |    47 |   25
 
