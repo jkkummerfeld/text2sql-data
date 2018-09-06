@@ -112,16 +112,23 @@ def insert_variables(sql, sql_variables, sent, sent_variables):
     return (tokens, tags, ' '.join(template), ' '.join(complete))
 
 def get_tagged_data_for_query(data):
+    # By default, set to the query split value
     dataset = data['query-split']
+    if args.split is not None:
+        if str(args.split) == str(dataset):
+            dataset = "test"
+        else:
+            dataset = "train"
+
     for sent_info in data['sentences']:
+        # For question split, set to this question's value
         if not args.query_split:
             dataset = sent_info['question-split']
-
-        if args.split is not None:
-            if str(args.split) == str(dataset):
-                dataset = "test"
-            else:
-                dataset = "train"
+            if args.split is not None:
+                if str(args.split) == str(dataset):
+                    dataset = "test"
+                else:
+                    dataset = "train"
 
         for sql in data['sql']:
             sql_vars = {}
