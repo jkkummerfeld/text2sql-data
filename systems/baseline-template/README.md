@@ -102,7 +102,7 @@ Academic, IMDB, Restaurants, Yelp | dim-word             | 64
 
 For example, this will run all of the experiments (assuming you are in this folder, have DyNet installed, and have four cores):
 
-```
+```bash
 #!/bin/bash
 
 for i in `seq 1 8` ; do
