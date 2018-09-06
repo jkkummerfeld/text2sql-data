@@ -41,14 +41,14 @@ None of the non-oracle results shifted substantially.
 There are some large drops for the oracle entities setting (ATIS and Scholar), but the results do not change the findings of the paper.
 The reason some values improved is that when filling in the query with slots tags that are inconsistent with the chosen template are ignored (and so cases that were previously wrong are now right).
 
-System              | Advising  | ATIS | GeoQuery | Scholar | Restaurants | Academic | IMDB | Yelp
-------------------- | --------- | ---- | -------- | ------- | ----------- | -------- | ---- | ----
-Old Baseline        |        80 |   46 |       57 |      52 |          95 |        0 |    0 |    1
-New Baseline        |        83 |   45 |       57 |      54 |          93 |        0 |    2 |    2
-Old Oracle Entities |        89 |   56 |       56 |      66 |          95 |        0 |    7 |    8
-New Oracle Entities |        87 | *49* |       59 |    *59* |          93 |        0 |  *2* |    6
-Old Oracle All      |       100 |   69 |       78 |      84 |         100 |       11 |   47 |   25
-New Oracle All      |       100 |   66 |       78 |      82 |         100 |       11 |   47 |   25
+System              | Advising  |   ATIS | GeoQuery | Scholar | Restaurants | Academic |  IMDB | Yelp
+------------------- | --------- | ------ | -------- | ------- | ----------- | -------- | ----- | ----
+Old Baseline        |        80 |     46 |       57 |      52 |          95 |        0 |     0 |    1
+New Baseline        |        83 |     45 |       57 |      54 |          93 |        0 |     2 |    2
+Old Oracle Entities |        89 |     56 |       56 |      66 |          95 |        0 |     7 |    8
+New Oracle Entities |        87 | **49** |       59 |  **59** |          93 |        0 | **2** |    6
+Old Oracle All      |       100 |     69 |       78 |      84 |         100 |       11 |    47 |   25
+New Oracle All      |       100 |     66 |       78 |      82 |         100 |       11 |    47 |   25
 
 ## Requirements
 
