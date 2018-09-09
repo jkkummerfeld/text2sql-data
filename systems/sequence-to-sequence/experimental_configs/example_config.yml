@@ -1,0 +1,22 @@
+model_dir: models/copy_input/advising_query_split/
+data_directories:
+  - work/advising_data/query_split/
+model: InputAttentionCopyingSeq2Seq
+model_params:
+  attention.params:
+    num_units: 100
+  encoder.params:
+    rnn_cell:
+      cell_params:
+        num_units: 200
+      dropout_input_keep_prob: 0.5
+      dropout_output_keep_prob:  0.5
+  decoder.params:
+    rnn_cell:
+      cell_params:
+        num_units: 200
+      dropout_input_keep_prob:  0.5
+      dropout_output_keep_prob:  0.5
+  optimizer.learning_rate: 0.001
+train_steps: 20000
+batch_size: 50

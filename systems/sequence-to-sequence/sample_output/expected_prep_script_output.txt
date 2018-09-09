@@ -1,0 +1,28 @@
+Query split:
+	dev: 515
+	test: 1832
+	train: 2040
+Question split:
+	dev: 229
+	test: 573
+	train: 2629
+INFO:root:Found 2014 unique tokens in the encode vocabulary.
+INFO:root:Found 1513 unique tokens in the decode vocabulary.
+INFO:root:Found 124 unique tokens in the decode-copy-encoder vocabulary.
+INFO:root:Found 1491 unique tokens in the decode-copy-schema vocabulary.
+INFO:root:Found 102 unique tokens in the decode-copy-both vocabulary.
+INFO:root:Found 2014 unique tokens with frequency > 0.
+INFO:root:Found 1513 unique tokens with frequency > 0.
+INFO:root:Found 124 unique tokens with frequency > 0.
+INFO:root:Found 1491 unique tokens with frequency > 0.
+INFO:root:Found 102 unique tokens with frequency > 0.
+INFO:root:Found 2490 unique tokens in the encode vocabulary.
+INFO:root:Found 1882 unique tokens in the decode vocabulary.
+INFO:root:Found 162 unique tokens in the decode-copy-encoder vocabulary.
+INFO:root:Found 1856 unique tokens in the decode-copy-schema vocabulary.
+INFO:root:Found 136 unique tokens in the decode-copy-both vocabulary.
+INFO:root:Found 2490 unique tokens with frequency > 0.
+INFO:root:Found 1882 unique tokens with frequency > 0.
+INFO:root:Found 162 unique tokens with frequency > 0.
+INFO:root:Found 1856 unique tokens with frequency > 0.
+INFO:root:Found 136 unique tokens with frequency > 0.
