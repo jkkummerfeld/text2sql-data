@@ -35,6 +35,17 @@ We are documenting them here for future reference (and in case someone is lookin
 # Scholar
 
 - There are cases where the `num-cited-by` and `num-citing` fields may simplify the query considerably.
+- Possible SQL bugs in:
+```
+Which paper should I read about keyphrasename
+citation count of authorname0 's papers
+who does authorname0 cite
+what papers does authorname0 cite
+When did authorname0 publish ?
+does authorname0 publish a lot ?
+topics at venuename0 year0
+How many papers did authorname0 co-authored with authorname1
+```
 
 # Yelp
 
