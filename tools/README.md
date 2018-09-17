@@ -25,3 +25,9 @@ Collects a few simple statistics about a dataset:
 ### json_to_flat.py
 
 A convenient tool to convert from our json format to three files (train, dev, test) conaining one example per line: `sentence | query` with variables filled in.
+
+### reformat_text2sql_data.py
+
+A utility script to write json formatted datasets split by question/query splits and also divided by train/dev/test or cross validation splits.
+This helps read in data independently and simplifies the data loading process.
+

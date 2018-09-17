@@ -9680,7 +9680,7 @@
             },
             {
                 "question-split": "train",
-                "text": "For the class about topic0s , what is the course number ?",
+                "text": "For the class about topic0 , what is the course number ?",
                 "variables": {
                     "topic0": "Creative Writing-Poetry"
                 }
@@ -9722,7 +9722,7 @@
             },
             {
                 "question-split": "test",
-                "text": "What 's the number of the course on topic0s ?",
+                "text": "What 's the number of the course on topic0 ?",
                 "variables": {
                     "topic0": "Mentorship- Multidisciplinary Design"
                 }
@@ -9743,7 +9743,7 @@
             },
             {
                 "question-split": "train",
-                "text": "What is the number of the course for topic0s ?",
+                "text": "What is the number of the course for topic0 ?",
                 "variables": {
                     "topic0": "Trademarks and Unfair Comp"
                 }
@@ -14355,7 +14355,7 @@
             },
             {
                 "question-split": "test",
-                "text": "Is there a level level0 , c400redit0 -credit department0 course ?",
+                "text": "Is there a level level0 , credit0 -credit department0 course ?",
                 "variables": {
                     "credit0": "12",
                     "department0": "SEAS",
@@ -25073,12 +25073,12 @@
             },
             {
                 "question-split": "train",
-                "text": "Is any department0 number0 section scheduled between 10 and 3 ?",
+                "text": "Is any department0 number0 section scheduled between time1 and time0 ?",
                 "variables": {
                     "department0": "BIOSTAT",
                     "number0": "995",
-                    "time0": "5:00",
-                    "time1": "9:00"
+                    "time0": "10:00",
+                    "time1": "3:00"
                 }
             },
             {
@@ -25113,11 +25113,11 @@
             },
             {
                 "question-split": "exclude",
-                "text": "For section in department0 number0 will time1 - 3:00 P.M. have offerings ?",
+                "text": "For section in department0 number0 will time1 - time0 have offerings ?",
                 "variables": {
                     "department0": "BIOMEDE",
                     "number0": "628",
-                    "time0": "4:00",
+                    "time0": "3:00",
                     "time1": "8:00"
                 }
             },
@@ -27376,7 +27376,7 @@
             },
             {
                 "question-split": "test",
-                "text": "Are there semester0s when department0 number0 has been offered ?",
+                "text": "Are there semester0 -s when department0 number0 has been offered ?",
                 "variables": {
                     "department0": "ARCH",
                     "number0": "589",
@@ -27430,7 +27430,7 @@
             },
             {
                 "question-split": "train",
-                "text": "Have there been any semester0s that department0 number0 has been offered ?",
+                "text": "Have there been any semester0 -s that department0 number0 has been offered ?",
                 "variables": {
                     "department0": "ENGR",
                     "number0": "599",

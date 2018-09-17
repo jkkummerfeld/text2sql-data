@@ -17,6 +17,7 @@ We have separate files describing the [datasets](./data/), [systems](./systems/)
 
 Version | Description
 ------- | -------------
+2       | Data with fixes for variables incorrectly defined in questions
 1       | Data used in the ACL 2018 paper
 
 # Citing this work
@@ -25,7 +26,7 @@ If you use this data in your work, please cite our ACL paper _and_ the appropria
 For example, in your paper you could write (using the BibTeX below):
 
 ```
-In this work, we use version 1 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-logic,data-restaurants-original,data-restaurants}
+In this work, we use version 2 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-logic,data-restaurants-original,data-restaurants}
 ```
 
 If you are only using one dataset, here are example citation commands:
@@ -147,6 +148,8 @@ We put substantial effort into fixing bugs in the datasets, but none of them are
 If you find a bug, please submit a pull request with a fix.
 We will be merging fixes into a development branch and only infrequently merging all of those changes into the master branch (at which point this page will be adjusted to note that it is a new release).
 This approach is intended to balance the need for clear comparisons between systems, while also improving the data.
+
+For some ideas of issues to address, see our list of [known issues](./known-issues.md).
 
 # Acknowledgments
 
