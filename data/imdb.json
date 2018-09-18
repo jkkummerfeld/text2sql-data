@@ -2439,7 +2439,7 @@
             }
         ],
         "sql": [
-            "SELECT MAX( * ) FROM ( SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID GROUP BY MOVIEalias0.RELEASE_YEAR ) AS DERIVED_TABLEalias0 ;"
+            "SELECT MAX( DERIVED_TABLEalias0.DERIVED_FIELDalias0 ) FROM ( SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) AS DERIVED_FIELDalias0 FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \" actor_name0 \" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID GROUP BY MOVIEalias0.RELEASE_YEAR ) AS DERIVED_TABLEalias0 ;"
         ],
         "variables": [
             {
