@@ -36,11 +36,11 @@ create_location = """ CREATE TABLE IF NOT EXISTS LOCATION (
                              FOREIGN KEY (CITY_NAME) REFERENCES GEOGRAPHIC(CITY_NAME)
                              ); """
 
-def main(database_path: str):
+def main(input_path: str, output_path: str = "./restuarants.db"):
     restaurant_data = {"RESTAURANT": [], "LOCATION": [], "GEOGRAPHIC": []}
     column_count = {"RESTAURANT": 5, "LOCATION": 4, "GEOGRAPHIC": 3}
 
-    with open(database_path, "r") as infile:
+    with open(input_path, "r") as infile:
 
         for line in infile:
             line = line.strip()
@@ -64,14 +64,15 @@ def main(database_path: str):
                     print(table)
                     raise ValueError("Table read from file didn't match schema.")
 
+            # Clean up some trailing spaces and quotation marks in the columns.
+            table = [x.strip('" ').strip("'") for x in table]
             restaurant_data[table_name].append(table)
 
 
-    connection = get_connection("./restuarants.db")
+    connection = get_connection(output_path)
 
     cursor = connection.cursor()
-
-    # Create the database
+    print(f"Creating database at {output_path}")
     cursor.execute(create_geographic)
     cursor.execute(create_restaurants)
     cursor.execute(create_location)
@@ -86,11 +87,17 @@ def main(database_path: str):
     for value in restaurant_data["GEOGRAPHIC"]:
         insert_into(cursor, "GEOGRAPHIC", ["CITY_NAME", "COUNTY", "REGION"], value)
 
+    # Superficial test that we can run queries.
+    sql = "SELECT RESTAURANT.NAME FROM RESTAURANT WHERE RESTAURANT.RESTAURANT_ID = 234"
+    print(f"Running query as a test: {sql}")
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    print("Result: ", results)
     connection.close()
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) != 2:
-        print("Usage: python create_restaurant_database.py <path to restaurants-db.txt>")
+    if len(sys.argv) not in [2, 3]:
+        print("Usage: python create_restaurant_database.py <path to restaurants-db.txt> <output path (optional, default = ./restuarants.db)>")
     else:
-        main(sys.argv[1])
+        main(*sys.argv[1:])
