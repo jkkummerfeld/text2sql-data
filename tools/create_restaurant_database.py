@@ -87,6 +87,8 @@ def main(input_path: str, output_path: str = "./restuarants.db"):
     for value in restaurant_data["GEOGRAPHIC"]:
         insert_into(cursor, "GEOGRAPHIC", ["CITY_NAME", "COUNTY", "REGION"], value)
 
+    connection.commit()
+
     # Superficial test that we can run queries.
     sql = "SELECT RESTAURANT.NAME FROM RESTAURANT WHERE RESTAURANT.RESTAURANT_ID = 234"
     print(f"Running query as a test: {sql}")
