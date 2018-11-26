@@ -1,0 +1,8 @@
+input_pipeline:
+  class: ParallelTextCopyingPipeline
+  params:
+    source_files:
+    - ${HOME}/text-to-sql/data/academic/2018_02_08/question_split/0/0_encode.txt
+model_dir: ${HOME}/text-to-sql/models/academic/question_split/2018_02_12/copy_input/0
+tasks:
+- class: DecodeText
