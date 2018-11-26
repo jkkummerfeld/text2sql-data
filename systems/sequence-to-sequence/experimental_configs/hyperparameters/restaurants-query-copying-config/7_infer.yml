@@ -1,0 +1,8 @@
+input_pipeline:
+  class: ParallelTextCopyingPipeline
+  params:
+    source_files:
+    - ${HOME}/text-to-sql/data/restaurants/2018_02_08/query_split/7/7_encode.txt
+model_dir: ${HOME}/text-to-sql/models/restaurants/query_split/2018_02_12/copy_input/7
+tasks:
+- class: DecodeText

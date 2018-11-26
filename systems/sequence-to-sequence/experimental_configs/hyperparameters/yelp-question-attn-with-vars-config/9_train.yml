@@ -1,0 +1,53 @@
+batch_size: 20
+buckets: 25,50,100,200
+input_pipeline_dev:
+  class: ParallelTextInputPipeline
+  params:
+    source_files:
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/1/1_encode.txt
+    target_files:
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/1/1_decode.txt
+input_pipeline_train:
+  class: ParallelTextInputPipeline
+  params:
+    source_files:
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/1/1_encode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/5/5_encode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/0/0_encode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/7/7_encode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/8/8_encode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/2/2_encode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/4/4_encode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/6/6_encode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/3/3_encode.txt
+    target_files:
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/1/1_decode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/5/5_decode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/0/0_decode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/7/7_decode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/8/8_decode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/2/2_decode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/4/4_decode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/6/6_decode.txt
+    - ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/3/3_decode.txt
+keep_checkpoint_max: 0
+model: AttentionSeq2Seq
+model_params:
+  decoder.params:
+    rnn_cell:
+      cell_params:
+        num_units: 200
+      dropout_input_keep_prob: 0.5
+      dropout_output_keep_prob: 0.5
+  encoder.params:
+    rnn_cell:
+      cell_params:
+        num_units: 200
+      dropout_input_keep_prob: 0.5
+      dropout_output_keep_prob: 0.5
+  optimizer.learning_rate: 0.001
+  vocab_source: ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/all_but_9_encode_vocab.txt
+  vocab_target: ${HOME}/text-to-sql/data/yelp/with_vars/2018_02_17/question_split/all_but_9_decode_vocab.txt
+output_dir: ${HOME}/text-to-sql/models/yelp/with_vars/question_split/2018_02_17/attn/9
+save_checkpoints_steps: 1000
+train_steps: 20000

@@ -1,0 +1,8 @@
+input_pipeline:
+  class: ParallelTextInputPipeline
+  params:
+    source_files:
+    - ${HOME}/text-to-sql/data/imdb/with_vars/2018_02_17/question_split/4/4_encode.txt
+model_dir: ${HOME}/text-to-sql/models/imdb/with_vars/question_split/2018_02_17/attn/4
+tasks:
+- class: DecodeText
