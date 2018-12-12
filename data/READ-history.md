@@ -11,6 +11,7 @@ geography    | [Iyer et al., 2017](http://aclweb.org/anthology/P/P17/P17-1089.pd
 imdb         | [Yaghmazadeh et al., 2017](http://doi.org/10.1145/3133887)                  | [UT](https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM)
 restaurants  | [Popescu et al., 2003](https://doi.org/10.1007/978-3-642-45260-4_5)         | [Trento](https://ikernels-portal.disi.unitn.it/repository/semmap/)
 scholar      | [Iyer et al., 2017](http://aclweb.org/anthology/P/P17/P17-1089.pdf)         | [UW](https://github.com/sriniiyer/nl2sql/tree/master/data)
+spider       | [Yu et al., 2018)](http://aclweb.org/anthology/D18-1425)                    | [Yale](https://yale-lily.github.io/spider)
 yelp         | [Yaghmazadeh et al., 2017](http://doi.org/10.1145/3133887)                  | [UT](https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM)
 
 ## academic
@@ -51,6 +52,11 @@ We have corrected some minor issues in the data:
 1. Originally a dataset created at UT Austin with sentences and logical forms.
 2. Converted to SQL by Popescu et al. (UW)
 3. Improved by Giordani and Moschitti (Trento)
+
+## spider
+
+1. Combination of data from this repository (1,659 queries) and new data (8,034 queries) across a large set of tabe=les.
+2. SQL canonicalised and variables detected automatically by us
 
 ## scholar
 

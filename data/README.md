@@ -14,13 +14,14 @@ For each dataset we provide:
 - `*-fields.txt`, a list of fields in the database
 - `*-schema.csv`, key information about each database field
 
-Four of the databases are not included in the repository either for size or licensing reasons.
+Some of the databases are not included in the repository either for size or licensing reasons.
 They can be found as follows:
 
 Dataset  | Database
 -------- | ----------
 Academic (MAS), IMDB, Yelp | [https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM](https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM)
 Scholar  | [https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk](https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk)
+Spider   | [https://yale-lily.github.io/spider](https://yale-lily.github.io/spider)
 
 For more information about the sources of data see the [READ-history.md](./READ-history.md) file.
 
@@ -49,6 +50,21 @@ variables/location       | string            | Whether this occurs in the SQL on
 variables/example        | string            | An example value that could fill the variable (in the SQL only case, this is what is used)
 variables/name           | string            | The variable name
 variables/type           | string            | Dataset specific type
+
+For the Spider dataset we have a few additional fields:
+
+Symbol             | Type              | Meaning
+------------------ | ----------------- | -----------------------------
+sentences/original | string            | The question from the original dataset, before our simple tokenisation
+sentences/database | string            | The name of the database this question is for
+sql-original       | list of strings   | The query from the original dataset, before our canonicalisation
+
+Also, there are a few caveats for Spider:
+
+- There is no query split
+- The test set is currently not available here (it is being kept secret by the original creators)
+- We did automatic variable identification and spot checked some of it (if you find issues, let us know!)
+- We modified our canonicalisation script to convert the data and spot checked the output (again, if you find issues, let us know!)
 
 Example:
 

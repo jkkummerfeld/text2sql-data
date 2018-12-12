@@ -17,6 +17,7 @@ We have separate files describing the [datasets](./data/), [systems](./systems/)
 
 Version | Description
 ------- | -------------
+3       | Data fixes and addition of data from Spider
 2       | Data with fixes for variables incorrectly defined in questions
 1       | Data used in the ACL 2018 paper
 
@@ -26,7 +27,7 @@ If you use this data in your work, please cite our ACL paper _and_ the appropria
 For example, in your paper you could write (using the BibTeX below):
 
 ```
-In this work, we use version 2 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-logic,data-restaurants-original,data-restaurants}
+In this work, we use version 3 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-logic,data-restaurants-original,data-restaurants,data-spider}
 ```
 
 If you are only using one dataset, here are example citation commands:
@@ -39,6 +40,7 @@ ATIS         | `\citet{data-advising,data-atis-original,data-atis-geography-scho
 Geography    | `\citet{data-advising,data-geography-original,data-atis-geography-scholar}`
 Restaurants  | `\citet{data-advising,data-restaurants-logic,data-restaurants-original,data-restaurants}`
 Scholar      | `\citet{data-advising,data-atis-geography-scholar}`
+Spider       | `\citet{data-advising,data-spider}`
 IMDB         | `\citet{data-advising,data-imdb-yelp}`
 Yelp         | `\citet{data-advising,data-imdb-yelp}`
 
@@ -140,6 +142,17 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
   pages     = {59--76},
   url       = {https://doi.org/10.1007/978-3-642-45260-4_5},
 }
+
+@InProceedings{data-spider,
+  author    = {Tao Yu, Rui Zhang, Kai Yang, Michihiro Yasunaga, Dongxu Wang, Zifan Li, James Ma, Irene Li, Qingning Yao, Shanelle Roman, Zilin Zhang, and Dragomir Radev},
+  title     = {Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task},
+  booktitle = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
+  year      = {2018},
+  location  = {Brussels, Belgium},
+  pages     = {3911--3921},
+  url       = {http://aclweb.org/anthology/D18-1425},
+}
+
 ```
 
 # Contributions
@@ -153,4 +166,5 @@ For some ideas of issues to address, see our list of [known issues](./known-issu
 
 # Acknowledgments
 
-This material is based in part upon work supported by IBM under contract 4915012629. Any opinions, findings, conclusions or recommendations expressed are those of the authors and do not necessarily reflect the views of IBM.
+This material is based in part upon work supported by IBM under contract 4915012629.
+Any opinions, findings, conclusions or recommendations expressed are those of the authors and do not necessarily reflect the views of IBM.
