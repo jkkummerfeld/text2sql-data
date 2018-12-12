@@ -4186,7 +4186,7 @@
             }
         ],
         "sql": [
-            "SELECT DISTINCT COURSEalias0.NAME , COURSEalias0.NUMBER FROM COURSE AS COURSEalias0 WHERE COURSEalias0.DEPARTMENT = \"department0\" AND COURSEalias0.HAS_LAB = \"N\" AND ;"
+            "SELECT DISTINCT COURSEalias0.NAME , COURSEalias0.NUMBER FROM COURSE AS COURSEalias0 WHERE COURSEalias0.DEPARTMENT = \"department0\" AND COURSEalias0.HAS_LAB = \"N\" ;"
         ],
         "variables": [
             {
