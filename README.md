@@ -17,7 +17,7 @@ We have separate files describing the [datasets](./data/), [systems](./systems/)
 
 Version | Description
 ------- | -------------
-3       | Data fixes and addition of data from Spider
+3       | Data fixes and addition of data from Spider and WikiSQL
 2       | Data with fixes for variables incorrectly defined in questions
 1       | Data used in the ACL 2018 paper
 
@@ -27,7 +27,7 @@ If you use this data in your work, please cite our ACL paper _and_ the appropria
 For example, in your paper you could write (using the BibTeX below):
 
 ```
-In this work, we use version 3 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-logic,data-restaurants-original,data-restaurants,data-spider}
+In this work, we use version 3 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-logic,data-restaurants-original,data-restaurants,data-spider,data-wikisql}
 ```
 
 If you are only using one dataset, here are example citation commands:
@@ -43,6 +43,7 @@ Scholar      | `\citet{data-advising,data-atis-geography-scholar}`
 Spider       | `\citet{data-advising,data-spider}`
 IMDB         | `\citet{data-advising,data-imdb-yelp}`
 Yelp         | `\citet{data-advising,data-imdb-yelp}`
+WikiSQL      | `\citet{data-advising,data-wikisql}`
 
 ```TeX
 @InProceedings{data-sql-advising,
@@ -153,6 +154,13 @@ Yelp         | `\citet{data-advising,data-imdb-yelp}`
   url       = {http://aclweb.org/anthology/D18-1425},
 }
 
+@article{data-wikisql,
+  author    = {Victor Zhong, Caiming Xiong, and Richard Socher},
+  title     = {Seq2SQL: Generating Structured Queries from Natural Language using Reinforcement Learning},
+  year      = {2017},
+  journal   = {CoRR},
+  volume    = {abs/1709.00103},
+}
 ```
 
 # Contributions
