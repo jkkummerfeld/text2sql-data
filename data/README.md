@@ -51,20 +51,22 @@ variables/example        | string            | An example value that could fill 
 variables/name           | string            | The variable name
 variables/type           | string            | Dataset specific type
 
-For the Spider dataset we have a few additional fields:
+For WikiSQL and Spider we have a few additional fields:
 
 Symbol             | Type              | Meaning
 ------------------ | ----------------- | -----------------------------
 sentences/original | string            | The question from the original dataset, before our simple tokenisation
-sentences/database | string            | The name of the database this question is for
+sentences/database | string            | The name of the database this question is for [Spider]
+sentences/table-id | string            | The name of the table this question is for [WikiSQL]
 sql-original       | list of strings   | The query from the original dataset, before our canonicalisation
 
-Also, there are a few caveats for Spider:
+Also, there are a few caveats:
 
-- There is no query split
-- The test set is currently not available here (it is being kept secret by the original creators)
-- We did automatic variable identification and spot checked some of it (if you find issues, let us know!)
-- We modified our canonicalisation script to convert the data and spot checked the output (again, if you find issues, let us know!)
+- There is no query split.
+- For Spider the test set is currently not available here (it is being kept secret by the original creators).
+- We did automatic variable identification and spot checked some of it (if you find issues, let us know!).
+- We modified our canonicalisation script to convert the data and spot checked the output (again, if you find issues, let us know!).
+- For WikiSQL we substituted in the actual field names, which contain all sorts of characters, so the SQL is not always valid. This substitution also means the 'sql-original' column numbers may be incorrect for some of the examples as we merged based on the final SQL.
 
 Example:
 
