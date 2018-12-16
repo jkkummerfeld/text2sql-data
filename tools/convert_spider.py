@@ -641,7 +641,7 @@ def standarise_file(original, log, skip):
     schemas = {}
     schema_info = json.load(open("tables.json"))
 
-    with open("spider.canonical-schemas.csv", 'w') as write_file:
+    with open("spider-schemas.csv", 'w') as write_file:
         print("Database name, Table Name, Field Name, Is Primary Key, Is Foreign Key, Type", file=write_file)
         for db in schema_info:
             name = db['db_id']
@@ -682,6 +682,7 @@ def standarise_file(original, log, skip):
         tokens = question.split()
         current = (None, None)
         nquery = []
+        prev = None
         for token in query.split():
             used = False
             if current[0] is not None:
@@ -701,9 +702,13 @@ def standarise_file(original, log, skip):
                 if token.endswith(token[0]):
                     if len(token) > 2:
                         var = token[1:-1]
-                        if var[0] == '%' and var[-1] == '%':
-                            var = var[1:-1]
-                        nquery.append('"' + "var"+ str(len(variables)) + '"')
+                        if var.endswith("/%"):
+                            var = var[:-2]
+                            nquery.append('"' + "var"+ str(len(variables)) + '/%"')
+                        else:
+                            if var[0] == '%' and var[-1] == '%':
+                                var = var[1:-1]
+                            nquery.append('"' + "var"+ str(len(variables)) + '"')
                         variables.append(var)
                         used = True
                 else:
@@ -714,13 +719,14 @@ def standarise_file(original, log, skip):
                     nquery.append("var"+ str(len(variables)))
                     variables.append(token)
                     used = True
-                elif is_num(token):
+                elif is_num(token) and (prev != "LIMIT" or token != "1"):
                     nquery.append("var"+ str(len(variables)))
                     variables.append(token)
                     used = True
 
             if not used:
                 nquery.append(token)
+            prev = token
         if log:
             print(' '.join(nquery))
         query = ' '.join(nquery)
@@ -766,7 +772,7 @@ def standarise_file(original, log, skip):
             seen[query] = example['sentences']
 
     # Print to file
-    with open("spider.canonical.json", 'w') as write_file:
+    with open("spider.json", 'w') as write_file:
         to_print = json.dumps(final, indent=4, sort_keys=True)
         for line in to_print.split("\n"):
             line = line.rstrip()
