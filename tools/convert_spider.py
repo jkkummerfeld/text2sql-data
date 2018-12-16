@@ -309,7 +309,7 @@ def standardise_aliases(query, schema):
         elif current_subquery[0] not in seen_where:
             seen_where[current_subquery[0]] = None
 
-        if word in schema[0] and not seen_where[current_subquery[0]]:
+        if word in schema[0] and not seen_where[current_subquery[0]] and seen_from[current_subquery[0]]:
             count[word] = count.get(word, -1) + 1
             if len(tokens) < i+2 or tokens[i+1] != 'AS':
                 tokens.insert(i+1, 'AS')
