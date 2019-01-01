@@ -4186,7 +4186,7 @@
             }
         ],
         "sql": [
-            "SELECT DISTINCT COURSEalias0.NAME , COURSEalias0.NUMBER FROM COURSE AS COURSEalias0 WHERE COURSEalias0.DEPARTMENT = \"department0\" AND COURSEalias0.HAS_LAB = \"N\" AND ;"
+            "SELECT DISTINCT COURSEalias0.NAME , COURSEalias0.NUMBER FROM COURSE AS COURSEalias0 WHERE COURSEalias0.DEPARTMENT = \"department0\" AND COURSEalias0.HAS_LAB = \"N\" ;"
         ],
         "variables": [
             {
@@ -15067,7 +15067,7 @@
             }
         ],
         "sql": [
-            "SELECT DISTINCT COURSEalias0.NAME , COURSEalias0.NUMBER FROM COURSE AS COURSEalias0 WHERE COURSEalias0.DEPARTMENT = \"department0\" COURSEalias0.CREDITS = credit0 ;"
+            "SELECT DISTINCT COURSEalias0.NAME , COURSEalias0.NUMBER FROM COURSE AS COURSEalias0 WHERE COURSEalias0.DEPARTMENT = \"department0\" AND COURSEalias0.CREDITS = credit0 ;"
         ],
         "variables": [
             {
@@ -25745,7 +25745,7 @@
             }
         ],
         "sql": [
-            "SELECT DISTINCT COURSEalias0.NAME , COURSEalias0.NUMBER , PROGRAM_COURSEalias0.WORKLOAD FROM COURSE AS COURSEalias0 , PROGRAM_COURSE AS PROGRAM_COURSEalias0 WHERE COURSEalias0.DEPARTMENT LIKE \"%department0%\" AND PROGRAM_COURSEalias0.COURSE_ID = COURSEalias0.COURSE_ID AND PROGRAM_COURSEalias0.WORKLOAD < 3 ; ;"
+            "SELECT DISTINCT COURSEalias0.NAME , COURSEalias0.NUMBER , PROGRAM_COURSEalias0.WORKLOAD FROM COURSE AS COURSEalias0 , PROGRAM_COURSE AS PROGRAM_COURSEalias0 WHERE COURSEalias0.DEPARTMENT LIKE \"%department0%\" AND PROGRAM_COURSEalias0.COURSE_ID = COURSEalias0.COURSE_ID AND PROGRAM_COURSEalias0.WORKLOAD < 3 ;"
         ],
         "variables": [
             {

@@ -1,4 +1,4 @@
-Table Name, Field Name, Is Primary Key, Is Foreign Key, Type
+Table Name, Field Name, Type, Is Foreign Key, Is Primary Key
 AREA, course_id,  int(11),      YES,   -,  NULL,     -
 AREA, area,       varchar(30),  YES,   -,  NULL,     -
 -, -, -, -, -, -, -

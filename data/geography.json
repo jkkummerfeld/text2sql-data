@@ -5692,7 +5692,7 @@
             }
         ],
         "sql": [
-            "SELECT SUM( RIVERalias0.LENGTH ) FROM ( SELECT DISTINCT RIVERalias0.RIVER_NAME , RIVERalias0.LENGTH FROM RIVER AS RIVERalias0 ) ;"
+            "SELECT SUM( DERIVED_TABLEalias0.LENGTH ) FROM ( SELECT DISTINCT RIVERalias0.RIVER_NAME , RIVERalias0.LENGTH FROM RIVER AS RIVERalias0 ) AS DERIVED_TABLEalias0 ;"
         ],
         "variables": []
     },
