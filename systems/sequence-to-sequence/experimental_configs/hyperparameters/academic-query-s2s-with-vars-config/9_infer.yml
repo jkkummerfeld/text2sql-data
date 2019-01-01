@@ -1,0 +1,8 @@
+input_pipeline:
+  class: ParallelTextInputPipeline
+  params:
+    source_files:
+    - ${HOME}/text-to-sql/data/academic/with_vars/2018_02_17/query_split/9/9_encode.txt
+model_dir: ${HOME}/text-to-sql/models/academic/with_vars/query_split/2018_02_17/seq2seq/9
+tasks:
+- class: DecodeText

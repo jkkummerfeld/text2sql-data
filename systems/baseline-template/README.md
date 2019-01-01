@@ -53,7 +53,7 @@ New Oracle All      |       100 |     66 |       78 |      82 |         100 |   
 ## Requirements
 
 - Python 3
-- [Dynet](dynet.readthedocs.io)
+- [Dynet](https://dynet.readthedocs.io)
 
 ## Running
 
