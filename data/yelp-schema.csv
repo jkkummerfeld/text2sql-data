@@ -20,9 +20,9 @@ checkin, business_id, n, n, varchar(255), NOT NULL,
 checkin, count, n, n, int(11), DEFAULT NULL,
 checkin, day, n, n, varchar(12), DEFAULT NULL,
 -, -, -, -, -
-neighbourhood, id, y, n, int(11), NOT NULL AUTO_INCREMENT,
-neighbourhood, business_id, n, n, varchar(255), NOT NULL,
-neighbourhood, neighborhood_name, n, n, varchar(255), NOT NULL,
+neighborhood, id, y, n, int(11), NOT NULL AUTO_INCREMENT,
+neighborhood, business_id, n, n, varchar(255), NOT NULL,
+neighborhood, neighborhood_name, n, n, varchar(255), NOT NULL,
 -, -, -, -, -
 review, rid, y, n, int(11), NOT NULL AUTO_INCREMENT,
 review, business_id, n, n, varchar(255), NOT NULL,

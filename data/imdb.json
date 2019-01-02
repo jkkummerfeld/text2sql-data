@@ -659,30 +659,30 @@
         "sentences": [
             {
                 "question-split": "8",
-                "text": "Find all genre_genre0 produced in year movie_release_year0",
+                "text": "Find all genre0 produced in year movie_release_year0",
                 "variables": {
-                    "genre_genre0": "comedies",
+                    "genre0": "comedies",
                     "movie_release_year0": "2015"
                 }
             },
             {
                 "question-split": "1",
-                "text": "List all the genre_genre0 movies which released in movie_release_year0",
+                "text": "List all the genre0 movies which released in movie_release_year0",
                 "variables": {
-                    "genre_genre0": "Sci-Fi",
+                    "genre0": "Sci-Fi",
                     "movie_release_year0": "2010"
                 }
             }
         ],
         "sql": [
-            "SELECT MOVIEalias0.TITLE FROM CLASSIFICATION AS CLASSIFICATIONalias0 , GENRE AS GENREalias0 , MOVIE AS MOVIEalias0 WHERE GENREalias0.GENRE = \"genre_genre0\" AND GENREalias0.GID = CLASSIFICATIONalias0.GID AND MOVIEalias0.MID = CLASSIFICATIONalias0.MSID AND MOVIEalias0.RELEASE_YEAR = movie_release_year0 ;"
+            "SELECT MOVIEalias0.TITLE FROM CLASSIFICATION AS CLASSIFICATIONalias0 , GENRE AS GENREalias0 , MOVIE AS MOVIEalias0 WHERE GENREalias0.GENRE = \"genre0\" AND GENREalias0.GID = CLASSIFICATIONalias0.GID AND MOVIEalias0.MID = CLASSIFICATIONalias0.MSID AND MOVIEalias0.RELEASE_YEAR = movie_release_year0 ;"
         ],
         "variables": [
             {
                 "example": "Sci-Fi",
                 "location": "both",
-                "name": "genre_genre0",
-                "type": "genre_genre"
+                "name": "genre0",
+                "type": "genre"
             },
             {
                 "example": "2010",
@@ -855,42 +855,42 @@
         "sentences": [
             {
                 "question-split": "9",
-                "text": "Find all movies about keyword_keyword0",
+                "text": "Find all movies about keyword0",
                 "variables": {
-                    "keyword_keyword0": "Persians"
+                    "keyword0": "Persians"
                 }
             },
             {
                 "question-split": "5",
-                "text": "Find all movies about keyword_keyword0",
+                "text": "Find all movies about keyword0",
                 "variables": {
-                    "keyword_keyword0": "Autism"
+                    "keyword0": "Autism"
                 }
             },
             {
                 "question-split": "9",
-                "text": "Find all movies about keyword_keyword0",
+                "text": "Find all movies about keyword0",
                 "variables": {
-                    "keyword_keyword0": "Iraq war"
+                    "keyword0": "Iraq war"
                 }
             },
             {
                 "question-split": "5",
-                "text": "What are the movies related to keyword_keyword0",
+                "text": "What are the movies related to keyword0",
                 "variables": {
-                    "keyword_keyword0": "nuclear weapons"
+                    "keyword0": "nuclear weapons"
                 }
             }
         ],
         "sql": [
-            "SELECT MOVIEalias0.TITLE FROM KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE KEYWORDalias0.KEYWORD = \"keyword_keyword0\" AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
+            "SELECT MOVIEalias0.TITLE FROM KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE KEYWORDalias0.KEYWORD = \"keyword0\" AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
         ],
         "variables": [
             {
                 "example": "nuclear weapons",
                 "location": "both",
-                "name": "keyword_keyword0",
-                "type": "keyword_keyword"
+                "name": "keyword0",
+                "type": "keyword"
             }
         ]
     },
@@ -1685,21 +1685,21 @@
         "sentences": [
             {
                 "question-split": "8",
-                "text": "List all the directors of movies about keyword_keyword0",
+                "text": "List all the directors of movies about keyword0",
                 "variables": {
-                    "keyword_keyword0": "nuclear weapons"
+                    "keyword0": "nuclear weapons"
                 }
             }
         ],
         "sql": [
-            "SELECT DIRECTORalias0.NAME FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND KEYWORDalias0.KEYWORD = \"keyword_keyword0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
+            "SELECT DIRECTORalias0.NAME FROM DIRECTED_BY AS DIRECTED_BYalias0 , DIRECTOR AS DIRECTORalias0 , KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE DIRECTORalias0.DID = DIRECTED_BYalias0.DID AND KEYWORDalias0.KEYWORD = \"keyword0\" AND MOVIEalias0.MID = DIRECTED_BYalias0.MSID AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
         ],
         "variables": [
             {
                 "example": "nuclear weapons",
                 "location": "both",
-                "name": "keyword_keyword0",
-                "type": "keyword_keyword"
+                "name": "keyword0",
+                "type": "keyword"
             }
         ]
     },
@@ -1995,22 +1995,22 @@
         "sentences": [
             {
                 "question-split": "3",
-                "text": "How many movies about keyword_keyword0 were produced in movie_release_year0 ?",
+                "text": "How many movies about keyword0 were produced in movie_release_year0 ?",
                 "variables": {
-                    "keyword_keyword0": "Iraq war",
+                    "keyword0": "Iraq war",
                     "movie_release_year0": "2015"
                 }
             }
         ],
         "sql": [
-            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE KEYWORDalias0.KEYWORD = \"keyword_keyword0\" AND MOVIEalias0.RELEASE_YEAR = movie_release_year0 AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE KEYWORDalias0.KEYWORD = \"keyword0\" AND MOVIEalias0.RELEASE_YEAR = movie_release_year0 AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
         ],
         "variables": [
             {
                 "example": "Iraq war",
                 "location": "both",
-                "name": "keyword_keyword0",
-                "type": "keyword_keyword"
+                "name": "keyword0",
+                "type": "keyword"
             },
             {
                 "example": "2015",
@@ -2026,22 +2026,22 @@
         "sentences": [
             {
                 "question-split": "7",
-                "text": "How many movies about keyword_keyword0 were released after movie_release_year0 ?",
+                "text": "How many movies about keyword0 were released after movie_release_year0 ?",
                 "variables": {
-                    "keyword_keyword0": "Persians",
+                    "keyword0": "Persians",
                     "movie_release_year0": "1990"
                 }
             }
         ],
         "sql": [
-            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE KEYWORDalias0.KEYWORD = \"keyword_keyword0\" AND MOVIEalias0.RELEASE_YEAR > movie_release_year0 AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
+            "SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM KEYWORD AS KEYWORDalias0 , MOVIE AS MOVIEalias0 , TAGS AS TAGSalias0 WHERE KEYWORDalias0.KEYWORD = \"keyword0\" AND MOVIEalias0.RELEASE_YEAR > movie_release_year0 AND TAGSalias0.KID = KEYWORDalias0.ID AND TAGSalias0.MSID = MOVIEalias0.MID ;"
         ],
         "variables": [
             {
                 "example": "Persians",
                 "location": "both",
-                "name": "keyword_keyword0",
-                "type": "keyword_keyword"
+                "name": "keyword0",
+                "type": "keyword"
             },
             {
                 "example": "1990",
@@ -2439,7 +2439,7 @@
             }
         ],
         "sql": [
-            "SELECT MAX( * ) FROM ( SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \"actor_name0\" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID GROUP BY MOVIEalias0.RELEASE_YEAR ) AS DERIVED_TABLEalias0 ;"
+            "SELECT MAX( DERIVED_TABLEalias0.DERIVED_FIELDalias0 ) FROM ( SELECT COUNT( DISTINCT ( MOVIEalias0.TITLE ) ) AS DERIVED_FIELDalias0 FROM ACTOR AS ACTORalias0 , CAST AS CASTalias0 , MOVIE AS MOVIEalias0 WHERE ACTORalias0.NAME = \" actor_name0 \" AND CASTalias0.AID = ACTORalias0.AID AND MOVIEalias0.MID = CASTalias0.MSID GROUP BY MOVIEalias0.RELEASE_YEAR ) AS DERIVED_TABLEalias0 ;"
         ],
         "variables": [
             {
