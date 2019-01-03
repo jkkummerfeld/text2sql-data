@@ -117,7 +117,7 @@ UNION UNIQUE UNKNOWN UNLOCK UNSIGNED UNTIL UPDATE UPGRADE USAGE USE USER
 USER_RESOURCES USE_FRM USING UTC_DATE UTC_TIME UTC_TIMESTAMP VALIDATION VALUE
 VALUES VARBINARY VARCHAR VARCHARACTER VARIABLES VARYING VIEW VIRTUAL WAIT
 WARNINGS WEEK WEIGHT_STRING WHEN WHERE WHILE WITH WITHOUT WORK WRAPPER WRITE
-X509 XA XID XML XOR YEAR YEAR_MONTH ZEROFILL""".split()}
+X509 XA XID XML XOR YEAR YEAR_MONTH ZEROFILL EXCEPT INTERSECT""".split()}
 
 def add_semicolon(query):
     query = query.strip()
@@ -241,7 +241,9 @@ def standardise_blank_spaces(query):
     return new_query
 
 def subquery_range(current, pos, tokens, in_quote=False):
-    if tokens[pos] == '(' and (not in_quote):
+    if current is not None and tokens[pos] == 'SELECT' and (not in_quote):
+        return (pos, current[1])
+    elif tokens[pos] == '(' and (not in_quote):
         start = pos
         end = pos + 1
         depth = 1
@@ -293,6 +295,7 @@ def standardise_aliases(query, schema):
     seen_from = {}
     seen_where = {}
     in_quote = False
+    if LOGGING: print("Starting tokens:", tokens)
     for i, word in enumerate(tokens):
         for part in word.split('"'):
             in_quote = not in_quote
@@ -300,7 +303,8 @@ def standardise_aliases(query, schema):
         current_subquery = subquery_range(current_subquery, i, tokens, in_quote)
         if word == "FROM":
             if LOGGING: print("Seen from", current_subquery[0], i)
-            seen_from[current_subquery[0]] = i
+            if seen_from.get(current_subquery[0], None) is None:
+                seen_from[current_subquery[0]] = i
         elif current_subquery[0] not in seen_from:
             seen_from[current_subquery[0]] = None
 
@@ -344,6 +348,7 @@ def standardise_aliases(query, schema):
 ###                    print("New alias", current_subquery[0], tokens[i], alias)
                     aliases[current_subquery[0], tokens[i]] = alias
                 tokens[i] = alias
+    if LOGGING: print("New tokens:", tokens)
 
     # replace old alias names for the columns with new alias names
     current_subquery = (0, -1)
@@ -385,6 +390,7 @@ def standardise_aliases(query, schema):
             sf = seen_from.get(current_subquery[0], None)
             sw = seen_where.get(current_subquery[0], None)
             done = False
+            if LOGGING: print(i, word, parts, sf, sw)
             if sf is None or i < sf or (sw is not None and i > sw):
                 for table in schema[0]:
 ###                    print(table, schema[0][table])
