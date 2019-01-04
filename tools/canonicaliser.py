@@ -615,8 +615,7 @@ def order_query(query, variables):
     return ' '.join(tokens)
 
 def make_canonical(query, schema, variables, skip=set()):
-    if 'add_semicolon' not in skip:
-        query = add_semicolon(query)
+    query = add_semicolon(query)
     if 'standardise_blank_spaces' not in skip:
         query = standardise_blank_spaces(query)
     if 'capitalise' not in skip:
@@ -718,7 +717,7 @@ if __name__ == '__main__':
     parser.add_argument('--testyelp', help='Run yelp test cases and exit.', action='store_true')
     parser.add_argument('--log', help='Print SQL before and after.', action='store_true')
     parser.add_argument('--fields', help='The tables and fields for these queries.', required=True)
-    parser.add_argument('--skip', help='Functions that should not be applied (choices are [add_semicolon, standardise_blank_spaces, capitalise, standardise_aliases, order_query]).')
+    parser.add_argument('--skip', help='Functions that should not be applied (choices are [standardise_blank_spaces, capitalise, standardise_aliases, order_query]).')
     parser.add_argument('--overwrite', help='Replace the file rather than creating a new one.', action='store_true')
     parser.add_argument('--nonjson', help='The files contain "Sentence ||| SQL" rather than json.', action='store_true')
     args = parser.parse_args()
