@@ -497,7 +497,9 @@ def order_sequence(tokens, start, end, variables):
             chunks.append((cpos, sub[1] - 1))
             order_sequence(tokens, sub[0], sub[1] - 1, variables)
             cpos = sub[1]
-
+    if tokens[end] != ';':
+        chunks.append((end, end))
+        
     # Handle SELECT
     cur_chunk = 0
     while cur_chunk < len(chunks):
