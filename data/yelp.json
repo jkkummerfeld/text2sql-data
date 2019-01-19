@@ -460,7 +460,7 @@
         "sentences": [
             {
                 "question-split": "2",
-                "text": "List all the neighbourhoods with category_name0 category_name1 in business_city0",
+                "text": "List all the neighborhoods with category_name0 category_name1 in business_city0",
                 "variables": {
                     "business_city0": "Madison",
                     "category_name0": "Italian",
@@ -469,7 +469,7 @@
             }
         ],
         "sql": [
-            "SELECT NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
+            "SELECT NEIGHBORHOODalias0.NEIGHBORHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
         ],
         "variables": [
             {
@@ -498,7 +498,7 @@
         "sentences": [
             {
                 "question-split": "5",
-                "text": "List all the neighbourhoods with category_name0 category_name1 rated less than business_rating0 in business_city0",
+                "text": "List all the neighborhoods with category_name0 category_name1 rated less than business_rating0 in business_city0",
                 "variables": {
                     "business_city0": "Madison",
                     "business_rating0": "2.5",
@@ -508,7 +508,7 @@
             }
         ],
         "sql": [
-            "SELECT NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND BUSINESSalias0.RATING < business_rating0 AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
+            "SELECT NEIGHBORHOODalias0.NEIGHBORHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND BUSINESSalias0.RATING < business_rating0 AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
         ],
         "variables": [
             {
@@ -1199,7 +1199,7 @@
         "sentences": [
             {
                 "question-split": "3",
-                "text": "What neighbourhood is category_name0 \" business_name0 \" in ?",
+                "text": "What neighborhood is category_name0 \" business_name0 \" in ?",
                 "variables": {
                     "business_name0": "Flat Top Grill",
                     "category_name0": "restaurant"
@@ -1207,8 +1207,8 @@
             }
         ],
         "sql": [
-            "SELECT NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.NAME = \"business_name0\" AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;",
-            "SELECT NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.NAME = \"business_name0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
+            "SELECT NEIGHBORHOODalias0.NEIGHBORHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.NAME = \"business_name0\" AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;",
+            "SELECT NEIGHBORHOODalias0.NEIGHBORHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.NAME = \"business_name0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
         ],
         "variables": [
             {
@@ -1411,14 +1411,14 @@
         "sentences": [
             {
                 "question-split": "2",
-                "text": "In which neighbourhoods has user_name0 reviewed a business ?",
+                "text": "In which neighborhoods has user_name0 reviewed a business ?",
                 "variables": {
                     "user_name0": "Michelle"
                 }
             }
         ],
         "sql": [
-            "SELECT NEIGHBOURHOODalias0.NAME FROM BUSINESS AS BUSINESSalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 , REVIEW AS REVIEWalias0 , USER AS USERalias0 WHERE NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND REVIEWalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND USERalias0.NAME = \"user_name0\" AND USERalias0.USER_ID = REVIEWalias0.USER_ID ;"
+            "SELECT NEIGHBORHOODalias0.NAME FROM BUSINESS AS BUSINESSalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 , REVIEW AS REVIEWalias0 , USER AS USERalias0 WHERE NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND REVIEWalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND USERalias0.NAME = \"user_name0\" AND USERalias0.USER_ID = REVIEWalias0.USER_ID ;"
         ],
         "variables": [
             {
@@ -2342,16 +2342,16 @@
         "sentences": [
             {
                 "question-split": "8",
-                "text": "How many category_name0 are there in the neighbourhood_name0 district of business_city0 ?",
+                "text": "How many category_name0 are there in the neighborhood_name0 district of business_city0 ?",
                 "variables": {
                     "business_city0": "Dallas",
                     "category_name0": "restaurant",
-                    "neighbourhood_name0": "Hazelwood"
+                    "neighborhood_name0": "Hazelwood"
                 }
             }
         ],
         "sql": [
-            "SELECT COUNT( DISTINCT ( BUSINESSalias0.NAME ) ) FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME = \"neighbourhood_name0\" ;"
+            "SELECT COUNT( DISTINCT ( BUSINESSalias0.NAME ) ) FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBORHOODalias0.NEIGHBORHOOD_NAME = \"neighborhood_name0\" ;"
         ],
         "variables": [
             {
@@ -2369,8 +2369,8 @@
             {
                 "example": "Hazelwood",
                 "location": "both",
-                "name": "neighbourhood_name0",
-                "type": "neighbourhood_name"
+                "name": "neighborhood_name0",
+                "type": "neighborhood_name"
             }
         ]
     },
@@ -2474,15 +2474,15 @@
         "sentences": [
             {
                 "question-split": "2",
-                "text": "How many businesses are there in the \" neighbourhood_name0 \" neighbourhood in business_city0 ?",
+                "text": "How many businesses are there in the \" neighborhood_name0 \" neighborhood in business_city0 ?",
                 "variables": {
                     "business_city0": "Madison",
-                    "neighbourhood_name0": "Stone Meadows"
+                    "neighborhood_name0": "Stone Meadows"
                 }
             }
         ],
         "sql": [
-            "SELECT COUNT( DISTINCT ( BUSINESSalias0.NAME ) ) FROM BUSINESS AS BUSINESSalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME = \"neighbourhood_name0\" ;"
+            "SELECT COUNT( DISTINCT ( BUSINESSalias0.NAME ) ) FROM BUSINESS AS BUSINESSalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBORHOODalias0.NEIGHBORHOOD_NAME = \"neighborhood_name0\" ;"
         ],
         "variables": [
             {
@@ -2494,8 +2494,8 @@
             {
                 "example": "Stone Meadows",
                 "location": "both",
-                "name": "neighbourhood_name0",
-                "type": "neighbourhood_name"
+                "name": "neighborhood_name0",
+                "type": "neighborhood_name"
             }
         ]
     },
@@ -2778,22 +2778,22 @@
         "sentences": [
             {
                 "question-split": "7",
-                "text": "Find the number of reviews on businesses located in \" neighbourhood_name0 \" neighbourhood",
+                "text": "Find the number of reviews on businesses located in \" neighborhood_name0 \" neighborhood",
                 "variables": {
-                    "neighbourhood_name0": "South Summerlin"
+                    "neighborhood_name0": "South Summerlin"
                 }
             }
         ],
         "sql": [
-            "SELECT SUM( BUSINESSalias0.REVIEW_COUNT ) FROM BUSINESS AS BUSINESSalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME = \"neighbourhood_name0\" ;",
-            "SELECT COUNT( DISTINCT ( REVIEWalias0.TEXT ) ) FROM BUSINESS AS BUSINESSalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 , REVIEW AS REVIEWalias0 WHERE NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME = \"neighbourhood_name0\" AND REVIEWalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
+            "SELECT SUM( BUSINESSalias0.REVIEW_COUNT ) FROM BUSINESS AS BUSINESSalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBORHOODalias0.NEIGHBORHOOD_NAME = \"neighborhood_name0\" ;",
+            "SELECT COUNT( DISTINCT ( REVIEWalias0.TEXT ) ) FROM BUSINESS AS BUSINESSalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 , REVIEW AS REVIEWalias0 WHERE NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBORHOODalias0.NEIGHBORHOOD_NAME = \"neighborhood_name0\" AND REVIEWalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
         ],
         "variables": [
             {
                 "example": "South Summerlin",
                 "location": "both",
-                "name": "neighbourhood_name0",
-                "type": "neighbourhood_name"
+                "name": "neighborhood_name0",
+                "type": "neighborhood_name"
             }
         ]
     },
@@ -2899,21 +2899,21 @@
         "sentences": [
             {
                 "question-split": "4",
-                "text": "Find the total checkins in \" neighbourhood_name0 \" neighbourhood",
+                "text": "Find the total checkins in \" neighborhood_name0 \" neighborhood",
                 "variables": {
-                    "neighbourhood_name0": "Brighton Heights"
+                    "neighborhood_name0": "Brighton Heights"
                 }
             }
         ],
         "sql": [
-            "SELECT SUM( CHECKINalias0.COUNT ) FROM BUSINESS AS BUSINESSalias0 , CHECKIN AS CHECKINalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE CHECKINalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME = \"neighbourhood_name0\" ;"
+            "SELECT SUM( CHECKINalias0.COUNT ) FROM BUSINESS AS BUSINESSalias0 , CHECKIN AS CHECKINalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE CHECKINalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBORHOODalias0.NEIGHBORHOOD_NAME = \"neighborhood_name0\" ;"
         ],
         "variables": [
             {
                 "example": "Brighton Heights",
                 "location": "both",
-                "name": "neighbourhood_name0",
-                "type": "neighbourhood_name"
+                "name": "neighborhood_name0",
+                "type": "neighborhood_name"
             }
         ]
     },
@@ -2986,7 +2986,7 @@
         "sentences": [
             {
                 "question-split": "3",
-                "text": "How many neighbourhoods have a business with rating business_rating0 in business_city0 ?",
+                "text": "How many neighborhoods have a business with rating business_rating0 in business_city0 ?",
                 "variables": {
                     "business_city0": "Madison",
                     "business_rating0": "5"
@@ -2994,7 +2994,7 @@
             }
         ],
         "sql": [
-            "SELECT COUNT( DISTINCT ( NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME ) ) FROM BUSINESS AS BUSINESSalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND BUSINESSalias0.RATING = business_rating0 AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
+            "SELECT COUNT( DISTINCT ( NEIGHBORHOODalias0.NEIGHBORHOOD_NAME ) ) FROM BUSINESS AS BUSINESSalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND BUSINESSalias0.RATING = business_rating0 AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ;"
         ],
         "variables": [
             {
@@ -3064,7 +3064,7 @@
         ],
         "sql": [
             "SELECT BUSINESSalias0.NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 WHERE CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" ORDER BY BUSINESSalias0.REVIEW_COUNT DESC LIMIT 1 ;",
-            "SELECT BUSINESSalias0.NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , REVIEW AS REVIEWalias0 WHERE CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND REVIEWalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID GROUP BY BUSINESSalias0.NAME ORDER BY COUNT( DISTINCT ( REVIEWalias0.TEXT ) ) DESC LIMIT ;"
+            "SELECT BUSINESSalias0.NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , REVIEW AS REVIEWalias0 WHERE CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND REVIEWalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID GROUP BY BUSINESSalias0.NAME ORDER BY COUNT( DISTINCT ( REVIEWalias0.TEXT ) ) DESC LIMIT 1;"
         ],
         "variables": [
             {
@@ -3118,14 +3118,14 @@
         "sentences": [
             {
                 "question-split": "7",
-                "text": "which neighbourhood has the most number of businesses in business_city0",
+                "text": "which neighborhood has the most number of businesses in business_city0",
                 "variables": {
                     "business_city0": "Madison"
                 }
             }
         ],
         "sql": [
-            "SELECT NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID GROUP BY NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME ORDER BY COUNT( DISTINCT ( BUSINESSalias0.NAME ) ) DESC LIMIT 1 ;"
+            "SELECT NEIGHBORHOODalias0.NEIGHBORHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID GROUP BY NEIGHBORHOODalias0.NEIGHBORHOOD_NAME ORDER BY COUNT( DISTINCT ( BUSINESSalias0.NAME ) ) DESC LIMIT 1 ;"
         ],
         "variables": [
             {
@@ -3142,7 +3142,7 @@
         "sentences": [
             {
                 "question-split": "5",
-                "text": "Which neighbourhood in business_city0 has the category_name1 category_name0 with the highest stars",
+                "text": "Which neighborhood in business_city0 has the category_name1 category_name0 with the highest stars",
                 "variables": {
                     "business_city0": "Madison",
                     "category_name0": "restaurant",
@@ -3151,7 +3151,7 @@
             }
         ],
         "sql": [
-            "SELECT NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ORDER BY BUSINESSalias0.RATING DESC LIMIT 1 ;"
+            "SELECT NEIGHBORHOODalias0.NEIGHBORHOOD_NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID ORDER BY BUSINESSalias0.RATING DESC LIMIT 1 ;"
         ],
         "variables": [
             {
@@ -3280,17 +3280,17 @@
         "sentences": [
             {
                 "question-split": "8",
-                "text": "Find all category_name0 category_name1 in the neighbourhood_name0 neighbourhood of business_city0",
+                "text": "Find all category_name0 category_name1 in the neighborhood_name0 neighborhood of business_city0",
                 "variables": {
                     "business_city0": "Madison",
                     "category_name0": "Italian",
                     "category_name1": "restaurant",
-                    "neighbourhood_name0": "Meadowood"
+                    "neighborhood_name0": "Meadowood"
                 }
             }
         ],
         "sql": [
-            "SELECT BUSINESSalias0.NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , NEIGHBOURHOOD AS NEIGHBOURHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND NEIGHBOURHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBOURHOODalias0.NEIGHBOURHOOD_NAME = \"neighbourhood_name0\" ;"
+            "SELECT BUSINESSalias0.NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , NEIGHBORHOOD AS NEIGHBORHOODalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND NEIGHBORHOODalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND NEIGHBORHOODalias0.NEIGHBORHOOD_NAME = \"neighborhood_name0\" ;"
         ],
         "variables": [
             {
@@ -3314,8 +3314,8 @@
             {
                 "example": "Meadowood",
                 "location": "both",
-                "name": "neighbourhood_name0",
-                "type": "neighbourhood_name"
+                "name": "neighborhood_name0",
+                "type": "neighborhood_name"
             }
         ]
     },
@@ -3465,7 +3465,7 @@
         ],
         "sql": [
             "SELECT BUSINESSalias0.NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" ORDER BY BUSINESSalias0.REVIEW_COUNT DESC LIMIT 1 ;",
-            "SELECT BUSINESSalias0.NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , REVIEW AS REVIEWalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND REVIEWalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID GROUP BY BUSINESSalias0.NAME ORDER BY COUNT( DISTINCT ( REVIEWalias0.TEXT ) ) DESC LIMIT ;"
+            "SELECT BUSINESSalias0.NAME FROM BUSINESS AS BUSINESSalias0 , CATEGORY AS CATEGORYalias0 , CATEGORY AS CATEGORYalias1 , REVIEW AS REVIEWalias0 WHERE BUSINESSalias0.CITY = \"business_city0\" AND CATEGORYalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias0.CATEGORY_NAME = \"category_name0\" AND CATEGORYalias1.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID AND CATEGORYalias1.CATEGORY_NAME = \"category_name1\" AND REVIEWalias0.BUSINESS_ID = BUSINESSalias0.BUSINESS_ID GROUP BY BUSINESSalias0.NAME ORDER BY COUNT( DISTINCT ( REVIEWalias0.TEXT ) ) DESC LIMIT 1;"
         ],
         "variables": [
             {
