@@ -7,4 +7,4 @@ Files                          | License
 `systems/baseline-template`    | [Apache License 2.0](./systems/baseline-template/LICENSE.txt)
 `systems/sequence-to-sequence` | [Apache License 2.0](./systems/sequence-to-sequence/LICENSE.txt)
 `data/advising*`               | [CC-BY-4.0](./data/advising-LICENSE.txt)
-
+`data/wikisql*`                | [BSD](./data/wikisql-LICENSE.txt)
