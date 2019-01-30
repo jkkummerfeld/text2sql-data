@@ -25,13 +25,15 @@ Spider   | [https://yale-lily.github.io/spider](https://yale-lily.github.io/spid
 
 For more information about the sources of data see the [READ-history.md](./READ-history.md) file.
 
-## Data split definition
+## Evaluation data split definition
 
 Question split - Where possible, we follow the divisions from prior work.
 
 Query split - Random assignment (note that this did not take into consideration the number of questions for a given query).
 
-For the smaller datasets we use cross-validation (randomly assigned) and provide our split definitions to enable exact replication.
+For the smaller datasets, we use cross-validation (randomly assigned) and provide our split definitions to enable exact replication.
+
+For the larger datasets, at test time we train on both the training and development sets.
 
 # Format
 
