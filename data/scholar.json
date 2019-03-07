@@ -7524,7 +7524,7 @@
             }
         ],
         "sql": [
-            "SELECT DISTINCT PAPERalias0.PAPERID FROM PAPER AS PAPERalias0 , VENUE AS VENUEalias0 WHERE PAPERalias0.YEAR = year0 AND VENUEalias0.VENUENAME = \"venueid0\" ;"
+            "SELECT DISTINCT PAPERalias0.PAPERID FROM PAPER AS PAPERalias0 , VENUE AS VENUEalias0 WHERE PAPERalias0.YEAR = year0 AND PAPERalias0.VENUEID = VENUEalias0.VENUEID AND VENUEalias0.VENUENAME = \"venueid0\";"
         ],
         "variables": [
             {
