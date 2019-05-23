@@ -28,8 +28,8 @@ Examples of these output files are in `sample_output/`.
 
 To run your own experiments, modify the `prep_advising.sh` to refer to the dataset
 of your choice, and adjust the hyperparameters the config YAML file.
-Note that the hyperparameters in example_config.yml are an example only;
-actual hyperparameters used in the paper will follow in a later update.
+Note that the hyperparameters in example_config.yml are an example only.
+Actual hyperparameters used in the paper are available [here](https://github.com/jkkummerfeld/text2sql-data/tree/master/systems/sequence-to-sequence/experimental_configs/hyperparameters).
 
 If you use this code, please cite our ACL paper:
  ```TeX
