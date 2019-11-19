@@ -17,6 +17,7 @@ We have separate files describing the [datasets](./data/), [systems](./systems/)
 
 Version | Description
 ------- | -------------
+4       | Data fixes
 3       | Data fixes and addition of data from Spider and WikiSQL
 2       | Data with fixes for variables incorrectly defined in questions
 1       | Data used in the ACL 2018 paper
@@ -27,7 +28,7 @@ If you use this data in your work, please cite our ACL paper _and_ the appropria
 For example, in your paper you could write (using the BibTeX below):
 
 ```
-In this work, we use version 3 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-logic,data-restaurants-original,data-restaurants,data-spider,data-wikisql}
+In this work, we use version 4 of the modified SQL datasets from \citet{data-advising}, based on \citet{data-academic,data-atis-original,data-geography-original,data-atis-geography-scholar,data-imdb-yelp,data-restaurants-logic,data-restaurants-original,data-restaurants,data-spider,data-wikisql}
 ```
 
 If you are only using one dataset, here are example citation commands:
