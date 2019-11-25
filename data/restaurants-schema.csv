@@ -1,5 +1,5 @@
 Table Name, Field Name, Is Primary Key, Is Foreign Key, Type
-RESTAURANT, RESTAURANT_ID, y, n, int(11)
+RESTAURANT, ID,            y, n, int(11)
 RESTAURANT, NAME,          n, n, varchar(255)
 RESTAURANT, FOOD_TYPE,     n, n, varchar(255)
 RESTAURANT, CITY_NAME,     n, y, varchar(255)
