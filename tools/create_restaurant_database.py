@@ -33,7 +33,7 @@ create_location = """ CREATE TABLE IF NOT EXISTS LOCATION (
                              HOUSE_NUMBER int(11),
                              STREET_NAME varchar(255),
                              CITY_NAME varchar(255),
-                             FOREIGN KEY (CITY_NAME) REFERENCES GEOGRAPHIC(CITY_NAME)
+                             FOREIGN KEY (RESTAURANT_ID) REFERENCES GEOGRAPHIC(RESTAURANT_ID)
                              ); """
 
 def main(input_path: str, output_path: str = "./restuarants.db"):
