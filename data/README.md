@@ -10,7 +10,8 @@ Our changes included:
 For each dataset we provide:
 
 - `*.json`, the questions and corresponding queries
-- `*-db.sql`, the database
+- `*-db.sql` or `*-db.txt`, the database in the form it was available
+- `*-db.sqlite`, (untested) an sqlite version of the database, generated in 2020 using [https://gist.github.com/esperlu/943776](https://gist.github.com/esperlu/943776)
 - `*-fields.txt`, a list of fields in the database
 - `*-schema.csv`, key information about each database field
 
