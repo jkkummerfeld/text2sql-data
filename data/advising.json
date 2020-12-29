@@ -27651,8 +27651,8 @@
         ],
         "variables": [
             {
-                "example": "",
-                "location": "text-only",
+                "example": "400",
+                "location": "both",
                 "name": "level1",
                 "type": "number"
             },

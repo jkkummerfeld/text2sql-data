@@ -54,3 +54,4 @@ How many papers did authorname0 co-authored with authorname1
 # All
 
 - There are often multiple ways to answer a question in SQL. Some datasets have multiple queries, it would be great to do this more generally (e.g. have nested and join based versions of queries).
+- The SQL uses some features that are part of MySQL but not all other versions of SQL (e.g. `COUNT( DISTINCT columnA, columnB )` and `WHERE X > ALL ( SELECT ... )`).

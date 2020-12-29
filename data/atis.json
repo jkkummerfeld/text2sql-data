@@ -15044,57 +15044,53 @@
                 }
             },
             {
-                "text": "please list the flights from city_name1 to city_name0 arriving month_number0 day_number1",
+                "text": "please list the flights from city_name1 to city_name0 arriving month_number0 day_number0",
                 "question-split": "train",
                 "variables": {
                     "arrival_time0": "41",
                     "time_elapsed0": "60",
-                    "day_number0": "6",
+                    "day_number0": "7",
                     "month_number0": "5",
                     "year0": "1991",
-                    "day_number1": "7",
                     "city_name0": "BALTIMORE",
                     "city_name1": "PITTSBURGH"
                 }
             },
             {
-                "text": "list the flights arriving in city_name0 from city_name1 on month_number0 day_number1",
+                "text": "list the flights arriving in city_name0 from city_name1 on month_number0 day_number0",
                 "question-split": "train",
                 "variables": {
                     "arrival_time0": "41",
                     "time_elapsed0": "60",
-                    "day_number0": "2",
+                    "day_number0": "3",
                     "month_number0": "8",
                     "year0": "1991",
-                    "day_number1": "3",
                     "city_name0": "BALTIMORE",
                     "city_name1": "PITTSBURGH"
                 }
             },
             {
-                "text": "list the flights arriving in city_name0 from city_name1 on month_number0 day_number1",
+                "text": "list the flights arriving in city_name0 from city_name1 on month_number0 day_number0",
                 "question-split": "train",
                 "variables": {
                     "arrival_time0": "41",
                     "time_elapsed0": "60",
-                    "day_number0": "4",
+                    "day_number0": "5",
                     "month_number0": "8",
                     "year0": "1991",
-                    "day_number1": "5",
                     "city_name0": "BOSTON",
                     "city_name1": "ATLANTA"
                 }
             },
             {
-                "text": "list the flights arriving in city_name0 from city_name1 on month_number0 day_number1",
+                "text": "list the flights arriving in city_name0 from city_name1 on month_number0 day_number0",
                 "question-split": "train",
                 "variables": {
                     "arrival_time0": "41",
                     "time_elapsed0": "60",
-                    "day_number0": "2",
+                    "day_number0": "3",
                     "month_number0": "8",
                     "year0": "1991",
-                    "day_number1": "3",
                     "city_name0": "BALTIMORE",
                     "city_name1": "DENVER"
                 }
@@ -15128,8 +15124,8 @@
         ],
         "sql": [
             "SELECT DISTINCT FLIGHTalias0.FLIGHT_ID FROM AIRPORT_SERVICE AS AIRPORT_SERVICEalias0 , AIRPORT_SERVICE AS AIRPORT_SERVICEalias1 , CITY AS CITYalias0 , CITY AS CITYalias1 , DATE_DAY AS DATE_DAYalias0 , DAYS AS DAYSalias0 , FLIGHT AS FLIGHTalias0 , STATE AS STATEalias0 WHERE ( CITYalias1.CITY_CODE = AIRPORT_SERVICEalias1.CITY_CODE AND CITYalias1.CITY_NAME = \"city_name0\" AND DATE_DAYalias0.DAY_NUMBER = day_number0 AND DATE_DAYalias0.MONTH_NUMBER = month_number0 AND DATE_DAYalias0.YEAR = year0 AND DAYSalias0.DAY_NAME = DATE_DAYalias0.DAY_NAME AND FLIGHTalias0.FLIGHT_DAYS = DAYSalias0.DAYS_CODE AND FLIGHTalias0.TO_AIRPORT = AIRPORT_SERVICEalias1.AIRPORT_CODE ) AND CITYalias0.CITY_CODE = AIRPORT_SERVICEalias0.CITY_CODE AND CITYalias0.CITY_NAME = \"city_name1\" AND FLIGHTalias0.FROM_AIRPORT = AIRPORT_SERVICEalias0.AIRPORT_CODE AND STATEalias0.STATE_CODE = CITYalias0.STATE_CODE AND STATEalias0.STATE_NAME = \"state_name0\" ;",
-            "SELECT DISTINCT FLIGHTalias0.FLIGHT_ID FROM AIRPORT_SERVICE AS AIRPORT_SERVICEalias0 , AIRPORT_SERVICE AS AIRPORT_SERVICEalias1 , CITY AS CITYalias0 , CITY AS CITYalias1 , DATE_DAY AS DATE_DAYalias0 , DAYS AS DAYSalias0 , FLIGHT AS FLIGHTalias0 WHERE ( ( ( ( ( FLIGHTalias0.ARRIVAL_TIME < arrival_time0 OR FLIGHTalias0.TIME_ELAPSED >= time_elapsed0 ) AND FLIGHTalias0.DEPARTURE_TIME > FLIGHTalias0.ARRIVAL_TIME ) AND DATE_DAYalias0.DAY_NUMBER = day_number0 AND DATE_DAYalias0.MONTH_NUMBER = month_number0 AND DATE_DAYalias0.YEAR = year0 AND DAYSalias0.DAY_NAME = DATE_DAYalias0.DAY_NAME AND FLIGHTalias0.FLIGHT_DAYS = DAYSalias0.DAYS_CODE ) OR ( DATE_DAYalias0.DAY_NUMBER = day_number1 AND DATE_DAYalias0.MONTH_NUMBER = month_number0 AND DATE_DAYalias0.YEAR = year0 AND DAYSalias0.DAY_NAME = DATE_DAYalias0.DAY_NAME AND FLIGHTalias0.FLIGHT_DAYS = DAYSalias0.DAYS_CODE AND NOT ( ( FLIGHTalias0.ARRIVAL_TIME < arrival_time0 OR FLIGHTalias0.TIME_ELAPSED >= time_elapsed0 ) AND FLIGHTalias0.DEPARTURE_TIME > FLIGHTalias0.ARRIVAL_TIME ) ) ) AND CITYalias1.CITY_CODE = AIRPORT_SERVICEalias1.CITY_CODE AND CITYalias1.CITY_NAME = \"city_name0\" AND FLIGHTalias0.TO_AIRPORT = AIRPORT_SERVICEalias1.AIRPORT_CODE ) AND CITYalias0.CITY_CODE = AIRPORT_SERVICEalias0.CITY_CODE AND CITYalias0.CITY_NAME = \"city_name1\" AND FLIGHTalias0.FROM_AIRPORT = AIRPORT_SERVICEalias0.AIRPORT_CODE ;",
-            "SELECT DISTINCT FLIGHTalias0.FLIGHT_ID FROM AIRPORT_SERVICE AS AIRPORT_SERVICEalias0 , AIRPORT_SERVICE AS AIRPORT_SERVICEalias1 , CITY AS CITYalias0 , CITY AS CITYalias1 , DATE_DAY AS DATE_DAYalias0 , DATE_DAY AS DATE_DAYalias1 , DAYS AS DAYSalias0 , DAYS AS DAYSalias1 , FLIGHT AS FLIGHTalias0 WHERE ( ( ( ( FLIGHTalias0.ARRIVAL_TIME < FLIGHTalias0.DEPARTURE_TIME ) AND DATE_DAYalias0.DAY_NUMBER = day_number0 AND DATE_DAYalias0.MONTH_NUMBER = month_number0 AND DATE_DAYalias0.YEAR = year0 AND DAYSalias0.DAY_NAME = DATE_DAYalias0.DAY_NAME AND FLIGHTalias0.FLIGHT_DAYS = DAYSalias0.DAYS_CODE ) OR FLIGHTalias0.FLIGHT_DAYS = DAYSalias1.DAYS_CODE AND DAYSalias1.DAY_NAME = DATE_DAYalias1.DAY_NAME AND DATE_DAYalias1.YEAR = year0 AND DATE_DAYalias1.MONTH_NUMBER = month_number0 AND DATE_DAYalias1.DAY_NUMBER = day_number1 ) AND CITYalias1.CITY_CODE = AIRPORT_SERVICEalias1.CITY_CODE AND CITYalias1.CITY_NAME = \"city_name0\" AND FLIGHTalias0.TO_AIRPORT = AIRPORT_SERVICEalias1.AIRPORT_CODE ) AND CITYalias0.CITY_CODE = AIRPORT_SERVICEalias0.CITY_CODE AND CITYalias0.CITY_NAME = \"city_name1\" AND FLIGHTalias0.FROM_AIRPORT = AIRPORT_SERVICEalias0.AIRPORT_CODE ;",
+            "SELECT DISTINCT FLIGHTalias0.FLIGHT_ID FROM AIRPORT_SERVICE AS AIRPORT_SERVICEalias0 , AIRPORT_SERVICE AS AIRPORT_SERVICEalias1 , CITY AS CITYalias0 , CITY AS CITYalias1 , DATE_DAY AS DATE_DAYalias0 , DAYS AS DAYSalias0 , FLIGHT AS FLIGHTalias0 WHERE ( ( ( ( ( FLIGHTalias0.ARRIVAL_TIME < arrival_time0 OR FLIGHTalias0.TIME_ELAPSED >= time_elapsed0 ) AND FLIGHTalias0.DEPARTURE_TIME > FLIGHTalias0.ARRIVAL_TIME ) AND DATE_DAYalias0.DAY_NUMBER = day_number0 AND DATE_DAYalias0.MONTH_NUMBER = month_number0 AND DATE_DAYalias0.YEAR = year0 AND DAYSalias0.DAY_NAME = DATE_DAYalias0.DAY_NAME AND FLIGHTalias0.FLIGHT_DAYS = DAYSalias0.DAYS_CODE ) OR ( DATE_DAYalias0.DAY_NUMBER = day_number0 AND DATE_DAYalias0.MONTH_NUMBER = month_number0 AND DATE_DAYalias0.YEAR = year0 AND DAYSalias0.DAY_NAME = DATE_DAYalias0.DAY_NAME AND FLIGHTalias0.FLIGHT_DAYS = DAYSalias0.DAYS_CODE AND NOT ( ( FLIGHTalias0.ARRIVAL_TIME < arrival_time0 OR FLIGHTalias0.TIME_ELAPSED >= time_elapsed0 ) AND FLIGHTalias0.DEPARTURE_TIME > FLIGHTalias0.ARRIVAL_TIME ) ) ) AND CITYalias1.CITY_CODE = AIRPORT_SERVICEalias1.CITY_CODE AND CITYalias1.CITY_NAME = \"city_name0\" AND FLIGHTalias0.TO_AIRPORT = AIRPORT_SERVICEalias1.AIRPORT_CODE ) AND CITYalias0.CITY_CODE = AIRPORT_SERVICEalias0.CITY_CODE AND CITYalias0.CITY_NAME = \"city_name1\" AND FLIGHTalias0.FROM_AIRPORT = AIRPORT_SERVICEalias0.AIRPORT_CODE ;",
+            "SELECT DISTINCT FLIGHTalias0.FLIGHT_ID FROM AIRPORT_SERVICE AS AIRPORT_SERVICEalias0 , AIRPORT_SERVICE AS AIRPORT_SERVICEalias1 , CITY AS CITYalias0 , CITY AS CITYalias1 , DATE_DAY AS DATE_DAYalias0 , DATE_DAY AS DATE_DAYalias1 , DAYS AS DAYSalias0 , DAYS AS DAYSalias1 , FLIGHT AS FLIGHTalias0 WHERE ( ( ( ( FLIGHTalias0.ARRIVAL_TIME < FLIGHTalias0.DEPARTURE_TIME ) AND DATE_DAYalias0.DAY_NUMBER = day_number0 AND DATE_DAYalias0.MONTH_NUMBER = month_number0 AND DATE_DAYalias0.YEAR = year0 AND DAYSalias0.DAY_NAME = DATE_DAYalias0.DAY_NAME AND FLIGHTalias0.FLIGHT_DAYS = DAYSalias0.DAYS_CODE ) OR FLIGHTalias0.FLIGHT_DAYS = DAYSalias1.DAYS_CODE AND DAYSalias1.DAY_NAME = DATE_DAYalias1.DAY_NAME AND DATE_DAYalias1.YEAR = year0 AND DATE_DAYalias1.MONTH_NUMBER = month_number0 AND DATE_DAYalias1.DAY_NUMBER = day_number0 ) AND CITYalias1.CITY_CODE = AIRPORT_SERVICEalias1.CITY_CODE AND CITYalias1.CITY_NAME = \"city_name0\" AND FLIGHTalias0.TO_AIRPORT = AIRPORT_SERVICEalias1.AIRPORT_CODE ) AND CITYalias0.CITY_CODE = AIRPORT_SERVICEalias0.CITY_CODE AND CITYalias0.CITY_NAME = \"city_name1\" AND FLIGHTalias0.FROM_AIRPORT = AIRPORT_SERVICEalias0.AIRPORT_CODE ;",
             "SELECT DISTINCT FLIGHTalias0.FLIGHT_ID FROM AIRPORT_SERVICE AS AIRPORT_SERVICEalias0 , AIRPORT_SERVICE AS AIRPORT_SERVICEalias1 , CITY AS CITYalias0 , CITY AS CITYalias1 , DATE_DAY AS DATE_DAYalias0 , DAYS AS DAYSalias0 , FLIGHT AS FLIGHTalias0 WHERE ( ( ( ( ( FLIGHTalias0.ARRIVAL_TIME < arrival_time0 OR FLIGHTalias0.TIME_ELAPSED >= time_elapsed0 ) AND FLIGHTalias0.DEPARTURE_TIME > FLIGHTalias0.ARRIVAL_TIME ) AND DATE_DAYalias0.DAY_NUMBER = day_number0 AND DATE_DAYalias0.MONTH_NUMBER = month_number0 AND DATE_DAYalias0.YEAR = year0 AND DAYSalias0.DAY_NAME = DATE_DAYalias0.DAY_NAME AND FLIGHTalias0.FLIGHT_DAYS = DAYSalias0.DAYS_CODE ) OR ( DATE_DAYalias0.DAY_NUMBER = day_number0 AND DATE_DAYalias0.MONTH_NUMBER = month_number0 AND DATE_DAYalias0.YEAR = year0 AND DAYSalias0.DAY_NAME = DATE_DAYalias0.DAY_NAME AND FLIGHTalias0.FLIGHT_DAYS = DAYSalias0.DAYS_CODE AND NOT ( ( FLIGHTalias0.ARRIVAL_TIME < arrival_time0 OR FLIGHTalias0.TIME_ELAPSED >= time_elapsed0 ) AND FLIGHTalias0.DEPARTURE_TIME > FLIGHTalias0.ARRIVAL_TIME ) ) ) AND CITYalias1.CITY_CODE = AIRPORT_SERVICEalias1.CITY_CODE AND CITYalias1.CITY_NAME = \"city_name0\" AND FLIGHTalias0.TO_AIRPORT = AIRPORT_SERVICEalias1.AIRPORT_CODE ) AND CITYalias0.CITY_CODE = AIRPORT_SERVICEalias0.CITY_CODE AND CITYalias0.CITY_NAME = \"city_name1\" AND FLIGHTalias0.FROM_AIRPORT = AIRPORT_SERVICEalias0.AIRPORT_CODE ;"
         ],
         "variables": [
