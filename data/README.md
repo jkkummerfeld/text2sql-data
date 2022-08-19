@@ -11,18 +11,18 @@ For each dataset we provide:
 
 - `*.json`, the questions and corresponding queries
 - `*-db.sql` or `*-db.txt`, the database in the form it was available
-- `*-db.sqlite`, (untested) an sqlite version of the database, generated in 2020 using [https://gist.github.com/esperlu/943776](https://gist.github.com/esperlu/943776)
+- `*-db.sqlite`, (untested) an sqlite version of the database, generated in 2020 using <https://gist.github.com/esperlu/943776>
 - `*-fields.txt`, a list of fields in the database
 - `*-schema.csv`, key information about each database field
 
-Some of the databases are not included in the repository either for size or licensing reasons.
-They can be found as follows:
+Some of the databases are not included in the repository.
+They can be found as follows (the alternative locations have been added with permission from the authors of the original papers, please remember to cite their work if you use their data):
 
 Dataset  | Database
 -------- | ----------
-Academic (MAS), IMDB, Yelp | [https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM](https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM)
-Scholar  | [https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk](https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk)
-Spider   | [https://yale-lily.github.io/spider](https://yale-lily.github.io/spider)
+Academic (MAS), IMDB, Yelp | <https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM> or <https://unisyd-my.sharepoint.com/:u:/g/personal/jonathan_kummerfeld_sydney_edu_au/EZKSPtcxPW9PvodZ-DzYn6YB1bsbREHh2Q5APcqWLOnMeQ?e=Hx0CiU>
+Scholar  | <https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk> or <https://unisyd-my.sharepoint.com/:u:/g/personal/jonathan_kummerfeld_sydney_edu_au/ERF1m9xu-NFBs1FMg-YkXFQBbwh6amWjLtSFEHVyXV11QA?e=kYZ3J6>
+Spider   | <https://yale-lily.github.io/spider>
 
 For more information about the sources of data see the [READ-history.md](./READ-history.md) file.
 
