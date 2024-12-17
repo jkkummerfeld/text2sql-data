@@ -20,8 +20,8 @@ They can be found as follows (the alternative locations have been added with per
 
 Dataset  | Database
 -------- | ----------
-Academic (MAS), IMDB, Yelp | <https://drive.google.com/drive/folders/0B-2uoWxAwJGKY09kaEtTZU1nTWM> or <https://drive.google.com/file/d/11qRUfkEVj7Lapa9ypPfwrDGUFsJRsVx9/view?usp=sharing>
-Scholar  | <https://drive.google.com/file/d/0Bw5kFkY8RRXYRXdYYlhfdXRlTVk> or <https://drive.google.com/file/d/1GijZceahwoPHU9bq-x0Su0HGwG6UKymE/view?usp=sharing>
+Academic (MAS), IMDB, Yelp | <https://drive.google.com/file/d/11qRUfkEVj7Lapa9ypPfwrDGUFsJRsVx9/view?usp=sharing>
+Scholar  | <https://drive.google.com/file/d/1GijZceahwoPHU9bq-x0Su0HGwG6UKymE/view?usp=sharing>
 Spider   | <https://yale-lily.github.io/spider>
 
 For more information about the sources of data see the [READ-history.md](./READ-history.md) file.
