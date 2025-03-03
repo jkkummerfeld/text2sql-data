@@ -16,9 +16,9 @@ CITY, COUNTRY_NAME, n, n, varchar(255)
 -, -, -, -, -
 HIGHLOW, STATE_NAME, y, y, varchar(255)
 HIGHLOW, HIGHEST_POINT, n, n, varchar(255)
-HIGHLOW, HIGHEST_ELEVATION, n, n, varchar(255)
+HIGHLOW, HIGHEST_ELEVATION, n, n, int(11)
 HIGHLOW, LOWEST_POINT, n, n, varchar(255)
-HIGHLOW, LOWEST_ELEVATION, n, n, varchar(255)
+HIGHLOW, LOWEST_ELEVATION, n, n, int(11)
 -, -, -, -, -
 RIVER, RIVER_NAME, y, n, varchar(255)
 RIVER, LENGTH, n, n, int(11)
